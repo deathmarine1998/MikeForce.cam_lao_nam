@@ -1,0 +1,230 @@
+#include "version.hpp"
+#define QUOT(s) #s
+
+#include "description_map.inc"
+
+//Allow calling verson number from mission functions
+version = VN_MF_VERSION;
+
+class Header
+{
+	gameType = "mikefrc";
+	minPlayers = 1;
+	maxPlayers = 100; //Do not exceed 32 players, as it begins to degrade balance and performance.
+};
+respawn = "BASE";
+respawnDelay = 3;
+respawnDialog = 0;
+respawnButton = 1;
+respawnOnStart = -1;
+respawnTemplates[] = { "MenuPosition" };
+onPauseScript = "";
+onLoadMission = QUOT(Mike Force (Beta VN_MF_VERSION));
+OnLoadIntro = "Welcome to Mike Force";
+loadScreen = "\vn\missions_f_vietnam\data\img\mikeforce\mission.jpg";
+OnLoadIntroTime = 0;
+OnLoadMissionTime = 0;
+briefingName = QUOT(Mike Force (Beta VN_MF_VERSION));
+onLoadName = QUOT(Mike Force (Beta VN_MF_VERSION));
+
+overviewPicture = "\vn\missions_f_vietnam\data\img\mikeforce\mission.jpg";
+overviewText = "Bro-Nation";
+overviewTextLocked = "Server is most likely locked for restart";
+
+disabledAI = 1;
+scriptedPlayer = 0;
+// 0 is global, 1 is side, 2 is command, 3 is group, 4 is vehicle, 5 is direct
+disableChannels[]=  // allow text only on side chat {0(channel ID), false(disable text chat), true(disable voice chat)
+{
+	{0,true,true},
+	{1,false,true},
+	{2,true,true},
+	{6,true,true}
+};
+enableItemsDropping = 0;
+briefing = 0;
+debriefing = 0;
+enableDebugConsole[] = {
+	//HARRY
+	"76561198140282519"
+};
+
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 1;
+joinUnassigned = 1; // Should resolve joining OPFOR when joining
+forceRotorLibSimulation = 0;
+saving = 0;
+skipLobby = 0;
+
+corpseManagerMode = 1;
+corpseLimit = 10;
+corpseRemovalMinTime = 1200;
+corpseRemovalMaxTime = 3600;
+
+wreckManagerMode = 0;
+wreckLimit = 2;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 360;
+
+disableRandomization[] = {"All"};
+
+showHUD[] =
+{
+	true,	// Scripted HUD (same as showHUD command)
+	true,	// Vehicle + soldier info
+	true,	// Vehicle radar
+	true,	// Vehicle compass
+	true,	// Tank direction indicator
+	true,	// Commanding menu
+	false,	// Group Bar
+	true,	// HUD Weapon Cursors
+	true	// Vehicle display panels
+};
+
+// Enable CBA settings loading
+cba_settings_hasSettingsFile = 1;
+
+class Params
+{
+	#include "config\params.hpp"
+};
+
+class CfgDebriefing
+{
+	class TimedOut
+	{
+		title = "ERROR";
+		subtitle = "Server Timeout";
+		description = "If you see this message please reconnect";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class ReservedDacCong
+	{
+		title = "RESERVED";
+		subtitle = "NOT Approved for Dac Cong";
+		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/><br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bn-dc'>BRO-NATION DAC CONG UNITS LINK</a></t>";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class ReservedPress
+	{
+		title = "RESERVED";
+		subtitle = "NOT Approved for Press Corp";
+		description = "<t align='center'>You are trying to join a reserved slot for Press Corp. <br/><br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/><br/> <t align='center'>Join the BRO-NATION Units and be considered for Press by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bro-nation'>BRO-NATION ARMA 3 UNITS LINK</a></t> <br/><br/> <t align='center'>Join the Civilian Press by inquirijng within discord</t>";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class ReservedMontagnard
+	{
+		title = "RESERVED";
+		subtitle = "NOT Approved for Montagnard";
+		description = "<t align='center'>You are trying to join a reserved slot for Montagnard. <br/><br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/><br/> <t align='center'>Join the BRO-NATION Units and be considered for Montagnard by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bro-nation'>BRO-NATION ARMA 3 UNITS LINK</a></t> <br/><br/> <t align='center'>Join Montagnard by inquirijng within discord</t>";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
+
+class CfgUnitInsignia
+{
+	class BroNation
+	{
+		displayName = "Bro Nation Operations";
+		author = "";
+		texture = "custom\bronation_freshmeat.paa";
+		textureVehicle = "";
+	};
+	class ZFG
+	{
+		displayName = "Zero Fucks Given";
+		author = "";
+		texture = "custom\zerofucks_left.paa";
+		textureVehicle = "";
+	};
+};
+
+class CfgLeaflets
+{
+	class East // Configuration for 1Rnd_Leaflets_East_01_F
+	{
+		text = "Going for broke, she hits a wall and flips her desk in rage. They've escaped!"; // Text shown when previewing the leaflet full-screen. Ideally should be localized, so even player who cannot read the image can get the information
+		texture = "custom\leaflet_ghginyw.paa"; // Leaflet texture shown when previewing the leaflet full-screen
+		model = "myLeaflet.p3d"; // In-flight model. Optional; When undefined, generic white leaflet is used
+	};
+	// 1Rnd_Leaflets_Custom_01_F
+	class Custom_01
+	{
+		text = "Bro Nation Operations"; 
+		texture = "custom\leaflets\bronationops.paa";
+		model = "myLeaflet.p3d";
+	};
+	// 1Rnd_Leaflets_Custom_02_F
+	class Custom_02  
+	{
+		text = "Tiger Force";
+		texture = "custom\recruiters\tigerforce_recruiter.paa";
+		model = "myLeaflet.p3d";
+	};
+	// 1Rnd_Leaflets_Custom_03_F
+	class Custom_03  
+	{
+		text = "Bro Nation News";
+		texture = "custom\recruiters\presscorp_recruiter.paa";
+		model = "myLeaflet.p3d";
+	};
+	// 1Rnd_Leaflets_Custom_04_F
+	class Custom_04  
+	{
+		text = "Satans Angels";
+		texture = "custom\recruiters\satansangels_recruiter.paa";
+		model = "myLeaflet.p3d";
+	};
+};
+
+class CfgTaskEnhancements
+{
+	enable       = 1; // 0: disable new task features (default), 1: enable new task features & add new task markers and task widgets into the map
+	3d           = 1; // 0: do not use new 3D markers (default), 1: replace task waypoints with new 3D markers
+	3dDrawDist   = 2000; // 3d marker draw distance (default: 2000)
+	share        = 1; // 0: do not count assigned players (default), 1: count how many players have the task assigned
+	propagate    = 1; // 0: do not propagate (default), 1: propagate shared tasks to subordinates
+};
+
+
+//class CfgSFX
+//{
+	// path, volume, pitch(1), maxDist, prob(1),minDelay, midDelay, maxDelay
+	//class PleikuRecvBroadcast
+	//{
+		//name = "Pleiku Receiving Area";
+		//broadcast[] = {"custom\pleiku_recv1.ogg",35,1,100,1,1,1,0};
+		//sounds[]={broadcast};
+		//empty[]= {"",0,0,0,0,0,0,0};
+	//};
+//};
+
+//Show melee weapons in the arsenal
+vn_arsenalShowMelee = 1;
+
+//Tell paradigm to handle mission initialisation.
+use_paradigm_init = 1;
+
+
+// VN HAM init
+#include "config\init.hpp"
+
+class CfgPylonManager
+{
+	//Blacklisted Magazines
+	blacklistedMagazines[] = {"PylonRack_2Rnd_BombCluster_03_F", "PylonMissile_1Rnd_BombCluster_03_F", "PylonMissile_1Rnd_BombCluster_02_cap_F", "PylonMissile_1Rnd_BombCluster_02_F", "PylonRack_2Rnd_BombCluster_01_F", "PylonMissile_1Rnd_BombCluster_01_F", "4Rnd_BombCluster_03_F", "4Rnd_BombCluster_02_F", "4Rnd_BombCluster_01_F", "USAF_PylonRack_1Rnd_B61", "USAF_PylonRack_1Rnd_CBU97", "USAF_PylonRack_2Rnd_CBU97", "USAF_PylonRack_3Rnd_CBU97", "USAF_PylonRack_1Rnd_B61", "USAF_PylonRack_1Rnd_CBU105","USAF_PylonRack_2Rnd_CBU105", "USAF_PylonRack_2Rnd_CBU89_BRU_42", "USAF_PylonRack_3Rnd_CBU105", "USAF_PylonRack_1Rnd_MK20", "USAF_PylonRack_3Rnd_MK20", "USAF_PylonRack_2Rnd_MK20", "USAF_PylonRack_2Rnd_MK20_BRU_42", "USAF_PylonRack_2Rnd_CBU87", "USAF_PylonRack_2Rnd_CBU87_BRU_42", "USAF_PylonRack_3Rnd_CBU87", "USAF_PylonRack_1Rnd_CBU87", "USAF_PylonRack_2Rnd_CBU89", "USAF_PylonRack_1Rnd_CBU89", "USAF_PylonRack_3Rnd_CBU89", "USAF_PylonRack_1Rnd_CBU103", "USAF_PylonRack_2Rnd_CBU103", "USAF_PylonRack_3Rnd_CBU103", "USAF_PylonRack_1Rnd_CBU104", "USAF_PylonRack_2Rnd_CBU104", "USAF_PylonRack_3Rnd_CBU104", "vn_bomb_500_mk20_cb_mag_x1", "vn_bomb_f4_500_mk20_cb_mag_x1", "vn_bomb_f4_500_mk20_cb_mag_x2", "vn_bomb_f4_500_mk20_cb_mag_x3", "USAF_PylonRack_1Rnd_ZALX9000", "USAF_PylonRack_1Rnd_AGM154A", "USAF_PylonRack_2Rnd_AGM154A", "USAF_PylonRack_1Rnd_AGM154B", "USAF_PylonRack_2Rnd_AGM154B", "USAF_PylonRack_1Rnd_AGM154C", "USAF_PylonRack_2Rnd_AGM154C"};
+
+	//Nothing is rearm everywhere
+	rearmObjects[] = {"Land_vn_us_vehicleammo","rhsusf_M977A4_AMMO_BKIT_usarmy_d","rhsusf_M977A4_AMMO_BKIT_M2_usarmy_d","rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd"};
+
+	//Distance needed from rearmObjects[]
+	rearmRange = 30;
+};

@@ -1,0 +1,92 @@
+/*
+	File: fn_player_can_enter_vehicle.sqf
+	Author: Spoffy
+	Date: 2020-05-23
+	Last Update: 2020-07-04
+	Public: No
+	
+	Description:
+		Check if the player can enter the vehicle.
+	
+	Parameter(s):
+	_player - Player that wants to enter [Object]
+	_role - Role in the vehicle they want to enter [String]
+	_vehicle - Vehicle that the player is entering [Object]
+	
+	Returns:
+		Can they enter the vehicle? [Boolean]
+	
+	Example(s): none
+*/
+
+
+/* Make sure to read */
+// when completing, make sure to check rank for pilot/driver only, bypass rank check for coPilot, but make sure they are proper team
+
+params ["_player", "_role", "_vehicle"];
+
+private _debugVeh = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playervehicles");
+if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-1 _player:%1 _role:%2 _veh:%3 _turret:%4",_player, _role, _vehicle, _turret] };
+
+private _teamsVehicleIsLockedTo = [];
+private _message = "ERROR - Screenshot and report for evidence";
+private _config = missionConfigFile >> "gamemode" >> "debug";
+
+private _rankData = [_player] call vn_mf_fnc_unit_to_rank;
+private _rank = _rankData select 1;
+private _plyrRank = getNumber(_config >> "usarmyranks" >> _rank);
+private _ranksArray = getArray(_config >> "usarmyranks" >> "ranksArray");
+private _arsenalTeams = ["DacCong","MikeForce","Montagnard","Civilian"];
+private _plyrTeam = _player getVariable "vn_mf_db_player_group";
+private _vehRankArray = (missionConfigFile >> "gamemode" >> "whitelisting" >> _plyrTeam >> "vehicles");
+if(_vehRankArray isEqualTo [])then
+{
+	_vehRankArray = getArray(missionConfigFile >> "arsenal");
+};
+
+//private _vehRankArray = getArray(_config >> "dirtyVehRanks" >> (typeOf _vehicle));
+//_vehRankArray params ["DacCong","MikeForce","Montagnard","Civilian"];
+
+
+private _teamsArray = getArray(_config >> "dirtyUSARMYRANKS" >> "teamsArray");
+private _rankReqSelect = _teamsArray find _plyrTeam;
+private _rankReq = _vehRankArray select _rankReqSelect;
+private _vehRank = _ranksArray select _rankReq;
+if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-2 player:%1 _rank:%2 _plyrRank:%3 _ranksArray:%4", player, _rank, _plyrRank, _ranksArray]}; 
+
+//
+if((_role == "driver") && (_rankReq isEqualTo -1))exitWith {
+	["VehicleLockedToTeam"] remoteExec ["para_c_fnc_show_notification", _unit];
+	false
+};
+
+if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-2 _vehicle:%1 _teamsArray:%2 _rankReqSelect:%3 _rankReq:%4 _vehRank:%5 _vehRankArray:[%6] ", typeOf _vehicle, _teamsArray, _rankReqSelect, _rankReq, _vehRank, _vehRankArray]}; 
+
+if((_role == "driver") && (_plyrRank < _rankReq))exitWith {
+	_message = format["Your Rank:   %1                   Required:   %2", _rank, _vehRank];
+	["VehicleLockedToRank", [_message]] remoteExec ["para_c_fnc_show_notification", _player];
+	false
+};
+
+if ((_role == "gunner") && (_vehicle isKindOf "vn_air_f4_base"))exitWith {
+	_teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []] apply {missionNamespace getVariable [_x, grpNull]};
+	if (_teamsVehicleIsLockedTo isEqualTo [] || group _player in _teamsVehicleIsLockedTo) exitWith {
+		true
+	};
+	["VehicleLockedToRank", ["Satans Angels Squadron members only, apply in discord"]] remoteExec ["para_c_fnc_show_notification", _player];
+	false
+};
+
+if (_role == "driver") exitWith {
+	if(isCopilotEnabled _vehicle)then { _vehicle enableCopilot false };
+	_teamsVehicleIsLockedTo = _vehicle getVariable ["teamLock", []] apply {missionNamespace getVariable [_x, grpNull]};
+	if (_teamsVehicleIsLockedTo isEqualTo [] || group _player in _teamsVehicleIsLockedTo) exitWith {
+		true
+	};
+	_message = format["Required Team(s):   %1", _teamsVehicleIsLockedTo];
+	["VehicleLockedToTeam"] remoteExec ["para_c_fnc_show_notification", _unit];
+	//["VehicleLockedToRank", [_message]] remoteExec ["para_c_fnc_show_notification", _player];
+	false
+};
+
+true

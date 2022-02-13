@@ -1,0 +1,1 @@
+player selectWeapon "vn_melee_muzzle";

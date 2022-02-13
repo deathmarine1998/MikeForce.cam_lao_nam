@@ -1,0 +1,1 @@
+["restart_after_capture", para_s_fnc_restart_after_hold, [], 59.5] call para_g_fnc_scheduler_add_job;

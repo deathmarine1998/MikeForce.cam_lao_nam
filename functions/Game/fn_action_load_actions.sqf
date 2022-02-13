@@ -1,0 +1,9 @@
+// add new task actions
+call vn_mf_fnc_action_destroy_camp;
+call vn_mf_fnc_action_destroy_tunnel;
+call vn_mf_fnc_action_destroy_respawn;
+call vn_mf_fnc_action_destroy_radio;
+call vn_mf_fnc_action_destroy_tunnel_watersupply;
+call vn_mf_fnc_action_gather_intel;
+call vn_mf_fnc_action_deactivate_mine;
+call vn_mf_fnc_action_control_mine;

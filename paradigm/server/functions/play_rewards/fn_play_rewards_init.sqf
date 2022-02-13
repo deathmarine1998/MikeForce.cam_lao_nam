@@ -1,0 +1,1 @@
+["play_rewards", para_s_fnc_play_rewards, [], 900] call para_g_fnc_scheduler_add_job;

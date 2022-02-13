@@ -1,0 +1,25 @@
+/*
+	File: fn_veh_asset_set_idle.sqf
+	Author: Spoffy
+	Date: 2020-05-23
+	Last Update: 2020-07-03
+	Public: No
+
+	Description:
+		Sets a vehicle asset to idle.
+
+	Parameter(s):
+		_id - Id of vehicle asset [Number]
+
+	Returns: nothing
+
+	Example(s): none
+*/
+
+params ["_id"];
+
+if(!(_id isEqualType "") || (_id isEqualTo "") || (_id isEqualType []))exitWith { diag_log format["[DirtyDebug]veh_asset_get_by_id id:%1",_id] };
+private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id;
+_vehicle set [struct_veh_asset_info_m_state_data, ["IDLE", serverTime]];
+
+[_id] call vn_mf_fnc_veh_asset_marker_delete;
