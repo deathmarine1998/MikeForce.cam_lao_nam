@@ -52,7 +52,9 @@ enableDebugConsole[] = {
 	//ferrous
 	"76561198084982129",
 	//leal
-	"76561198173293466"
+	"76561198173293466",
+	//cerebral
+	"76561199195828749"
 };
 
 allowFunctionsLog = 1;

@@ -7,7 +7,7 @@
 	"player distance cursorObject < 5",						// Condition for the action to progress
 	{},	// Code executed when action starts
 	{},	// Code executed on every progress tick
-	{[cursorTarget] spawn vn_mf_fnc_gather_intel},// Code executed on completion
+	{[player] spawn vn_mf_fnc_gather_intel},// Code executed on completion
 	{},	// Code executed on interrupted
 	[],													// Arguments passed to the scripts as _this select 3
 	5,													// Action duration [s]
