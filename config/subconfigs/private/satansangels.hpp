@@ -36,6 +36,7 @@ ranks[] = {
 	{"7Vightmare", "76561198044955232", "Specialist"},
 	{"Cpl. Cold", "76561199082806351", "Corporal"},
 	{"Pvt. Jake", "76561198981154299", "Private"}
+};
 
 vehicles[] = 
 { 
