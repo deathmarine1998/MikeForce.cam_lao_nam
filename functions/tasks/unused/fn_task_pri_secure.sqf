@@ -121,7 +121,7 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 }];
 
 _taskDataStore setVariable ["FINISH", {
-	private _tasks = (_taskDataStore getVariable "campTasks") + (_taskDataStore getVariable "buildTasks) + (_taskDataStore getVariable "_buildCopTasks");
+	private _tasks = (_taskDataStore getVariable "campTasks") + (_taskDataStore getVariable "buildTasks") + (_taskDataStore getVariable "_buildCopTasks");
 	{
 		if !(_x call vn_mf_fnc_task_is_completed) then {
 			[_x, "FAILED"] call vn_mf_fnc_task_complete;

@@ -27,7 +27,7 @@ class capture_zone : task
 	class destroy_sites
 	{
 		taskname = "Destroy Sites";
-		taskdesc = "Destroy all HQs, Camps, Tunnels, Water Supplies, AA, Arty sites as well as Vehicles and Helicopoters within 1200m.";
+		taskdesc = "Destroy all HQs, AA, Arty sites as well as Vehicles and Helicopoters within 1200m.";
 	};
 
 	class destroy_enemy_supplies

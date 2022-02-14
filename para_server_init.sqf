@@ -143,9 +143,6 @@ enableenvironment [[false,true] select _ambientlife,[false,true] select _ambient
 //Set up respawn points.
 [] call vn_mf_fnc_respawn_points_init;
 
-// Clear the server one more time
-call vn_mf_fnc_server_rcon_event_kickAll;
-
 // start scheduler
 diag_log "VN MikeForce: Starting scheduler";
 [] call para_g_fnc_scheduler_subsystem_init;
@@ -388,4 +385,4 @@ CAPTURERESTART1MIN = false;
 //init intel counter
 IntelCounter = 0;
 // Server is ready unlock it
-[] call vn_mf_fnc_server_rcon_event_ready;
+//[] call vn_mf_fnc_server_rcon_event_ready;

@@ -83,7 +83,7 @@ private _fnc_findPosRoad = {
 		};
 	};
 	
-
+	/*
 	for "_i" from 1 to (1 + ceil random (mf_s_max_camps_per_zone - 1)) do
 	{
 		//[_zoneData] call vn_mf_fnc_sites_create_camp;
@@ -108,6 +108,7 @@ private _fnc_findPosRoad = {
 			[_tunnelWaterSupply, _zone] call vn_mf_fnc_sites_create_tunnel_watersupply_site;
 		};
 	};
+	*/
 	
 	for "_i" from 1 to (1 + ceil random (mf_s_max_vehicles_per_zone - 1)) do
 	{
