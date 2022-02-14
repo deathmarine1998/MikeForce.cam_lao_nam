@@ -31,6 +31,8 @@ overviewPicture = "\vn\missions_f_vietnam\data\img\mikeforce\mission.jpg";
 overviewText = "Bro-Nation";
 overviewTextLocked = "Server is most likely locked for restart";
 
+zeusCompositionScriptLevel = 2;
+
 disabledAI = 1;
 scriptedPlayer = 0;
 // 0 is global, 1 is side, 2 is command, 3 is group, 4 is vehicle, 5 is direct
