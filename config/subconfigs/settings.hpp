@@ -46,9 +46,6 @@ class teams
     FAILED[] = {"NO TEAM","\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa", "FAILED", "<a href='https://discord.gg/W6geNfx'>BroNation Discord Invite</a>", {1,0.3,0.4,1}, "ColorPink" };
 };
 
-snakebitechance[] = {0.05,1};  // 50% chance to get bit if closer than 1m, 0.1 = 10%
-snakebitefrequency[] = {600,300}; // Restrict snakes to biting once every 600s, with another 300s of reduced chance.
-
 class restartmsgs
 {
 	restart_times[] = {02,06,11,16,21};

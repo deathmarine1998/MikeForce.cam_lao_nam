@@ -28,7 +28,7 @@ if(_ready2Blow)then {
 		};
 	}forEach _nearPlayers;
 	uisleep 15;
-	[_respawn, _player] remoteExecCall ["vn_mf_fnc_server_destroy_respawn", 2];
+	[_respawn, _player] remoteExecCall ["vn_mf_fnc_server_destroy_task", 2];
 } else {
 	["NoSatchels"] call para_c_fnc_show_notification;
 };

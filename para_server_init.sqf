@@ -338,7 +338,7 @@ diag_log "VN MikeForce: Initialising Respawn Scheduler";
 // Moved to gameplay based restart to stop middle of the AO loss of progress and enhance the experience with higher numbers of AI after capture, kinda like pissing off the VC LOL
 //diag_log "VN MikeForce: Initialising Restart Messages";
 //Server Restart
-//[] call para_s_fnc_restart_messages_init;
+[] call para_s_fnc_restart_messages_init;
 
 diag_log "VN MikeForce: Initialising Arsenal Cleanup";
 // Initialise arsenal cleanup script

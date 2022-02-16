@@ -228,6 +228,8 @@ if !(rank _player isEqualTo _rank) then
 	_player setUnitRank _rank;
 };
 
+enableEnvironment false; //disable animals
+
 // start player at correct camp for team
 //For now, we're just hardcoding this.
 private _playerGroup = _player getVariable ["vn_mf_db_player_group", "MikeForce"];

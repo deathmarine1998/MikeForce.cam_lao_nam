@@ -386,7 +386,7 @@ class CfgNotifications
 	class FireInTheHole
 	{
 		title = "Satchel Charge Set";
-		description = "Get the heck outta dodge, its gonna blow!      Don't forget the HQ!";
+		description = "Get the heck outta dodge, its gonna blow!";
 		priority = 8;
 		color[] = {1,0,0,1};
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";

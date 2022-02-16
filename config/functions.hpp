@@ -25,7 +25,6 @@ class CfgFunctions
 			class enable_debug_monitor {};
 			class enable_task_roster {};
 			class enable_keydown_escape {};
-			class snake_handler {};
 			class task_client_on_task_completed {};
 			class task_client_on_task_created {};
 			class update_loading_screen {};

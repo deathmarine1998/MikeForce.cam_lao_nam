@@ -190,7 +190,6 @@ if (_is_unit_player) then
 			
 			
 			if(vehicle _unit isKindOf "house")then { _kill_type = "destruction" };		
-			if(vehicle _unit isKindOf "snake_random_f")then { _kill_type = "hunting"; deleteVehicle _unit; };
 			if(vehicle _unit isKindOf "fowl_base_f")then { _kill_type = "hunting"; deleteVehicle _unit; };
 			if(vehicle _unit isKindOf "rabbit_f")then { _kill_type = "hunting"; deleteVehicle _unit; };
 			if(isNull _unit)then { _kill_type = "hunting"; deleteVehicle _unit; };

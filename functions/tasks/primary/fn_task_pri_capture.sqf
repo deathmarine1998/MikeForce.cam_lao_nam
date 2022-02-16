@@ -89,8 +89,8 @@ _taskDataStore setVariable ["destroy_enemy_supplies", {
 		_taskDataStore setVariable ["suppliesDestroyed", true];
 		["SUCCEEDED"] call _fnc_finishSubtask;
 		
-		private _defSites = ["defend_sites", _zone] call vn_mf_fnc_task_create select 1;
-		mf_s_cia_defend_hq = true;
+		//private _defSites = ["defend_sites", _zone] call vn_mf_fnc_task_create select 1;
+		//mf_s_cia_defend_hq = true;
 	};
 }];
 
@@ -106,7 +106,7 @@ _taskDataStore setVariable ["AFTER_STATES_RUN", {
 
 _taskDataStore setVariable ["FINISH", {
 	[_taskDataStore getVariable "taskMarker"] call vn_mf_fnc_zones_capture_zone;
-	private _hold_zone = ["hold_zone", _taskDataStore getVariable "taskMarker"] call vn_mf_fnc_task_create select 1;
+	//private _hold_zone = ["hold_zone", _taskDataStore getVariable "taskMarker"] call vn_mf_fnc_task_create select 1;
 	private _recapture_zone = ["recapture_zone", _taskDataStore getVariable "taskMarker"] call vn_mf_fnc_task_create select 1;
 	vn_mf_hStartTime = serverTime;
 	mf_s_capturedZone = true;

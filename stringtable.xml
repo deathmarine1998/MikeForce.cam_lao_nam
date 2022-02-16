@@ -903,33 +903,6 @@
       <Key ID="STR_vn_mf_advanced_revive_desc">
         <Original>Enable Advanced Revive (Recommended)</Original>
       </Key>
-      <Key ID="STR_vn_mf_param_snake_header">
-        <Original>======== Snake Settings ========</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_chance">
-        <Original>==== Bite Chance ====</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_chance_desc">
-        <Original>Percentage chance of being bitten</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_distance">
-        <Original>==== Bite Distance ====</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_distance_desc">
-        <Original>How close a snake must be to bite a player</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_frequency">
-        <Original>==== Bite Frequency ====</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_frequency_desc">
-        <Original>Minimum Amount of time between bites</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_extra_time">
-        <Original>==== Ramp up Time ====</Original>
-      </Key>
-      <Key ID="STR_vn_mf_param_snake_bite_extra_time_desc">
-        <Original>Amount of time with a reduced chance of being bitten. Starts counting after the bite frequency time has elapsed.</Original>
-      </Key>
       <Key ID="STR_vn_mf_param_teams_header">
         <Original>======== Team Settings ========</Original>
       </Key>

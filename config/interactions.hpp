@@ -8,13 +8,6 @@ class CfgItemInteractions
 			{"STR_vn_mf_repack", "call vn_mf_fnc_ammo_repack;" } // To disable set this to an empty array here or in description.ext. interactActions[] = {};
 		};
 	};
-	class snake_bite
-	{
-		attributes[] =
-		{
-			{"poison", 0.25} //
-		};
-	};
 	class dirty_water
 	{
 		attributes[] =

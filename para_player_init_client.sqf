@@ -184,6 +184,8 @@ call vn_mf_fnc_admin_arsenal;
 // end loading screen
 uiSleep 0.4;
 endLoadingScreen;
+enableEnvironment false; //disable animals
+
 // Fade in
 cutText ["", "BLACK IN", 4];
 // Bring sound back to normal
