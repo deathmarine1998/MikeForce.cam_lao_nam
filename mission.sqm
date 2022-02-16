@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1284;
+		nextID=1288;
 	};
 	class Camera
 	{
-		pos[]={15822.155,23.746954,7161.4844};
-		dir[]={0.083495915,-0.40528351,-0.91041917};
-		up[]={0.037022725,0.91414344,-0.4036769};
-		aside[]={-0.99585974,-3.3702236e-008,-0.091331325};
+		pos[]={15822.778,15.570713,7144.1753};
+		dir[]={-0.41886961,-0.18093446,0.88989598};
+		up[]={-0.077103093,0.98346353,0.16380492};
+		aside[]={0.90482062,-1.0823715e-007,0.42589328};
 	};
 };
 binarizationWanted=0;
@@ -322,8 +322,8 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="ReviveRequiredItems";
-			expression="false";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -397,8 +397,8 @@ class CustomAttributes
 		};
 		class Attribute4
 		{
-			property="SharedObjectives";
-			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			property="ReviveRequiredItems";
+			expression="false";
 			class Value
 			{
 				class data
@@ -5949,7 +5949,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15843.36,16.502253,7152.3945};
-						angles[]={-0,6.2806892,0};
+						angles[]={0,6.2806892,0};
 					};
 					side="Empty";
 					flags=4;
@@ -5983,7 +5983,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={15786.317,16.502253,7107.8276};
-						angles[]={-0,3.3812177,0};
+						angles[]={0,3.3812177,0};
 					};
 					side="Empty";
 					flags=4;
@@ -25978,15 +25978,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={15828.35,17.712332,7146.2729};
+				position[]={15821.834,15.497625,7143.604};
+				angles[]={-0,5.7517467,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 			};
 			id=2568;
 			type="vn_b_prop_fmradio_01";
-			atlOffset=2.644001;
+			atlOffset=0.0067949295;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61624,13 +61626,12 @@ class Mission
 				position[]={20180.721,7.6426191,9639.71};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=4929;
 			type="vn_targetp_inf_f";
-			atlOffset=0.00032615662;
+			atlOffset=0.66799974;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61664,13 +61665,12 @@ class Mission
 				angles[]={6.2490468,0,0.035377823};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=4930;
 			type="vn_targetp_inf_f";
-			atlOffset=0.12744904;
+			atlOffset=1.6239996;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61704,13 +61704,12 @@ class Mission
 				angles[]={0.070162237,0,0.025708701};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=4931;
 			type="vn_targetp_inf_f";
-			atlOffset=0.0019464493;
+			atlOffset=0.95699978;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61744,13 +61743,12 @@ class Mission
 				angles[]={6.2529039,0,6.2329373};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=4932;
 			type="vn_targetp_inf_f";
-			atlOffset=0.0011281967;
+			atlOffset=1.4799995;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -61784,13 +61782,12 @@ class Mission
 				angles[]={6.2529039,0,6.2329373};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=4933;
 			type="vn_targetp_inf_f";
-			atlOffset=0.0005903244;
+			atlOffset=0.96099997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -66905,7 +66902,7 @@ class Mission
 			name="mf_respawn_sasr";
 			text="@STR_vn_mf_respawn_sasr";
 			type="Empty";
-			angle=114.49572;
+			angle=114.49571;
 			id=5122;
 			atlOffset=-0.0001077652;
 		};
