@@ -579,7 +579,7 @@
 			{"vn_prop_food_sack_02",{0,0,0,0}},
 			{"vn_prop_med_antibiotics",{0,0,0,0}},
 			{"vn_prop_med_antimalaria",{0,0,0,0}},
-			{"vn_prop_med_antivenom",{0,0,0,0}},
+			//{"vn_prop_med_antivenom",{0,0,0,0}},
 			{"vn_prop_med_dysentery",{0,0,0,0}},
 			{"vn_prop_med_painkillers",{0,0,0,0}},
 			{"vn_prop_med_wormpowder",{0,0,0,0}},

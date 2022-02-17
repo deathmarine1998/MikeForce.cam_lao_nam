@@ -31,12 +31,12 @@ if(((diag_tickTime - vn_mf_sStartTime) >= 100) && !(mf_s_startup))then {
 	mf_s_startup = true;
 };
 
-//private _completedZones = mf_s_activeZones select {[_x # 1] call vn_mf_fnc_task_is_completed};
-//mf_s_activeZones = mf_s_activeZones - _completedZones;
-//if (count _completedZones > 0) then 
-//{
-//	[] call vn_mf_fnc_director_open_connected_zones;
-//};
+private _completedZones = mf_s_activeZones select {[_x # 1] call vn_mf_fnc_task_is_completed};
+mf_s_activeZones = mf_s_activeZones - _completedZones;
+if ( (count(_completedZones) > 0) && ( count(mf_s_activeZones) < 2) ) then 
+{
+	[] call vn_mf_fnc_director_open_connected_zones;
+};
 
 ///////////////////////
 // Mission end state //

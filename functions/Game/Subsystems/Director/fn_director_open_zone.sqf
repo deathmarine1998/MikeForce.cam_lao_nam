@@ -15,7 +15,7 @@
         Function reached the end [BOOL]
     
     Example(s):
-        [parameter] call vn_fnc_myFunction
+        [parameter] call vn_fnc_director_open_zone
 */
 params ["_zone"];
 

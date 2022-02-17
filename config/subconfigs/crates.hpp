@@ -2,7 +2,7 @@ class MedicalCrate
 {
 	objectClassname = "vn_b_ammobox_supply_03";
 	weapons[] = {};
-	magazines[] = {{"vn_prop_med_antivenom",30},
+	magazines[] = {//{"vn_prop_med_antivenom",30},
 	{"vn_prop_med_wormpowder",15},
 	{"vn_prop_med_dysentery",15},
 	{"vn_prop_med_painkillers",30},
