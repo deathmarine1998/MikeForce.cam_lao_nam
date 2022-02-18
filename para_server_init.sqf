@@ -6,7 +6,7 @@
     Public: Yes 
     
     Description:
-        Called to initialise the server on game start.
+        Called to initialise the server on game start. 
     
     Parameter(s):
         None
