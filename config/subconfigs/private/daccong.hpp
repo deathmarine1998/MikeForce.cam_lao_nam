@@ -2,6 +2,7 @@ members[] = {"76561198140282519","76561199195828749","76561198122629843","765611
 
 ranks[] = {
 	{"BG Harry", "76561198140282519", "GOTA"},
+	{"Du Me May", "76561198006446539", "Captain"},
 	{"Derp", "76561198122629843", "SecondLieutentant"},
 	{"Tôi ăn gi", "76561198226125028", "Private"},
 	{"AntiWingman", "76561198058034545", "Specialist"},
@@ -25,7 +26,6 @@ ranks[] = {
 	{"Ma Rừng", "76561198031111662", "ChiefWarrantOfficer2"},
 	{"Lihng Lihng Faat", "76561198409738153", "Sergeant"},
 	{"Mein Chao", "76561198000509719", "Sergeant"},
-	{"Du Me May", "76561198006446539", "CmdSgtMaj"},
 	{"Giambong Uoncong", "76561197990064660", "Captian"},
 	{"Som Hung Gai", "76561198086654634", "Private"},
 	{"con mèo điên", "76561198038250724", "ChiefWarrantOfficer2"},

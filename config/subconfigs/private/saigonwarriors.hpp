@@ -26,7 +26,6 @@ ranks[] = {
 	{"Sgt. MisterNoOne", "76561198061477571", "Sergeant"},
     {"Spc. Cold", "76561199082806351", "Corporal"},
     {"Ssg. Williams", "76561198000509719", "StaffSergeant"},
-	{"2LT. DeGraymis", "76561198031867373", "SecondLieutenant"},
 	{"Pvt. Chinery", "76561198121607904", "Private"},
     {"Spc. TD Prolene", "76561198079229813", "Specialist"},
 	{"1Lt. Squeezy", "76561198179652553", "FirstLieutenant"},
