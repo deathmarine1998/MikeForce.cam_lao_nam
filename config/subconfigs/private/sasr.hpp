@@ -2,8 +2,8 @@ members[] = {"76561199158454289","76561198006446539","76561198279740603","765611
 
 ranks[] = {
 
+	{"Cpt. Stalker", "76561198006446539", "Captain"},
 	{"2LT. Crazy Earl", "76561199158454289", "Second Leuitenant"},
-	{"CSM. Stalker", "76561198006446539", "Command Sergeant Major"},
 	{"Sgt. NumbNuts", "76561197984639361", "Sergeant"},
 	{"Sgt. Kronos", "76561198132233071", "Sergeant"},
 	{"Cpl. Danny", "76561199005262742", "Corporal"},
