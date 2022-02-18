@@ -21,7 +21,7 @@ params ["_zone"];
 
 if(_zone in mf_s_opened_zones) exitWith {};
 //if!(mf_s_activeZones isEqualTo [])exitWith {};
-if(count(mf_s_activeZones) >= mf_s_maxActiveZones) exitWith { diag_log format["[DirtyDebug]open_zones 2 zones opened  mf_s_activeZones:%1", mf_s_activeZones ] };
+if(count(mf_s_activeZones) >= mf_s_maxActiveZones) exitWith { diag_log format["[+]open_zones 2 zones opened  mf_s_activeZones:%1", mf_s_activeZones ] };
 private _taskStore = ["capture_zone", _zone] call vn_mf_fnc_task_create select 1;
 mf_s_activeZones pushBack [_zone, _taskStore];
 

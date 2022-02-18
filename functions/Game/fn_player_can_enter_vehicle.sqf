@@ -23,7 +23,7 @@
 params ["_player", "_role", "_vehicle"];
 
 private _debugVeh = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playervehicles");
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-1 _player:%1 _role:%2 _veh:%3",_player, _role, _vehicle] };
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]fn_player_can_enter_vehicle DBG-1 _player:%1 _role:%2 _veh:%3",_player, _role, _vehicle] };
 
 private _teamsVehicleIsLockedTo = [];
 

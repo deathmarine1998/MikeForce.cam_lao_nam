@@ -122,14 +122,14 @@ private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "player
 					private _varname = format["vn_mf_db_%1",_x];
 					private _resp = _player getVariable _varname;
 					
-					if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]health_stats Name:%1 Data:%2", _varname,_resp] };
+					if(_debug isEqualTo 1) then { diag_log format["[+]health_stats Name:%1 Data:%2", _varname,_resp] };
 					if(_varname == "vn_mf_db_awards")then {
 						private _awardArray = [];
 						for "_i" from 0 to (count(_resp)-1) do {
 							_awardArray pushBack ((_resp# _i)# 1);
 						};
 						_resp = _awardArray;
-						if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]health_stats awards Name:%1 Data:%2", _varname,_resp] };
+						if(_debug isEqualTo 1) then { diag_log format["[+]health_stats awards Name:%1 Data:%2", _varname,_resp] };
 					};
 					_vardata pushBack _resp;
 				} forEach _stats;

@@ -23,7 +23,7 @@ private _dropMarker = "supply_drop" + (_officerMarker select [count "supply_offi
 private _officer = missionNamespace getVariable [_officerMarker, objNull];
 private _debugAgent = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "createagent");
 
-if(_debugAgent isEqualTo 1) then { diag_log format["[DirtyDebug]fn_create_supply_officer DBG-1 _officerMarker:%1 _dropMarker:%2 _officer:%3", _officerMarker, _dropMarker, _officer] };
+if(_debugAgent isEqualTo 1) then { diag_log format["[+]fn_create_supply_officer DBG-1 _officerMarker:%1 _dropMarker:%2 _officer:%3", _officerMarker, _dropMarker, _officer] };
 
 private _groupColor = "ColorBlack";
 private _officerType = getText(missionConfigFile >> "gamemode" >> "modded_ops" >> "supply_officer"); //"vn_b_men_aircrew_02";
@@ -33,7 +33,7 @@ if(_officerMarker == "supply_officer_initial_4") then
 	_groupColor = "ColorEAST";
 	_officerType = "vn_o_men_nva_marine_01";
 };
-if(_debugAgent isEqualTo 1) then { diag_log format["[DirtyDebug]fn_create_supply_officer DBG-2 _officerMarker:%1 _groupColor:%2 _officerType:%3", _officerMarker, _groupColor, _officerType] };
+if(_debugAgent isEqualTo 1) then { diag_log format["[+]fn_create_supply_officer DBG-2 _officerMarker:%1 _groupColor:%2 _officerType:%3", _officerMarker, _groupColor, _officerType] };
 
 if (isNull _officer) then {
 	_officer = createAgent [_officerType, getMarkerPos _officerMarker, [], 0, "NONE"];

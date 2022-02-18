@@ -7,7 +7,7 @@ private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimark
 private _stashAlpha = 0.5;
 if(_stash isEqualTo 0)then {_stashAlpha=0};
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zones_create_camp_site DBG-1 _stash:%1 _pos:%2", [_stash,_stashAlpha], _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_zones_create_camp_site DBG-1 _stash:%1 _pos:%2", [_stash,_stashAlpha], _pos] };
 
 [
 	"underwater_stash",

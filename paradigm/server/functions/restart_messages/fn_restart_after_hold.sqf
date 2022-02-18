@@ -15,6 +15,6 @@ if((_timeLeft == 1) && !(CAPTURERESTART1MIN))then { CAPTURERESTART1MIN = true;_m
 
 if!(_message == "")then {
 	["DefendTheAORestart", [_message]] remoteExec ["para_c_fnc_show_notification", allPlayers];
-	diag_log format["[DirtyDebug]restart_after_capture remaining:%1 msg:%2", _timeLeft, _message];
+	diag_log format["[+]restart_after_capture remaining:%1 msg:%2", _timeLeft, _message];
 };
 

@@ -21,15 +21,15 @@ params ["_building"];
 if !(_building getVariable ["para_s_respawn_id", []] isEqualTo []) exitWith {diag_log "Paradigm: Warning: Attempt to re-register a respawn"};
 
 if (_building getVariable ["para_s_building_id", ""] isEqualTo "")exitWith {
-	diag_log format["[DirtyDebug]fn_bf_respawn_register_respawn DBG-2a register bldg as respawn point _bldgID:%1", (_building getVariable "para_s_building_id")];
+	diag_log format["[+]fn_bf_respawn_register_respawn DBG-2a register bldg as respawn point _bldgID:%1", (_building getVariable "para_s_building_id")];
 };
 
 if (_building getVariable ["para_g_objects", []] isEqualTo [])exitWith { 
-	diag_log format["[DirtyDebug]fn_bf_respawn_register_respawn DBG-2b register bldg as respawn point _bldgPos:%1", (_building getVariable "para_g_objects" select 0)];
+	diag_log format["[+]fn_bf_respawn_register_respawn DBG-2b register bldg as respawn point _bldgPos:%1", (_building getVariable "para_g_objects" select 0)];
 };
 private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "building");
 if(_debug isEqualTo 1) then { 
-	diag_log format["[DirtyDebug]register_respawn building:%1 type:%2", _building, typeOf _building];
+	diag_log format["[+]register_respawn building:%1 type:%2", _building, typeOf _building];
 };
 
 private _marker = createMarker [

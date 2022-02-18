@@ -27,7 +27,7 @@ private _groups = getArray(_gamemode_config >> "settings" >> "groups" );
 	_x params ["_group_name", ["_class","vn_b_men_army_01"]];
 	private _marker = "duty_officer_" + toLower(_group_name);
 	private _location = getMarkerPos _marker;
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_group_init(dutyOfficer) DBG-1 _marker:%1 _location:%2 _group_name:%3", _marker, _location, _group_name] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_group_init(dutyOfficer) DBG-1 _marker:%1 _location:%2 _group_name:%3", _marker, _location, _group_name] };
 	if !(_location isEqualTo [0,0,0]) then
 	{
 		_side = west;

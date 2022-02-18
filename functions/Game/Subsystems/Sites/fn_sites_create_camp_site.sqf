@@ -7,7 +7,7 @@ private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimark
 private _campAlpha = 0.5;
 if(_camp isEqualTo 0)then {_campAlpha=0};
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zones_create_camp_site DBG-1 _camp:%1 _pos:%2", [_camp,_campAlpha], _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_zones_create_camp_site DBG-1 _camp:%1 _pos:%2", [_camp,_campAlpha], _pos] };
 
 [
 	"camp",

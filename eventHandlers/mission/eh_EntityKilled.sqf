@@ -30,7 +30,7 @@ params
 
 
 private _debugKills = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "killedstats");
-if(_debugKills isEqualTo 1) then { diag_log format["[DirtyDebug]eh_EntityKilled DBG-1 _unit:%1 _killer:%2 _instigator:%3 _useEffects:%4", _unit, _killer, _instigator, _useEffects] };
+if(_debugKills isEqualTo 1) then { diag_log format["[+]eh_EntityKilled DBG-1 _unit:%1 _killer:%2 _instigator:%3 _useEffects:%4", _unit, _killer, _instigator, _useEffects] };
 
 private _kill_type = "deaths";
 private _rankPoints = -1;
@@ -56,7 +56,7 @@ if(_is_killer_player)then{
 };
 
 
-if(_debugKills isEqualTo 1) then { diag_log format["[DirtyDebug]eh_EntityKilled DBG-2 is_unit_player:%1 typeOfUnit:%2 unitGroup:%3 is_killer_player:%4 killerGroup:%5 useEffects:%6", _is_unit_player, (typeOf _unit), _unitGroup,_is_killer_player, _killerGroup, _killerGroup] };
+if(_debugKills isEqualTo 1) then { diag_log format["[+]eh_EntityKilled DBG-2 is_unit_player:%1 typeOfUnit:%2 unitGroup:%3 is_killer_player:%4 killerGroup:%5 useEffects:%6", _is_unit_player, (typeOf _unit), _unitGroup,_is_killer_player, _killerGroup, _killerGroup] };
 
 if (isNull _instigator) then { _instigator = UAVControl vehicle _killer select 0 }; // UAV/UGV player operated road kill -
 if (isNull _instigator) then { _instigator = _killer}; // player driven vehicle road kill
@@ -118,7 +118,7 @@ if (_is_unit_player) then
 			[[_instigator],_kill_type] call vn_mf_fnc_change_player_stat;
 			[[_instigator],"rank",_rankPoints] call vn_mf_fnc_change_player_stat;
 			if(_kill_type isEqualTo "friendlyfire")then { 
-				diag_log format["[DirtyDebug]FriendlyFire data: name:%1 obj:%2 (UID:%3) killed %4(UID:%5) _useEffects:%6",name _instigator, _instigator, getPlayerUID _instigator, name _unit, getPlayerUID _unit, _useEffects];
+				diag_log format["[+]FriendlyFire data: name:%1 obj:%2 (UID:%3) killed %4(UID:%5) _useEffects:%6",name _instigator, _instigator, getPlayerUID _instigator, name _unit, getPlayerUID _unit, _useEffects];
 				["FriendlyFire", ["TeamKill Warning, PID and watch your fire!"]] remoteExec ["para_c_fnc_show_notification", _instigator];
 			};
 		};

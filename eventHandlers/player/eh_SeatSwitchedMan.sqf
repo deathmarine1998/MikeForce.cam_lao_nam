@@ -23,7 +23,7 @@ params ["_unit1", "_unit2", "_vehicle"];
 private _role = assignedVehicleRole _unit1 select 0;
 
 private _debugVeh = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playervehicles");
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]eh_SeatSwitchedMan _unit1:%1 _unit2:%2 _role:%3 _vehicle:%4",_unit, _unit2, _role, _vehicle] };
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]eh_SeatSwitchedMan _unit1:%1 _unit2:%2 _role:%3 _vehicle:%4",_unit, _unit2, _role, _vehicle] };
 
 if ((_role == "driver") && (isEngineOn _vehicle))exitWith{
 	//Try not to kill them while flying and taking over dead pilot

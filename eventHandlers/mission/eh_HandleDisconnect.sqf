@@ -42,14 +42,14 @@ if !(isNull _unit) then
 	{
 		private _varname = format["vn_mf_db_%1",_x];
 		private _resp = _unit getVariable _varname;
-		if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]handleDisconnect Name:%1 Data:%2", _varname,_resp] };
+		if(_debug isEqualTo 1) then { diag_log format["[+]handleDisconnect Name:%1 Data:%2", _varname,_resp] };
 		if(_varname == "vn_mf_db_awards")then {
 			private _awardArray = [];
 			for "_i" from 0 to (count(_resp)-1) do {
 				_awardArray pushBack ((_resp# _i)# 1);
 			};
 			_resp = _awardArray;
-			if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]handleDisconnect awards Name:%1 Data:%2", _varname,_resp] };
+			if(_debug isEqualTo 1) then { diag_log format["[+]handleDisconnect awards Name:%1 Data:%2", _varname,_resp] };
 		};
 		_vardata pushBack _resp;
 	} forEach _stats;

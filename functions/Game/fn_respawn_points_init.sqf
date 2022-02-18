@@ -27,17 +27,17 @@ private _respawnID = [independent, _indpRespawnMarker] call BIS_fnc_addRespawnPo
 vn_indp_respawn_points = vn_indp_markers_base_respawns apply
 {
 	[independent, _x, markerText _x] call BIS_fnc_addRespawnPosition;
-	if (_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_respawn_points_init DBG-1 MikeForce marker:%1", _x] };
+	if (_debug isEqualTo 1) then { diag_log format["[+]fn_respawn_points_init DBG-1 MikeForce marker:%1", _x] };
 };
 vn_mf_respawn_points = vn_mf_markers_base_respawns apply 
 { 
 	[west, _x, markerText _x] call BIS_fnc_addRespawnPosition;
 	[independent, _x, markerText _x] call BIS_fnc_addRespawnPosition;
-	if (_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_respawn_points_init DBG-1 MikeForce marker:%1", _x] };
+	if (_debug isEqualTo 1) then { diag_log format["[+]fn_respawn_points_init DBG-1 MikeForce marker:%1", _x] };
 };
 
 vn_dc_respawn_points = vn_dc_markers_base_respawns apply 
 { 
 	[east, _x, markerText _x] call BIS_fnc_addRespawnPosition;
-	if (_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_respawn_points_init DBG-2 DacCong marker:%1", _x] };
+	if (_debug isEqualTo 1) then { diag_log format["[+]fn_respawn_points_init DBG-2 DacCong marker:%1", _x] };
 };

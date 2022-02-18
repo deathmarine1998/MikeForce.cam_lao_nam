@@ -4,7 +4,7 @@ private _dropMarker = "bartender_drop" + (_bartenderMarker select [count "barten
 private _bartender = missionNamespace getVariable [_bartenderMarker, objNull];
 private _debugAgent = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "createAgent");
 
-if(_debugAgent isEqualTo 1) then { diag_log format["[DirtyDebug]fn_create_bartender DBG-1 _bartenderMarker:%1 _dropMarker:%2 _bartender:%3", _bartenderMarker, _dropMarker, _bartender] };
+if(_debugAgent isEqualTo 1) then { diag_log format["[+]fn_create_bartender DBG-1 _bartenderMarker:%1 _dropMarker:%2 _bartender:%3", _bartenderMarker, _dropMarker, _bartender] };
 
 
 if (isNull _bartender) then {

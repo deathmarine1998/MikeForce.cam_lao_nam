@@ -30,7 +30,7 @@ if(_aaGrid isEqualTo 0)then { _aaGridAlpha=0 };
 private _aaIconAlpha = 0.5;
 if(_aaIcon isEqualTo 0)then { _aaIconAlpha=0 };
 
-if(_debug isEqualTo 1)then { diag_log format["[DirtyDebug]fn_zones_create_aa_site DBG-1 _aaGrid:%1 _aaIcon:%2 _pos:%3",[_aaGrid,_aaGridAlpha], [_aaIcon,_aaIconAlpha], _pos] };
+if(_debug isEqualTo 1)then { diag_log format["[+]fn_zones_create_aa_site DBG-1 _aaGrid:%1 _aaIcon:%2 _pos:%3",[_aaGrid,_aaGridAlpha], [_aaIcon,_aaIconAlpha], _pos] };
 
 [
 	"aa",

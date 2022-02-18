@@ -26,7 +26,7 @@
 params ["_player", "_role", "_vehicle"];
 
 private _debugVeh = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playervehicles");
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-1 _player:%1 _role:%2 _veh:%3 _turret:%4",_player, _role, _vehicle, _turret] };
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]fn_player_can_enter_vehicle DBG-1 _player:%1 _role:%2 _veh:%3 _turret:%4",_player, _role, _vehicle, _turret] };
 
 private _teamsVehicleIsLockedTo = [];
 private _message = "ERROR - Screenshot and report for evidence";
@@ -52,7 +52,7 @@ private _teamsArray = getArray(_config >> "dirtyUSARMYRANKS" >> "teamsArray");
 private _rankReqSelect = _teamsArray find _plyrTeam;
 private _rankReq = _vehRankArray select _rankReqSelect;
 private _vehRank = _ranksArray select _rankReq;
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-2 player:%1 _rank:%2 _plyrRank:%3 _ranksArray:%4", player, _rank, _plyrRank, _ranksArray]}; 
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]fn_player_can_enter_vehicle DBG-2 player:%1 _rank:%2 _plyrRank:%3 _ranksArray:%4", player, _rank, _plyrRank, _ranksArray]}; 
 
 //
 if((_role == "driver") && (_rankReq isEqualTo -1))exitWith {
@@ -60,7 +60,7 @@ if((_role == "driver") && (_rankReq isEqualTo -1))exitWith {
 	false
 };
 
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_can_enter_vehicle DBG-2 _vehicle:%1 _teamsArray:%2 _rankReqSelect:%3 _rankReq:%4 _vehRank:%5 _vehRankArray:[%6] ", typeOf _vehicle, _teamsArray, _rankReqSelect, _rankReq, _vehRank, _vehRankArray]}; 
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]fn_player_can_enter_vehicle DBG-2 _vehicle:%1 _teamsArray:%2 _rankReqSelect:%3 _rankReq:%4 _vehRank:%5 _vehRankArray:[%6] ", typeOf _vehicle, _teamsArray, _rankReqSelect, _rankReq, _vehRank, _vehRankArray]}; 
 
 if((_role == "driver") && (_plyrRank < _rankReq))exitWith {
 	_message = format["Your Rank:   %1                   Required:   %2", _rank, _vehRank];

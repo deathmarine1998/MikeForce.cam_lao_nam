@@ -88,7 +88,7 @@ if!(_checked_object_data isEqualTo []) then
 					for "_i" from 0 to (count(_vardata)-1) do {
 						_awardArray pushBack [_awards# _i,_vardata# _i];
 					};
-					if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]p_init_server Name:%1 Data:%2", _varname,_vardata] };
+					if(_debug isEqualTo 1) then { diag_log format["[+]p_init_server Name:%1 Data:%2", _varname,_vardata] };
 					_vardata = _awardArray;
 				};
 				_player setVariable [_varname,_vardata];
@@ -117,7 +117,7 @@ if(_checked_object_data isEqualTo []) then
 					for "_j" from 0 to (count(_vardata)-1) do {
 						_awardArray pushBack [_awards# _j,_vardata# _j];
 					};
-					if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]recv_db_stats Name:%1 Data:%2", _varname,_vardata] };
+					if(_debug isEqualTo 1) then { diag_log format["[+]recv_db_stats Name:%1 Data:%2", _varname,_vardata] };
 					_vardata = _awardArray;
 				};
 				_player setVariable [_varname,_vardata];

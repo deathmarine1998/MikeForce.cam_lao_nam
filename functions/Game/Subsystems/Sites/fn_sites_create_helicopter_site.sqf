@@ -3,7 +3,7 @@ params ["_pos", "_zoneName"];
 private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimarkers");
 
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zones_create_helicopter_site DBG-1 _zoneName:%1 _pos:%2", _zoneName, _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_zones_create_helicopter_site DBG-1 _zoneName:%1 _pos:%2", _zoneName, _pos] };
 
 // _result return will be Array format [createdVehicle, crew, group]:
 // createdVehicle: Object - the created vehicle

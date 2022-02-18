@@ -360,7 +360,7 @@ private _customChannels = getArray(_gamemode_config >> "customchat" >> "channels
 {
 	_x params ["_chanID", "_chanName", "_chanColor"];
 	private _channelID = radioChannelCreate [_chanColor, _chanName, "%UNIT_VEH_POSITION %UNIT_NAME", []]; 
-	diag_log format["[DirtyDebug]para_server_init RadioChannels ID:%1 CFGID:%2 ChName:%3 Color:%4",_channelID, _chanID, _chanName, _chanColor];
+	diag_log format["[+]para_server_init RadioChannels ID:%1 CFGID:%2 ChName:%3 Color:%4",_channelID, _chanID, _chanName, _chanColor];
 	if (_channelID == 0) exitWith { diag_log format ["Custom channel '%1' creation failed!", _chanName] };
 	if !(_channelID == _chanID) exitWith { diag_log format ["Custom channel '%1' borked ChannelCreated:%2 ChannelExpected:%3", _chanName, _channelID, _chanID] };
 }forEach _customChannels;

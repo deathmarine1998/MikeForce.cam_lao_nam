@@ -14,23 +14,23 @@ if (isClass _config) then
 	private _key = format["vn_mf_db_%1",_name];
 	private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playerstats");
 	if(_debug isEqualTo 1) then { 
-		diag_log format["[DirtyDebug]change_stats key:%1 change:%2 default:%3 min:%4 max:%5", _key, _change, _default, _min, _max];
+		diag_log format["[+]change_stats key:%1 change:%2 default:%3 min:%4 max:%5", _key, _change, _default, _min, _max];
 	};
 	{
 		private _player = _x;
 
 		// make variable change
 		if((_player getVariable _key) isEqualType [])exitWith {
-			diag_log format["[DirtyDebug]change_stats key:%1 change:%2 default:%3 min:%4 max:%5", _key, _change, _default, _min, _max];
+			diag_log format["[+]change_stats key:%1 change:%2 default:%3 min:%4 max:%5", _key, _change, _default, _min, _max];
 		};
 		
 		if(_debug isEqualTo 1) then { 
-			diag_log format["[DirtyDebug]change_stats current key var before callingcurrent_stat_value: %1", (_player getVariable _key)];
+			diag_log format["[+]change_stats current key var before callingcurrent_stat_value: %1", (_player getVariable _key)];
 		};
 		private _current_stat_value = _player getVariable [_key,_default];
 		
 		if(_debug isEqualTo 1) then { 
-			diag_log format["[DirtyDebug]change_stats current:%1 key:%2 default:%3", _current_stat_value, _key, _default];
+			diag_log format["[+]change_stats current:%1 key:%2 default:%3", _current_stat_value, _key, _default];
 		};
 		private _new_stat_value = ((_current_stat_value + _change) min _max) max _min;
 		

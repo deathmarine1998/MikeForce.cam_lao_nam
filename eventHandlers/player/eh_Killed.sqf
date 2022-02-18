@@ -45,4 +45,4 @@ if!(isNil "vn_mf_enable_debug_monitor") then
 disableUserInput false;
 
 private _debugKills = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "killedstats");
-if(_debugKills isEqualTo 1) then { diag_log format["[DirtyDebug]eh_Killed DBG-1 _unit:%1 _killer:%2 _instigator:%3 _useEffects:%4", _unit, _killer, _instigator, _useEffects] };
+if(_debugKills isEqualTo 1) then { diag_log format["[+]eh_Killed DBG-1 _unit:%1 _killer:%2 _instigator:%3 _useEffects:%4", _unit, _killer, _instigator, _useEffects] };

@@ -68,18 +68,18 @@ vn_dc_player_markers_manned_vehicles = [];
 	_unitGroupColor = _team#5;
 	_unitMarker setMarkerColorLocal _unitGroupColor;
 
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-1a _unit:%1 _unitGroup:%2 _unitGroupColor:%3 _unitMarker:%4 markershape:%5 ", _unit, _unitGroup, _unitGroupColor, _unitMarker, markerShape _unitMarker] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-1a _unit:%1 _unitGroup:%2 _unitGroupColor:%3 _unitMarker:%4 markershape:%5 ", _unit, _unitGroup, _unitGroupColor, _unitMarker, markerShape _unitMarker] };
 
 	private _markerType = if(_unitGroup != "DacCong")then { "b_inf" } else { "o_inf" };
 	{
 		if(_unit getUnitTrait _x)then { _markerType = _mfPIcons# _forEachIndex; };
 	}forEach _traits;
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-1b _unit:%1 _markerType:%2", _unit, _markerType] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-1b _unit:%1 _markerType:%2", _unit, _markerType] };
 
 	if (markerShape _unitMarker == "")then 
 	{
 		createMarkerLocal [_unitMarker, [0,0,0]];
-		if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-2 Dac Cong created new marker _unitMarker:%1 _unitGroupColor:%2", _unitMarker, _unitGroupColor] };
+		if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-2 Dac Cong created new marker _unitMarker:%1 _unitGroupColor:%2", _unitMarker, _unitGroupColor] };
 		_unitMarker setMarkerTextLocal name _unit;
 		_unitMarker setMarkerShapeLocal "ICON";
 		_unitMarker setMarkerTypeLocal _markerType;
@@ -113,7 +113,7 @@ vn_dc_player_markers_manned_vehicles = [];
 	};
 } forEach allPlayers;
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-3 finished allPlayers markers Player:%1", player] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 finished allPlayers markers Player:%1", player] };
 
 //Add markers for vehicles.
 
@@ -122,14 +122,14 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 	//if(_playerSide == east)exitWith {};
 	private _vehicle = _x;
 	private _crew = crew _vehicle select { isPlayer _x };
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4 vehicles markers _vehicle:%1 _crew:%2", _vehicle, _crew] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4 vehicles markers _vehicle:%1 _crew:%2", _vehicle, _crew] };
 	//If somehow we've got a vehicle in this list with no player crew.
 	if (_crew isEqualTo []) exitWith {};
 
 	private _vehicleMarker = format ["player_marker_vehicle_%1", netId _vehicle];
 	_activeMFVehicleMarkers pushBack _vehicleMarker;
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4a vehicles markers _vehicle:%1 _vehicleMarker:%2", _vehicle, _vehicleMarker] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4a vehicles markers _vehicle:%1 _vehicleMarker:%2", _vehicle, _vehicleMarker] };
 
 	private _driverType = "Driver:";
 	private _markerType = "b_motor_inf";
@@ -150,7 +150,7 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 	_vehicleGroupColor = _team#5;
 	_vehicleMarker setMarkerColorLocal _vehicleGroupColor;
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4a vehicles markers _vehicleGroup:%1 _markerType:%2 _vehicleGroupColor:%3 _driverType:%4", _vehicleGroup, _vehicleGroupColor, _driverType] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4a vehicles markers _vehicleGroup:%1 _markerType:%2 _vehicleGroupColor:%3 _driverType:%4", _vehicleGroup, _vehicleGroupColor, _driverType] };
 	
 	//Easiest way to check if it exists
 	if (markerShape _vehicleMarker == "") then 
@@ -160,7 +160,7 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 		_vehicleMarker setMarkerAlphaLocal 1;
 		_vehicleMarker setMarkerTypeLocal _markerType;
 		_vehicleMarker setMarkerColorLocal _vehicleGroupColor;
-		if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4e MikeForce created new marker _vehicleMarker:%1 _markerType:%2", _vehicleMarker, _markerType, _vehicleGroupColor]; };
+		if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4e MikeForce created new marker _vehicleMarker:%1 _markerType:%2", _vehicleMarker, _markerType, _vehicleGroupColor]; };
 	};	
 		
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
@@ -170,7 +170,7 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 		_vehicleMarker setMarkerTextLocal format [localize "STR_vn_mf_player_markers_vehicle_marker_lonewolf", _vehicleName, _driverType, _vehicleDriverName];
 	};
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
 } forEach vn_mf_player_markers_manned_vehicles;	
 		
 {
@@ -178,14 +178,14 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 	//if(_playerSide in [west,independent,civilian])exitWith {};
 	private _vehicle = _x;
 	private _crew = crew _vehicle select { isPlayer _x };
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4 vehicles markers _vehicle:%1 _crew:%2", _vehicle, _crew] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4 vehicles markers _vehicle:%1 _crew:%2", _vehicle, _crew] };
 	//If somehow we've got a vehicle in this list with no player crew.
 	if (_crew isEqualTo []) exitWith {};
 
 	private _vehicleMarker = format ["player_marker_vehicle_%1", netId _vehicle];
 	_activeDCVehicleMarkers pushBack _vehicleMarker;
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4a vehicles markers _vehicle:%1 _vehicleMarker:%2", _vehicle, _vehicleMarker] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4a vehicles markers _vehicle:%1 _vehicleMarker:%2", _vehicle, _vehicleMarker] };
 
 	private _driverType = "Driver:";
 	private _markerType = "b_motor_inf";
@@ -206,7 +206,7 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 	_vehicleGroupColor = _team#5;
 	_vehicleMarker setMarkerColorLocal _vehicleGroupColor;
 
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4b Dac Cong created new marker _vehicleMarker:%1 _vehicleGroupColor:%2", _vehicleMarker, _vehicleGroupColor] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4b Dac Cong created new marker _vehicleMarker:%1 _vehicleGroupColor:%2", _vehicleMarker, _vehicleGroupColor] };
 	
 	//Easiest way to check if it exists
 	if (markerShape _vehicleMarker == "") then 
@@ -216,7 +216,7 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 		_vehicleMarker setMarkerAlphaLocal 1;
 		_vehicleMarker setMarkerTypeLocal _markerType;
 		_vehicleMarker setMarkerColorLocal _vehicleGroupColor;
-		if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4c MikeForce created new marker _vehicleMarker:%1 _markerType:%2", _vehicleMarker, _markerType] };
+		if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4c MikeForce created new marker _vehicleMarker:%1 _markerType:%2", _vehicleMarker, _markerType] };
 	};
 	
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
@@ -226,10 +226,10 @@ if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job
 		_vehicleMarker setMarkerTextLocal format [localize "STR_vn_mf_player_markers_vehicle_marker_lonewolf", _vehicleName, _driverType, _vehicleDriverName];
 	};
 
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
 } forEach vn_dc_player_markers_manned_vehicles;
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_player_markers_job DBG-5 finished vehicles markers Player:%1", player]; };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-5 finished vehicles markers Player:%1", player]; };
 
 //Prune markers for players that have left.
 private _inactiveMarkers = (vn_mf_player_markers - _activeMFPlayerMarkers) + (vn_mf_player_markers_vehicle_markers - _activeMFVehicleMarkers);

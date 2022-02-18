@@ -18,7 +18,7 @@
 
 params ["_id"];
 
-if(!(_id isEqualType "") || (_id isEqualTo "") || (_id isEqualType []))exitWith { diag_log format["[DirtyDebug]veh_asset_get_by_id id:%1",_id] };
+if(!(_id isEqualType "") || (_id isEqualTo "") || (_id isEqualType []))exitWith { diag_log format["[+]veh_asset_get_by_id id:%1",_id] };
 private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
 private _vehicle = _vehicleInfo select struct_veh_asset_info_m_vehicle;
 private _dir = getDir _vehicle;

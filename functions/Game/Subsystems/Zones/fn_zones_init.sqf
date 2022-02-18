@@ -56,7 +56,7 @@ mf_s_opened_zones = [];
 {
 	private _zoneData = [_x] call vn_mf_fnc_zones_load_zone;
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zone_init DBG-1 _zoneData:%1", _zoneData] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_zone_init DBG-1 _zoneData:%1", _zoneData] };
 	//Turn on flag markers for display
 	private _split = _x splitString "_";
 	_zoneName = [];

@@ -20,5 +20,5 @@
 
 params [ ["_id", ""] ];
 
-if(!(_id isEqualType "") || (_id isEqualTo ""))exitWith { diag_log "[DirtyDebug]veh_asset_get_by_id _id:ANY" };
+if(!(_id isEqualType "") || (_id isEqualTo ""))exitWith { diag_log "[+]veh_asset_get_by_id _id:ANY" };
 missionNamespace getVariable [_id call vn_mf_fnc_veh_asset_key, []]

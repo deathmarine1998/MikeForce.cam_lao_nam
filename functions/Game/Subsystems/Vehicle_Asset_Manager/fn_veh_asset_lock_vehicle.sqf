@@ -20,7 +20,7 @@
 
 params [ ["_id", ""] ];
 
-if(!(_id isEqualType "") || (_id isEqualTo ""))exitWith { diag_log "[DirtyDebug]veh_asset_lock_vehicle _id:ANY" };
+if(!(_id isEqualType "") || (_id isEqualTo ""))exitWith { diag_log "[+]veh_asset_lock_vehicle _id:ANY" };
 private _vehicle = [_id] call vn_mf_fnc_veh_asset_get_by_id select struct_veh_asset_info_m_vehicle;
 
 if (count crew _vehicle > 0 || _vehicle getVariable ["vn_mf_g_veh_asset_locked", false]) exitWith {};

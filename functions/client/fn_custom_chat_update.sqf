@@ -95,7 +95,7 @@ _customChannels = getArray(missionConfigFile >> "gamemode" >> "customchat" >> "c
 	_x params ["_chanID", "_chanName", "_chanColor"];
 	private _handled = false;
 	
-	diag_log format["[DirtyDebug]fn_custom_chat_update DBG-1 _chanID:%1 _customChannels:%2", _chanID, _chanName];
+	diag_log format["[+]fn_custom_chat_update DBG-1 _chanID:%1 _customChannels:%2", _chanID, _chanName];
 	private _playerGroup = (_group_ID in ["MikeForce","ACAV","GreenHornets"]);
 	private _channelGroup = (_chanName in ["MikeForce","ACAV","GreenHornets"]);
 
@@ -115,7 +115,7 @@ _customChannels = getArray(missionConfigFile >> "gamemode" >> "customchat" >> "c
 	};
 	
 	if(_group_ID isEqualTo "MACVSOG")then {
-		diag_log format["[DirtyDebug]fn_custom_chat_update DBG-2 MACVSOG _chanID:%1 _customChannels:%2", _chanID, _chanName];
+		diag_log format["[+]fn_custom_chat_update DBG-2 MACVSOG _chanID:%1 _customChannels:%2", _chanID, _chanName];
 		if!(_chanName isEqualTo "DacCong")then {
 			_enabledChannel enableChannel [true, true];
 		_handled = true;

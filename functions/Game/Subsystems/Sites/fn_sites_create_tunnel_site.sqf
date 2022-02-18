@@ -7,7 +7,7 @@ private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimark
 private _tunnelAlpha = 0.5;
 if(_tunnel isEqualTo 0)then {_tunnelAlpha=0};
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zones_create_camp_site DBG-1 _tunnel:%1 _pos:%2", [_tunnel,_tunnelAlpha], _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_zones_create_camp_site DBG-1 _tunnel:%1 _pos:%2", [_tunnel,_tunnelAlpha], _pos] };
 
 [
 	"tunnel",

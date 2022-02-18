@@ -39,7 +39,7 @@ private _lockingSystem = getNumber(_gamemodeConfig >> "debug" >> "lockingSystem"
 
 private _fnc_processVehicle = {
 	params ["_id"];
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_veh_asset_job DBG-1 vehicleID:%1", _id ] };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_veh_asset_job DBG-1 vehicleID:%1", _id ] };
 	if!(_id isEqualType "")exitWith {};
 	if(_id isEqualTo "")exitWith {};
 	private _vehicleInfo = [_id] call vn_mf_fnc_veh_asset_get_by_id;
@@ -55,7 +55,7 @@ private _fnc_processVehicle = {
         [_id] call vn_mf_fnc_veh_asset_unlock_vehicle;
 	};
 	
-	if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_veh_asset_job DBG-1 vehicle:[TYPE/DIR/ORIGPOS/Vars]:%1  respawn:[Type/Time}:[%2]   vehicleState:%3",struct_veh_asset_info_m_spawn_info, struct_veh_asset_info_m_respawn_type, _state]; };
+	if(_debug isEqualTo 1) then { diag_log format["[+]fn_veh_asset_job DBG-1 vehicle:[TYPE/DIR/ORIGPOS/Vars]:%1  respawn:[Type/Time}:[%2]   vehicleState:%3",struct_veh_asset_info_m_spawn_info, struct_veh_asset_info_m_respawn_type, _state]; };
 	
 	//Vehicle is dead, and has no respawn type - remove it from the system.
 	if (!alive _vehicle && _respawnType == "NONE") exitWith {

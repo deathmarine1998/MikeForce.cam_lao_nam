@@ -33,7 +33,7 @@ _deadObjs = [];
 for "_i" from 0 to (count(vn_mf_markers_zones)-1) do
 {
 	private _zMrkrPos = getMarkerPos (vn_mf_markers_zones# _i);
-	//diag_log format["[DirtyDebug]cleanup_arsenal zone:%1 mrkrPos:%2",(vn_mf_markers_zones# _i), _zMrkrPos];
+	//diag_log format["[+]cleanup_arsenal zone:%1 mrkrPos:%2",(vn_mf_markers_zones# _i), _zMrkrPos];
 	_deadObjs = (nearestObjects [_zMrkrPos, ["Man","ReammoBox_F","Slingload_base_F","StaticWeapon","vn_o_vc_spiderhole_01","vn_m72_used"], 1000]) select { !alive _x };
 	_allDeadMissionObj append _deadObjs;
 };

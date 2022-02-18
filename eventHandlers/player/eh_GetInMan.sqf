@@ -22,7 +22,7 @@
 params ["_unit", "_role", "_vehicle", "_turret"];
 
 private _debugVeh = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "playervehicles");
-if(_debugVeh isEqualTo 1) then { diag_log format["[DirtyDebug]eh_GetInMan _unit:%1 _role:%2 _veh:%3 _turret:%4",_unit, _role, _vehicle, _turret] };
+if(_debugVeh isEqualTo 1) then { diag_log format["[+]eh_GetInMan _unit:%1 _role:%2 _veh:%3 _turret:%4",_unit, _role, _vehicle, _turret] };
 
 if !([_unit, _role, _vehicle] call vn_mf_fnc_player_can_enter_vehicle) then {
 	moveOut _unit;

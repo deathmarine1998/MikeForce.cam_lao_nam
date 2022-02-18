@@ -7,7 +7,7 @@ private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimark
 private _supplyAlpha = 0.5;
 if(_supply isEqualTo 0)then {_supplyAlpha=0};
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_zones_create_camp_site DBG-1 _supply:%1 _pos:%2", [_supply,_supplyAlpha], _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_zones_create_camp_site DBG-1 _supply:%1 _pos:%2", [_supply,_supplyAlpha], _pos] };
 
 [
 	"tunnel_watersupply",

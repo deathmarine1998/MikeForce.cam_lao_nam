@@ -17,7 +17,7 @@ if(groupId group player in ["DacCong", "MACVSOG", "DOD"])exitWith {};
 //check weapons not team or rank - players use enemy weapons in times of need do not do team rank checks
 {
 	if!(_x in InvCheckWpns)then { 
-		if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed weapon:%1",_x] };
+		if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed weapon:%1",_x] };
 		player removeWeapon _x;
 	};
 }forEach (weapons player);
@@ -25,14 +25,14 @@ if(groupId group player in ["DacCong", "MACVSOG", "DOD"])exitWith {};
 //check mags - because of the allowed weapons as such above allow the mags 
 {
 	if!(_x in InvCheckMags)then { 
-		if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed mag:%1",_x] };
+		if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed mag:%1",_x] };
 		player removeMagazine _x;
 	};
 }forEach (magazines player);
 
 //check backpack - do not do team rank checks as looted bodies will yield opfor classname backpackse
 if( !(backpack player in InvCheckBpks) && !(backpack player isEqualTo "") )then {
-	if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed backpack:%1",(backpack player)] };
+	if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed backpack:%1",(backpack player)] };
 	removeBackpack player;
 };
 
@@ -41,12 +41,12 @@ if( !(backpack player in InvCheckBpks) && !(backpack player isEqualTo "") )then 
 	if(_x == "") exitWith {};
 	if(isClass(configFile >> "CfgWeapons" >> _x))then {
 		if( !(_x in InvCheckWpns) && !(_x in InvCheckItems ) )then { 
-			if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed weapon:%1",_x] };
+			if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed weapon:%1",_x] };
 			player removeWeapon _x;
 		};
 	}else{
 		if!(_x in InvCheckItems)then { 
-			if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed item:%1",_x] };
+			if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed item:%1",_x] };
 			player removeItem _x;
 		};
 	};
@@ -59,7 +59,7 @@ if( !(backpack player in InvCheckBpks) && !(backpack player isEqualTo "") )then 
 	_array = _itemsArray select { (_x#0) == _item };
 	_teamRanks = (_array#0)#1;
 	if(!(_x in InvCheckItems) || (_teamRanks#1 == -1))then { 
-		if(_debug)then { diag_log format["[DirtyDebug]fn_mikeforce_checkInv removed linked item:%1",_x] };
+		if(_debug)then { diag_log format["[+]fn_mikeforce_checkInv removed linked item:%1",_x] };
 		player unlinkItem _item;
 		player removeItem _item;
 	};

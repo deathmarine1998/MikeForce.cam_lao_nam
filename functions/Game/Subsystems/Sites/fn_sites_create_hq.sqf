@@ -24,7 +24,7 @@ private _config = missionConfigFile >> "gamemode" >> "settings" >> "aimarkers";
 private _hqAlpha = getNumber(_config >> "headquarters");
 private _debug = getNumber(missionConfigFile >> "gamemode" >> "debug" >> "aimarkers");
 
-if(_debug isEqualTo 1) then { diag_log format["[DirtyDebug]fn_sites_create_hq DBG-1 _hqAlpha:%1 _pos:%2",_hqAlpha, _pos] };
+if(_debug isEqualTo 1) then { diag_log format["[+]fn_sites_create_hq DBG-1 _hqAlpha:%1 _pos:%2",_hqAlpha, _pos] };
 
 [
 	"hq",
