@@ -3,9 +3,10 @@ members[] = {"76561198140282519","76561199195828749","76561198122629843","765611
 ranks[] = {
 	{"BG Harry", "76561198140282519", "GOTA"},
 	{"Du Me May", "76561198006446539", "Captain"},
-	{"Derp", "76561198122629843", "SecondLieutentant"},
+	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"},
+	{"AntiWingman", "76561198058034545", "Specialist"}
+/*	{"Derp", "76561198122629843", "SecondLieutentant"},
 	{"Tôi ăn gi", "76561198226125028", "Private"},
-	{"AntiWingman", "76561198058034545", "Specialist"},
 	{"Thảo Duy Bảo", "76561198011584225", "Private"},
 	{"Mr Chao", "76561197970363954", "Corporal"},
 	{"Bac Tu Ca Li", "76561198872955854", "Private1stClass"},
@@ -36,8 +37,8 @@ ranks[] = {
 	{"Dai Hung Chien", "76561197990246235", "SecondLieutentant"},
 	{"Chat Le", "76561198124955904", "Sergeant"},
 	{"Ho Li Fuk", "76561198080932623", "Specialist"},
-	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"},
 	{"Cerebral", "76561199195828749", "Captain"}
+*/
 };
 
 // Vehicles ranks are based on opfor faction in the regular arsenal
