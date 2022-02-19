@@ -348,12 +348,6 @@ diag_log "VN MikeForce: Initialising BroNation Player Rewards";
 // Initialise bronnie bonus points
 [] call para_s_fnc_play_rewards_init;
 
-diag_log "VN MikeForce: Creating Bro Nation bar tenders";
-// spawn bar tenders
-{
-    [_x] call vn_mf_fnc_create_bar_tender;
-} forEach vn_mf_markers_bar_tender_initial;
-
 diag_log "VN MikeForce: Creating Custom Chat Channels";
 // create custom channels
 private _customChannels = getArray(_gamemode_config >> "customchat" >> "channels");

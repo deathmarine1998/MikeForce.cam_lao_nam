@@ -314,6 +314,27 @@
       <Key ID="STR_vn_mf_loading10">
         <Original>Take a Knee Drink Water...</Original>
       </Key>
+      <Key ID="STR_vn_mf_loading11">
+        <Original>Build a FOB with ACAV!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading12">
+        <Original>There's no I in team!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading13">
+        <Original>Help your fellow brothers and sisters!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading14">
+        <Original>VC are in the trees.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading15">
+        <Original>Watch each others back.</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading16">
+        <Original>Secure the landing zone!</Original>
+      </Key>
+      <Key ID="STR_vn_mf_loading17">
+        <Original>Welcome to the jungle.</Original>
+      </Key>
       <Key ID="STR_vn_mf_howtobuild">
         <Original>How to Build</Original>
       </Key>

@@ -34,9 +34,6 @@ if (_player distance2D _object > 20) exitWith {};
 private _destination = getMarkerPos getText (_destinationConfig >> "position_marker");
 if (_destination isEqualTo [0,0,0]) exitWith {};
 
-private _newLocation = _destination findEmptyPosition [3,20,typeOf _player];
-if (_newLocation isEqualTo []) then {_newLocation = _destination};
-
 remoteExecCall ["vn_mf_fnc_display_location_time",_player];
 
-_player setPos _newLocation;
+_player setPos _destination;

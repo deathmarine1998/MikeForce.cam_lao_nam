@@ -23,7 +23,7 @@ ranks[] = {
 	{"Nightstalker","76561199044821604","Captain"},	 // EASY COMPANY COC
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier - DAC CONG COC
 	{"Cerebral", "76561199195828749", "Corporal"},
-	{"Cpl. Cypher", "76561199175533497", "Corporal"}
+	{"CW2. Cypher", "76561199175533497", "ChiefWarrantOfficer2"}
 };
 
 vehicles[] = 
@@ -449,5 +449,6 @@ vehicles[] =
 	{ "vn_o_nva_navy_static_v11m", 					0}, 
 	{ "vn_o_nva_65_static_type56rr", 				0}, 
 	{ "vn_b_navy_static_l60mk3", 					0}, 
-	{ "vn_b_navy_static_l70mk2", 					0}
+	{ "vn_b_navy_static_l70mk2", 					0},
+	{ "B_Heli_Light_01_F",							0}
 };

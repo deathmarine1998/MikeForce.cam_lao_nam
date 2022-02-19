@@ -92,25 +92,25 @@ progressLoadingScreen 0.2;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading2"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.3;
+progressLoadingScreen 0.25;
 // add display event handlers
 call para_c_fnc_init_display_event_handler;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading3"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.4;
+progressLoadingScreen 0.3;
 // add player event handlers
 call para_c_fnc_init_player_event_handlers;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading4"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.5;
+progressLoadingScreen 0.35;
 // add self actions
 call vn_mf_fnc_action_drink_water;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading5"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.6;
+progressLoadingScreen 0.4;
 // add self actions
 call vn_mf_fnc_action_eat_food;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
@@ -119,23 +119,23 @@ call vn_mf_fnc_action_eat_food;
 call vn_mf_fnc_action_load_actions;
 
 uiSleep 0.4;
-progressLoadingScreen 0.7;
+progressLoadingScreen 0.45;
 // create UI
 0 spawn vn_mf_fnc_ui_create;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.8;
+progressLoadingScreen 0.5;
 // master loop
 0 spawn para_c_fnc_compiled_loop_init;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 0.9;
+progressLoadingScreen 0.55;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
-progressLoadingScreen 1.0;
+progressLoadingScreen 0.6;
 //Setup teleporters
 call vn_mf_fnc_action_teleport;
 
@@ -148,11 +148,19 @@ call vn_mf_fnc_health_effects;
 private _respawnDelay = ["respawn_delay", 20] call BIS_fnc_getParamValue;
 setplayerrespawntime _respawnDelay;
 
+uiSleep 0.4;
+progressLoadingScreen 0.65;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
+
 // Start player marker subsystem
 private _useMarkers = (["allow_map_markers", 1] call BIS_fnc_getParamValue) > 0;
 if (_useMarkers) then {
 	call vn_mf_fnc_player_markers_subsystem_init;
 };
+
+uiSleep 0.4;
+progressLoadingScreen 0.7;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading12"]] call vn_mf_fnc_update_loading_screen;
 
 // Initalize marker info UI
 [] call para_c_fnc_zone_marker_init;
@@ -161,11 +169,19 @@ if (!isServer) then {
 	call para_g_fnc_ai_create_behaviour_execution_loop;
 };
 
+uiSleep 0.4;
+progressLoadingScreen 0.75;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading13"]] call vn_mf_fnc_update_loading_screen;
+
 // Set up automatic view distance scaling for performance
 [] call para_c_fnc_perf_enable_dynamic_view_distance;
 
 // starting rank
 vn_mf_starting_rank = player getVariable ["vn_mf_db_rank",0];
+
+uiSleep 0.4;
+progressLoadingScreen 0.8;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading14"]] call vn_mf_fnc_update_loading_screen;
 
 // init awards array
 vn_mf_default_awards = [];
@@ -173,10 +189,22 @@ vn_mf_default_awards = [];
     vn_mf_default_awards pushBack [configName _x, -1];
 } forEach ("isClass(_x)" configClasses (missionConfigFile >> "gamemode" >> "awards_config"));
 
+uiSleep 0.4;
+progressLoadingScreen 0.9;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading15"]] call vn_mf_fnc_update_loading_screen;
+
 // initialize tools controller
 call para_c_fnc_tool_controller_init;
 
+uiSleep 0.4;
+progressLoadingScreen 0.95;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading16"]] call vn_mf_fnc_update_loading_screen;
+
 call vn_mf_fnc_admin_arsenal;
+
+uiSleep 0.4;
+progressLoadingScreen 1.0;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading17"]] call vn_mf_fnc_update_loading_screen;
 
 //LOADING COMPLETE
 //Start tidying up ready for play.
