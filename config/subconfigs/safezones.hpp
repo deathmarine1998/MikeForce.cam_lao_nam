@@ -21,7 +21,7 @@ class safezonescfg
 	arsenal_greenhornets = 40;
 	arsenal_spiketeam = 25;
 	arsenal_easycompany = 25;
-	arsenal_saigonwarriors = 25;
+	arsenal_saigonwarriors = 0;
 	arsenal_blackhorse = 25;
 	arsenal_frogmen = 25;
 	arsenal_muskets = 25;

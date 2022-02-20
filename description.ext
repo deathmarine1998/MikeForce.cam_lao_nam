@@ -54,7 +54,9 @@ enableDebugConsole[] = {
 	//leal
 	"76561198173293466",
 	//cerebral
-	"76561199195828749"
+	"76561199195828749",
+	//zod
+	"76561198808129773"
 };
 
 allowFunctionsLog = 1;

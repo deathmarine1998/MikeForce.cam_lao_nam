@@ -164,6 +164,15 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	};	
 		
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+	if(_vehicleName == "MH-9 Hummingbird") then 
+	{
+		switch(vehicleVarName _vehicle) do
+		{
+			case "cmd1" : {_vehicleName = "CMD-1"; };
+			case "mp1"  : {_vehicleName = "MP-1"; };
+		};
+	};
+
 	if(count _crew > 1)then {
 		_vehicleMarker setMarkerTextLocal format [localize "STR_vn_mf_player_markers_vehicle_marker", _vehicleName, _driverType, _vehicleDriverName, count _crew];
 	} else {
@@ -220,6 +229,15 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	};
 	
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+	if(_vehicleName == "MH-9 Hummingbird") then 
+	{
+		switch(vehicleVarName _vehicle) do
+		{
+			case "cmd1": {_vehicleName = "CMD-1"; };
+			case "mp1" : {_vehicleName = "MP-1"; };
+		};
+	};
+
 	if(count _crew > 1)then {
 		_vehicleMarker setMarkerTextLocal format [localize "STR_vn_mf_player_markers_vehicle_marker", _vehicleName, _driverType, _vehicleDriverName, count _crew];
 	} else {
@@ -246,7 +264,7 @@ vn_dc_player_markers_vehicle_markers = _activeDCVehicleMarkers;
 private _removeMarkersDaccong = getArray(missionConfigFile >> "gamemode" >> "settings" >> "playermarkers" >> "daccong");
 private _removeMarkersNotDaccong = getArray(missionConfigFile >> "gamemode" >> "settings" >> "playermarkers" >> "notdaccong");
 
-if(_playerGroup == "DacCong")then
+if (_playerGroup == "DacCong") then
 {
 	{
 		_x setMarkerAlphaLocal 0;
@@ -256,5 +274,6 @@ if(_playerGroup == "DacCong")then
 		_x setMarkerAlphaLocal 0;
 	} forEach _removeMarkersNotDaccong;
 };
+
 
 
