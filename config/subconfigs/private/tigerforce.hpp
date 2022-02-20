@@ -3,7 +3,7 @@ members[] = {"76561199179901102"};
 
 ranks[] = {
 
-{"Cpt. Deluxemorals","76561199179901102","FirstLieutenant"}
+{"Cpt. Deluxemorals","76561199179901102","FirstLieutenant"} // TIGER FORCE COC TEAM LEAD
 
 
 };
