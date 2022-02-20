@@ -9,8 +9,8 @@ ranks[] = { /* SATAN ANGELS COC , MUSKET COC , MP COC , SASR COC , EASY COC , DA
 	{"Holtz", "76561198162908634", "Captain"},	// SATAN ANGELS COC
 	{"Persona non Grata","76561198372933750","SecondLieutentant"}, // SATAN ANGELS COC
 	{"Title", "76561198226125028", "SecondLieutenant"}, // SATAN ANGELS COC
-	{"2Lt. Malcolm 'Viper'", "76561198114818319", "SecondLieutenant"}, // SATAN ANGELS COC
-	{"Maj. Strawberry Man", "76561198049082424","Major"} // MUSKET  COC   TEAM LEAD
+	{"2Lt. Malcolm Viper", "76561198114818319", "SecondLieutenant"}, // SATAN ANGELS COC
+	{"Maj. Strawberry Man", "76561198049082424","Major"}, // MUSKET  COC   TEAM LEAD
 	{"Zod", "76561198808129773", "Captain"}, // MP COC
 	{"2Lt. Chemist", "76561198177197734", "SecondLieutenant"}, // MP COC
 	{"Cpt. Stalker", "76561198006446539", "Captain"}, // SASR COC 
@@ -20,7 +20,7 @@ ranks[] = { /* SATAN ANGELS COC , MUSKET COC , MP COC , SASR COC , EASY COC , DA
 	{"Nightstalker","76561199044821604","Captain"},	 // EASY COMPANY COC
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier - DAC CONG COC
 	{"Cerebral", "76561199195828749", "Corporal"},  // HEAD DEV
-	{"CW2. Cypher", "76561199175533497", "ChiefWarrantOfficer2"}, // DEV ASSIST LEAD
+	{"CW2. Cypher", "76561199175533497", "ChiefWarrantOfficer2"} // DEV ASSIST LEAD
 };
 
 vehicles[] = 
