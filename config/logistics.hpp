@@ -100,7 +100,12 @@ class vn_logistics
 		class vn_b_boat_05_02 : vn_defaults_medium {};
 
 		//Air assets
+		
+		//Air America
+		class B_Heli_Light_01_F : vn_defaults_tiny {};
+
 		//Cobra Helicopter
+
 		class vn_b_air_ah1g_01 : vn_defaults_tiny {};
 		class vn_b_air_ah1g_02 : vn_defaults_tiny {};
 		class vn_b_air_ah1g_03 : vn_defaults_tiny {};

@@ -32,12 +32,12 @@ class objects
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhorse_base", "easycompany_base", "sasr_base", "muskets_base", "montagnards_base", "macvsog_base"};
+		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhorse_base", "easycompany_base", "sasr_base", "muskets_base", "macvsog_base"};
 	};
 	
 	class vn_mf_macvsog_teleporter
 	{
-		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhorse_base", "easycompany_base", "sasr_base", "muskets_base", "montagnards_base"};
+		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhorse_base", "easycompany_base", "sasr_base", "muskets_base"};
 	};
 	class vn_mf_blackhorse_teleporter
 	{

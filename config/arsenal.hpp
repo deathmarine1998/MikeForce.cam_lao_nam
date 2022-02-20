@@ -1511,7 +1511,8 @@ class vn_whitelisted_arsenal_loadouts
 			{ "vn_o_nva_navy_static_v11m", 			{ 0, 0, 0, 0}}, 
 			{ "vn_o_nva_65_static_type56rr", 		{ 0, 0, 0, 0}}, 
 			{ "vn_b_navy_static_l60mk3", 			{ 0, 0, 0, 0}}, 
-			{ "vn_b_navy_static_l70mk2", 			{ 0, 0, 0, 0}}
+			{ "vn_b_navy_static_l70mk2", 			{ 0, 0, 0, 0}},
+			{ "B_Heli_Light_01_F", 					{ 0, 0, 0, 0}}
 		};
 	};
 	#include "arsenal_altis.hpp"

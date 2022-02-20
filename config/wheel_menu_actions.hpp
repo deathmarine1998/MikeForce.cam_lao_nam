@@ -267,7 +267,7 @@ class wheel_menu_actions
 	
 	class toggleSiren : base_action
 	{
-		visible = "ALWAYS";
+		visible = "nope";
 		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'SaigonWarriors')";
 		text = "Siren";
 		icon = "custom\wheelmenu\mpsiren.paa";
@@ -277,6 +277,7 @@ class wheel_menu_actions
 		spawn = 0;
 		color_codes[] = {{0.2,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};
+
 	class Bentham : base_action
 	{
 		visible = "ALWAYS";
@@ -289,6 +290,7 @@ class wheel_menu_actions
 		spawn = 0;
 		color_codes[] = {{0.2,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};
+	
 	class PressCorpDressup : base_action
 	{
 		visible = "ALWAYS";

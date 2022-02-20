@@ -1,6 +1,6 @@
 class CfgSounds
 {
-	sounds[] = {vn_build_1,vn_build_2,vn_build_3,Selfie,Bentham};
+	sounds[] = {vn_build_1,vn_build_2,vn_build_3,Selfie,Bentham,Siren};
 	class vn_build_1
 	{
 		sound[]		= { "@vn\sounds_f_vietnam\sfx\vn_build_1.ogg",1.0,1.0,30 };
@@ -47,5 +47,12 @@ class CfgSounds
 		name = "Breath";
 		sound[] 	= { "custom\sounds\breath.ogg", 1, 1, 30 };
         titles[] 	= { 1, "Fooling your way to a kill" };
+    };
+
+	class Siren
+	{
+		name = "Siren";
+		sound[] 	= { "custom\sounds\Siren.ogg", 5, 1, 200 };
+        titles[] 	= { 0, "" };
     };
 };

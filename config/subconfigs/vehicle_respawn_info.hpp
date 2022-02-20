@@ -185,6 +185,10 @@ class vn_b_boat_05_02 : respawn_long {};
 class vn_b_boat_06_02 : respawn_long {};
 
 //Air assets
+
+//Air America
+class B_Heli_Light_01_F : respawn_short {};
+
 //Cobra Helicopter
 class vn_b_air_ah1g_01 : wreck_long {};
 class vn_b_air_ah1g_02 : wreck_long {};

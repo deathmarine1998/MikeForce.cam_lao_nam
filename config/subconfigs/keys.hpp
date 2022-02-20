@@ -45,6 +45,7 @@ class para_vote_2
 	displayName = "Vote for Option #2";
 	access = 1;
 };
+
 class para_vote_3
 {
 	defaultKey = DIK_F3;
@@ -56,6 +57,7 @@ class para_vote_3
 	displayName = "Open Voting Menu";
 	access = 1;
 };
+
 class vn_mf_interactionOverlay_toggle
 {
 	defaultKey = DIK_7; // 7
@@ -65,6 +67,18 @@ class vn_mf_interactionOverlay_toggle
 	function = "para_c_fnc_interactionOverlay_toggle";
 	down = 1;
 	displayName = $STR_vn_mf_keybindings_interactionOverlay_toggle;
+	access = 1;
+};
+
+class vn_mf_siren_toggle
+{
+	defaultKey = DIK_8; // 8
+	shift = "false";
+	ctrl = "false";
+	alt = "false";
+	function = "vn_mf_fnc_saigonwarriors_toggleSiren";
+	down = 1;
+	displayName = $STR_vn_mf_keybindings_siren_toggle;
 	access = 1;
 };
 
