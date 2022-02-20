@@ -25,13 +25,13 @@ ranks[] = {
 	{"Pv1. Shayne", "76561198964800233", "Private First Class"},
 	{"Pv1. BoomChook", "76561198007349411", "Private First Class"},
     {"Pv2. Shawn", "76561198105916657", "Private Second Class"},
+	{"Pv2. MIG 20", "76561198046038996", "Private Second Class"},
+	{"Pv2. Legend", "76561198976258425", "Private Second Class"},			
 	{"Pvt. MadDog", "76561199069317928", "Private"},
 	{"Pvt. Roose", "76561198084622850", "Private"},
 	{"Pvt. Semtex", "76561198088275330", "Private"},
 	{"Pvt. Revenant", "76561198043708162", "Private"},
 	{"Pvt. Bluefort.D", "76561198065345886", "Private"},	
-	{"Pv2. MIG 20", "76561198046038996", "Private"},
-	{"Pv2. Legend", "76561198976258425", "Private"},		
 	{"Pvt. Mojo", "76561198136559135", "Private"}		
 
 };
