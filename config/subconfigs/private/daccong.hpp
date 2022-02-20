@@ -6,7 +6,7 @@ ranks[] = {
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier DC COC
 	{"AntiWingman", "76561198058034545", "Specialist"},   // Spc. AntiWingman  SASR
 	{"Wi Tu Lo ", "76561198124955904", "Sergeant"},  // Sgt. HighLand Piper  DC 
-	{"Hut Toi Di", "76561198162908634", "Sergeant"} // Holtz
+	{"Hut Toi Di", "76561198162908634", "Captain"} // Cpt. Holtz  SATAN ANGLES COC
 
 /*	{"Derp", "76561198122629843", "SecondLieutentant"},
 	{"Tôi ăn gi", "76561198226125028", "Private"},
