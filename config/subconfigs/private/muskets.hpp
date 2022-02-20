@@ -3,7 +3,7 @@ members[] = {"76561198049082424", "76561198287632164","76561197990246235","76561
 
 ranks[] = {
 	
-	{"Maj. Strawberry Man", "76561198049082424","Major"},
+	{"Maj. Strawberry Man", "76561198049082424","Major"}, // MUSKET  COC   TEAM LEAD
 	{"1Lt.GtgBlaze19","76561198287632164","FirstLieutenant"},
 	{"CWO5.TJ","76561197990246235","SecondLieutenant"},
 	{"CSM. Chow","76561198295066189","Recruit"},
