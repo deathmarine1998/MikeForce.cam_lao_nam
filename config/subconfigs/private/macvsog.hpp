@@ -18,7 +18,7 @@ ranks[] = { /* SATAN ANGELS COC , MUSKET COC , MP COC , SASR COC , EASY COC ,TIG
 	{"Sgt. Kronos", "76561198132233071", "Sergeant"}, // SASR COC
 	{"Cpl. Danny", "76561199005262742", "Corporal"}, // SASR COC
 	{"Nightstalker","76561199044821604","Captain"},	 // EASY COMPANY COC
-	{"Cpt. Deluxemorals","76561199179901102","FirstLieutenant"} // TIGER FORCE COC TEAM LEAD
+	{"Cpt. Deluxemorals","76561199179901102","FirstLieutenant"}, // TIGER FORCE COC TEAM LEAD
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier - DAC CONG COC
 	{"Cerebral", "76561199195828749", "Corporal"},  // HEAD DEV
 	{"CW2. Cypher", "76561199175533497", "ChiefWarrantOfficer2"} // DEV ASSIST LEAD
