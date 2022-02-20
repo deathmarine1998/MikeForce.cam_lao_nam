@@ -4,7 +4,7 @@ ranks[] = {
 	{"BG Harry", "76561198140282519", "GOTA"},
 	{"Du Me May", "76561198006446539", "Captain"},// CPT.STALKER  SASR COC / DC COC
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier DC COC
-	{"Long Duong", "76561197984639361", "Sergeant"} // Sgt. Numbnuts SASR COC
+	{"Long Duong", "76561197984639361", "Sergeant"}, // Sgt. Numbnuts SASR COC
 	{"AntiWingman", "76561198058034545", "Specialist"},   // Spc. AntiWingman  SASR
 	{"Wi Tu Lo ", "76561198124955904", "Sergeant"},  // Sgt. HighLand Piper  DC 
 	{"Hut Toi Di", "76561198162908634", "Captain"}, // Cpt. Holtz  SATAN ANGLES COC
