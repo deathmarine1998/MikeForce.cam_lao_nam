@@ -10,7 +10,7 @@ ranks[] = {
 	{"Hut Toi Di", "76561198162908634", "Captain"}, // Cpt. Holtz  SATAN ANGLES COC
 	{"Tri-Tran", "76561198087729387", "Specialist"}, // Spc. Tac BLACK HORSE
 	{"Lê Con Qua", "76561198059107070", "Private"} // Pvt. Raven BLACK HORSE
-	  
+
 
 /*	{"Derp", "76561198122629843", "SecondLieutentant"},
 	{"Tôi ăn gi", "76561198226125028", "Private"},
