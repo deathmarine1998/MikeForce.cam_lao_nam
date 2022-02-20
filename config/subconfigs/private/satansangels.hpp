@@ -8,7 +8,7 @@ ranks[] = {
 	{"1LT Gallant", "76561198183901839", "FirstLieutenant"},
 	{"2Lt. Malcolm 'Viper'", "76561198114818319", "SecondLieutenant"},
 	{"Title", "76561198226125028", "SecondLieutenant"},
-	{"2Lt. Persona non Grata 'Panopticon 1'", "76561198372933750", "SecondLieutenant"},
+	{"2Lt. Persona non Grata", "76561198372933750", "SecondLieutenant"},
 	{"CWO-3 Lilac", "76561198014743152", "ChiefWarrantOfficer3"},
 	{"xiiRevenge", "76561198153055336", "SergeantFirstClass"},
 	{"chair65", "76561198204222821", "Corporal"},
@@ -24,8 +24,8 @@ ranks[] = {
 	{"LBR", "76561198116319722", "Recruit"},
 	{"SGT. Skipper", "76561198177835547", "Recruit"},
 	{"RCT. Grommit!", "76561198057888677", "Recruit"}
-
 };
+
 vehicles[] = 
 { 
 	{ "NonSteerable_Parachute_F", 					0}, 
