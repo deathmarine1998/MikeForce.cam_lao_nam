@@ -30,8 +30,8 @@ ranks[] = {
 	{"Pvt. Semtex", "76561198088275330", "Private"},
 	{"Pvt. Revenant", "76561198043708162", "Private"},
 	{"Pvt. Bluefort.D", "76561198065345886", "Private"},	
-	{"Pvt. MIG 20", "76561198046038996", "Private"},
-	{"Pvt. Legend", "76561198976258425", "Private"},		
+	{"Pv2. MIG 20", "76561198046038996", "Private"},
+	{"Pv2. Legend", "76561198976258425", "Private"},		
 	{"Pvt. Mojo", "76561198136559135", "Private"}		
 
 };
