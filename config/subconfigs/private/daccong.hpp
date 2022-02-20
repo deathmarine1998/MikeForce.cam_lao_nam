@@ -4,7 +4,7 @@ ranks[] = {
 	{"BG Harry", "76561198140282519", "GOTA"},
 	{"Du Me May", "76561198006446539", "Captain"},// CPT.STALKER  SASR COC / DC COC
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier DC COC
-	{"AntiWingman", "76561198058034545", "Specialist"}   // Spc. AntiWingman  SASR
+	{"AntiWingman", "76561198058034545", "Specialist"},   // Spc. AntiWingman  SASR
 	{"Wi Tu Lo ", "76561198124955904", "Sergeant"}  // Sgt. HighLand Piper  DC 
 
 /*	{"Derp", "76561198122629843", "SecondLieutentant"},
