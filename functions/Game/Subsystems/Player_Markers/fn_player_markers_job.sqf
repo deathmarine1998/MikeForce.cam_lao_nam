@@ -181,7 +181,8 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	
 	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
 } forEach vn_mf_player_markers_manned_vehicles;	
-		
+
+_airAmericaChoppers = 1;		
 {
 	if(_playerGroup != "DacCong")exitWith {};
 	//if(_playerSide in [west,independent,civilian])exitWith {};
@@ -235,6 +236,10 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 		{
 			case "cmd1": {_vehicleName = "CMD-1"; };
 			case "mp1" : {_vehicleName = "MP-1"; };
+			default: {
+				_vehicleName = format ["Air America-%1", _airAmericaChoppers];
+				_airAmericaChoppers = _airAmericaChoppers + 1;
+			};
 		};
 	};
 
