@@ -56,6 +56,12 @@ private _groups = getArray(_gamemode_config >> "settings" >> "groups" );
 			_this disableAI "ALL";
 			_this setCaptive true;
 		};
+
+		if(_marker isEqualTo "duty_officer_satansangels") then //gotta do jank cause it's a prop
+		{
+			vehicle _agent setVehiclePosition [_location,[],0,"None"];
+		};
+
 		_agent setObjectTextureGlobal [2,"custom\loadingscreens\bronation_banner.paa"];
 		//Set up custom interaction overlay
 		_agent setVariable ["#para_InteractionOverlay_ConfigClass", "DutyOfficer", true];

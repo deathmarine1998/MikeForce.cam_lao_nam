@@ -113,8 +113,8 @@ class CfgDebriefing
 	class ReservedDacCong
 	{
 		title = "RESERVED";
-		subtitle = "NOT approved for Dac Cong";
-		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/><br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/bVWBw243XS'>BRO-NATION UNITS DISCORD</a></t>";
+		subtitle = "Not approved for Dac Cong.";
+		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/> <t align='center'>If previously white-listed please contact Stalker.</t> <br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/bVWBw243XS'>BRO-NATION UNITS DISCORD</a></t>";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};
@@ -122,8 +122,8 @@ class CfgDebriefing
 	class ReservedPress
 	{
 		title = "RESERVED";
-		subtitle = "NOT Approved for Press Corp";
-		description = "<t align='center'>You are trying to join a reserved slot for Press Corp. <br/><br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/><br/> <t align='center'>Join the BRO-NATION Units and be considered for Press by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bro-nation'>BRO-NATION ARMA 3 UNITS LINK</a></t> <br/><br/> <t align='center'>Join the Civilian Press by inquirijng within discord</t>";
+		subtitle = "NOT approved for Press Corp.";
+		description = "<t align='center'>You are trying to join a reserved slot for Press Corp. <br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/> <t align='center'>Join the BRO-NATION Units and be considered for Press by applying at this link</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/bVWBw243XS'>BRO-NATION UNITS DISCORD</a></t> <br/> <t align='center'>Join the Civilian Press by inquirijng within discord</t>";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};
@@ -131,8 +131,8 @@ class CfgDebriefing
 	class ReservedMontagnard
 	{
 		title = "RESERVED";
-		subtitle = "NOT Approved for Montagnard";
-		description = "<t align='center'>You are trying to join a reserved slot for Montagnard. <br/><br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/><br/> <t align='center'>Join the BRO-NATION Units and be considered for Montagnard by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bro-nation'>BRO-NATION ARMA 3 UNITS LINK</a></t> <br/><br/> <t align='center'>Join Montagnard by inquirijng within discord</t>";
+		subtitle = "NOT approved for Montagnard.";
+		description = "<t align='center'>You are trying to join a reserved slot for Montagnard. <br/> <t align='center'>Join discord by clicking this link and introduce yourself</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/W6geNfx'>BRO-NATION DISCORD INVITE LINK</a></t> <br/> <t align='center'>Join the BRO-NATION Units and be considered for Montagnard by applying at this link</t> <br/> <t align='center' size='1.25'><a href='https://discord.gg/bVWBw243XS'>BRO-NATION UNITS DISCORD</a></t> <br/> <t align='center'>Join Montagnard by inquirijng within discord</t>";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};

@@ -25,7 +25,7 @@ class safezonescfg
 	arsenal_blackhorse = 25;
 	arsenal_frogmen = 25;
 	arsenal_muskets = 25;
-	arsenal_satansangels = 25;
+	arsenal_satansangels = 5;
 	arsenal_tigerforce = 25;
 	arsenal_montagnard = 25;
 	arsenal_macvsog = 25;

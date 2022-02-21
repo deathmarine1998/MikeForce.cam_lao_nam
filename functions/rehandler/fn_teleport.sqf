@@ -31,12 +31,18 @@ private _object = missionNamespace getVariable [_objectName, objNull];
 //Works with objNull, as distance2D returns a huge number.
 if (_player distance2D _object > 20) exitWith {};
 
-private _destination = getMarkerPos getText (_destinationConfig >> "position_marker");
+
+private _destinationName = getText (_destinationConfig >> "position_marker");
+private _destination = getMarkerPos _destinationName;
 if (_destination isEqualTo [0,0,0]) exitWith {};
 
-private _newLocation = _destination findEmptyPosition [3,20,typeOf _player];
-if (_newLocation isEqualTo []) then {_newLocation = _destination};
+if(_destinationName isEqualTo "mf_respawn_satansangels") then 
+{
+  vehicle player setVehiclePosition [_destination,[],0,"None"];
+} else {
+  private _newLocation = _destination findEmptyPosition [3,20,typeOf _player];
+  if (_newLocation isEqualTo []) then {_newLocation = _destination};
 
-remoteExecCall ["vn_mf_fnc_display_location_time",_player];
-
-_player setPos _newLocation;
+  remoteExecCall ["vn_mf_fnc_display_location_time",_player];
+  _player setPos _newLocation;
+}

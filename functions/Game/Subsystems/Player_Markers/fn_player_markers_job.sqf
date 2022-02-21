@@ -166,6 +166,8 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 	if(_vehicleName == "MH-9 Hummingbird") then 
 	{
+		_vehicleName = "MH-6";
+
 		switch(vehicleVarName _vehicle) do
 		{
 			case "cmd1" : {_vehicleName = "CMD-1"; };
@@ -181,8 +183,7 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	
 	if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-4e MikeForce created new marker _vehicle:%1 _vehicleName:%2 crewcount:%3", _vehicle, _vehicleName, count _crew]; };
 } forEach vn_mf_player_markers_manned_vehicles;	
-
-_airAmericaChoppers = 1;		
+	
 {
 	if(_playerGroup != "DacCong")exitWith {};
 	//if(_playerSide in [west,independent,civilian])exitWith {};
@@ -232,13 +233,12 @@ _airAmericaChoppers = 1;
 	private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 	if(_vehicleName == "MH-9 Hummingbird") then 
 	{
+		_vehicleName = "MH-6";
+
 		switch(vehicleVarName _vehicle) do
 		{
 			case "cmd1": {_vehicleName = "CMD-1"; };
 			case "mp1" : {_vehicleName = "MP-1"; };
-			default {
-				_vehicleName = "MH-6";
-			};
 		};
 	};
 
