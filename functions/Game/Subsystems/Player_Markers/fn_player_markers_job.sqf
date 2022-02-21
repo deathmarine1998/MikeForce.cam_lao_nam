@@ -236,9 +236,8 @@ _airAmericaChoppers = 1;
 		{
 			case "cmd1": {_vehicleName = "CMD-1"; };
 			case "mp1" : {_vehicleName = "MP-1"; };
-			default: {
-				_vehicleName = format ["Air America-%1", _airAmericaChoppers];
-				_airAmericaChoppers = _airAmericaChoppers + 1;
+			default {
+				_vehicleName = "MH-6";
 			};
 		};
 	};
