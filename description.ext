@@ -114,7 +114,7 @@ class CfgDebriefing
 	{
 		title = "RESERVED";
 		subtitle = "NOT Approved for Dac Cong";
-		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/><br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://units.arma3.com/unit/bn-dc'>BRO-NATION DAC CONG UNITS LINK</a></t>";
+		description = "<t align='center'>You are trying to join a reserved team for Dac Cong Commandos. <br/><br/> <t align='center'>Join the Dac Cong Commandos by applying at this link</t> <br/><br/> <t align='center' size='1.25'><a href='https://discord.gg/bVWBw243XS'>BRO-NATION UNITS DISCORD</a></t>";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0.0,0.3,0.6,1};
