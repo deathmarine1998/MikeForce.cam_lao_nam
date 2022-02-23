@@ -5,7 +5,7 @@ ranks[] = {
 	{"Du Me May", "76561198006446539", "Captain"},// CPT.STALKER  SASR COC / DC COC
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier DC COC
 	{"Long Duong", "76561197984639361", "Sergeant"}, // Sgt. Numbnuts SASR COC
-	{"Bóng Ma", "76561198132233071", "Sergeant"}, // Sgt. Kronos SASR COC
+	{"Yên Tĩnh", "76561198132233071", "Sergeant"}, // Sgt. Kronos SASR COC
 	{"AntiWingman", "76561198058034545", "Specialist"},   // Spc. AntiWingman  SASR
 	{"Sóm Dum Hóè","76561198859578319", "Specalist"}, // Spc. Tok3n White Guy SASR
 	{"Bóng ma rúng", "76561199086593763", "Specialist"}, // Spc. Fenrir SASR	
