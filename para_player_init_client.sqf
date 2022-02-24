@@ -197,12 +197,6 @@ progressLoadingScreen 0.9;
 call para_c_fnc_tool_controller_init;
 
 uiSleep 0.4;
-progressLoadingScreen 0.95;
-[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading16"]] call vn_mf_fnc_update_loading_screen;
-
-call vn_mf_fnc_admin_arsenal;
-
-uiSleep 0.4;
 progressLoadingScreen 1.0;
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading17"]] call vn_mf_fnc_update_loading_screen;
 
@@ -319,3 +313,6 @@ IsDancing = false;
 
 // Start player inventory checks
 call vn_mf_fnc_player_check_for_non_arsenal_init;
+
+[] spawn {call vn_mf_fnc_admin_arsenal};
+
