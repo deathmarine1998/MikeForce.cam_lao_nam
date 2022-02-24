@@ -6,7 +6,7 @@ ranks[] = {
 	{"Pitje Fukn Puk", "76561198007206066", "Sergeant"}, // Rogier DC COC
 	{"Long Duong", "76561197984639361", "Sergeant"}, // Sgt. Numbnuts SASR COC
 	{"Yên Tĩnh", "76561198132233071", "Sergeant"}, // Sgt. Kronos SASR COC
-	{"Yu Stin Ki Pu", "76561199158454289", "2Lt"} // 2Lt. Crazy Earl SARS
+	{"Yu Stin Ki Pu", "76561199158454289", "2Lt"}, // 2Lt. Crazy Earl SARS
 	{"AntiWingman", "76561198058034545", "Specialist"},   // Spc. AntiWingman  SASR
 	{"Sóm Dum Hóè","76561198859578319", "Specalist"}, // Spc. Tok3n White Guy SASR
 	{"Bóng ma rúng", "76561199086593763", "Specialist"}, // Spc. Fenrir SASR	
