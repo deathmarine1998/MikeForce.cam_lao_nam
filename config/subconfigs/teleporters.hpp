@@ -22,22 +22,22 @@ class objects
 	
 	class vn_mf_tigerforce_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "saigonwarriors_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "militarypolice_base"};
 	};
 	
-	class vn_mf_saigonwarriors_teleporter
+	class vn_mf_militarypolice_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "tigerforce_base", "macv_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "macv_base"};
 	};
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base", "macv_base"};
+		destinations[] = {"satansangels_base", "militarypolice_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base", "macv_base"};
 	};
 	
 	class vn_mf_macv_teleporter
 	{
-		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base"};
+		destinations[] = {"satansangels_base", "militarypolice_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base"};
 	};
 	class vn_mf_blackhawk_teleporter
 	{
@@ -211,10 +211,10 @@ class destinations
 		position_marker = "mf_respawn_shooting_range";
 	};
 	
-	class saigonwarriors_base
+	class militarypolice_base
 	{
-		image = "custom\taskroster\saigonwarriors_HL.paa"; 
-		position_marker = "mf_respawn_saigonwarriors";
+		image = "custom\taskroster\militarypolice_HL.paa"; 
+		position_marker = "mf_respawn_militarypolice";
 	};
 	
 	class macv_base

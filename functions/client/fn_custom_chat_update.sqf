@@ -1,12 +1,5 @@
 // Add custom channel based on group
 private _group_ID = player getVariable "vn_mf_db_player_group";
-if(_group_ID == "DacCong")then {
-	10 radioChannelAdd [player];
-	15 enableChannel [true,true];
-	for "_i" from 1 to 9 do {
-		_i radioChannelRemove [player];
-	};
-};
 if!(_group_ID == "DacCong")then {
 	for "_i" from 1 to 9 do {
 		_i radioChannelAdd [player];
@@ -15,78 +8,111 @@ if!(_group_ID == "DacCong")then {
 	10 radioChannelRemove [player];
 };
 
-if(_group_ID isEqualTo "MACV")then {
-	for "_i" from 1 to 9 do {
-		(_i+5) enableChannel [true,true];
+switch(_group_ID) do
+{
+	case "DacCong" : {
+		10 radioChannelAdd [player];
+		15 enableChannel [true,true];
+		for "_i" from 1 to 9 do {
+			_i radioChannelRemove [player];
+		};
 	};
-};
 
-if(_group_ID == "MikeForce")then {
-	6 enableChannel [true,true];
-	7 enableChannel [true,false];
-	8 enableChannel [true,false];
-	9 enableChannel [true,false];
-	10 enableChannel [false,false];
-};
-if(_group_ID == "GreenHornets")then {
-	6 enableChannel [true,false];
-	7 enableChannel [true,true];
-	8 enableChannel [true,false];
-	9 enableChannel [true,false];
-	10 enableChannel [false,false];
-};
-if(_group_ID == "ACAV")then {
-	6 enableChannel [true,false];
-	7 enableChannel [true,false];
-	8 enableChannel [true,true];
-	9 enableChannel [true,false];
-	10 enableChannel [false,false];
-	11 enableChannel [true,false];
-};
-if(_group_ID == "SpikeTeam")then {
-	9 enableChannel [true,true];
-	10 enableChannel [false,false];
-	14 enableChannel [true,false];
-};
-if(_group_ID == "TigerForce")then {
-	9 enableChannel [true,true];
-	10 enableChannel [false,false];
-	14 enableChannel [true,false];
-};
-if(_group_ID == "Montagnard")then {
-	9 enableChannel [true,false];
-	10 enableChannel [true,false];
-	14 enableChannel [true,true];
-};
-if(_group_ID == "BlackHawk")then {
-	8 enableChannel [true,false];
-	10 enableChannel [false,false];
-	11 enableChannel [true,true];
-};
-if(_group_ID == "Muskets")then {
-	7 enableChannel [true,false];
-	10 enableChannel [false,false];
-	12 enableChannel [true,true];
-};
-if(_group_ID == "SatansAngels")then {
-	7 enableChannel [true,false];
-	10 enableChannel [false,false];
-	12 enableChannel [true,true];
-};
-if(_group_ID == "SaigonWarriors")then {
-	6 enableChannel [true,false];
-	7 enableChannel [true,false];
-	8 enableChannel [true,false];
-	9 enableChannel [true,false];
-	10 enableChannel [false,false];
-	13 enableChannel [true,true];
-};
-if(_group_ID == "EasyCompany")then {
-	6 enableChannel [true,true];
-	7 enableChannel [true,false];
-	8 enableChannel [true,false];
-	9 enableChannel [true,false];
-	10 enableChannel [false,false];
+	case "MACV" : {
+		for "_i" from 1 to 9 do {
+			(_i+5) enableChannel [true,true];
+		};
+	};
+
+	case "633rdCSG": {
+		6 enableChannel [true,false];
+		7 enableChannel [true,false];
+		8 enableChannel [true,false];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+		11 enableChannel [true,true];
+	};
+
+	case "MikeForce": {
+		6 enableChannel [true,true];
+		7 enableChannel [true,false];
+		8 enableChannel [true,false];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+	};
+
+	case "GreenHornets": {
+		6 enableChannel [true,false];
+		7 enableChannel [true,true];
+		8 enableChannel [true,false];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+	};
+
+	case "ACAV" : {
+		6 enableChannel [true,false];
+		7 enableChannel [true,false];
+		8 enableChannel [true,true];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+		11 enableChannel [true,false];
+	};
+
+	case "SpikeTeam" : {
+		9 enableChannel [true,true];
+		10 enableChannel [false,false];
+		14 enableChannel [true,false];		
+	};
+
+	case "TigerForce" : {
+		9 enableChannel [true,true];
+		10 enableChannel [false,false];
+		14 enableChannel [true,false];	
+	};
+
+	case "BlackHawk" : {
+		8 enableChannel [true,false];
+		10 enableChannel [false,false];
+		11 enableChannel [true,true];
+	};
+
+	case "Muskets" : {
+		7 enableChannel [true,false];
+		10 enableChannel [false,false];
+		12 enableChannel [true,true];
+	};
+
+	case "SatansAngels" : {
+		7 enableChannel [true,false];
+		10 enableChannel [false,false];
+		12 enableChannel [true,true];
+	};
+
+	case "MilitaryPolice" : {
+		6 enableChannel [true,false];
+		7 enableChannel [true,false];
+		8 enableChannel [true,false];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+		13 enableChannel [true,true];
+	};
+
+	case "EasyCompany" : {
+		6 enableChannel [true,true];
+		7 enableChannel [true,false];
+		8 enableChannel [true,false];
+		9 enableChannel [true,false];
+		10 enableChannel [false,false];
+	};
+
+	default {
+		6 enableChannel [false,false];
+		7 enableChannel [false,false];
+		8 enableChannel [false,false];
+		9 enableChannel [false,false];
+		10 enableChannel [false,false];
+		13 enableChannel [false,false];
+	};
 };
 /*
 _customChannels = getArray(missionConfigFile >> "gamemode" >> "customchat" >> "channels");

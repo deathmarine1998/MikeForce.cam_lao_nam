@@ -112,7 +112,7 @@ vn_mf_secondaryTasksBySide setVariable ["SpikeTeam", []];
 vn_mf_secondaryTasksBySide setVariable ["GreenHornets", []];
 vn_mf_secondaryTasksBySide setVariable ["ACAV", []];
 vn_mf_secondaryTasksBySide setVariable ["EasyCompany", []];
-vn_mf_secondaryTasksBySide setVariable ["SaigonWarriors", []];
+vn_mf_secondaryTasksBySide setVariable ["MilitaryPolice", []];
 vn_mf_secondaryTasksBySide setVariable ["BlackHawk", []];
 vn_mf_secondaryTasksBySide setVariable ["Frogmen", []];
 vn_mf_secondaryTasksBySide setVariable ["Muskets", []];
@@ -124,7 +124,6 @@ vn_mf_secondaryTasksBySide setVariable ["PressCorp", []];
 vn_mf_secondaryTasksBySide setVariable ["SASR", []];
 vn_mf_secondaryTasksBySide setVariable ["633rdCSG", []];
 vn_mf_secondaryTasksBySide setVariable ["BNCadet", []];
-vn_mf_secondaryTasksBySide setVariable ["BNGunClub", []];
 
 // vn_mf_allowed_functions = ("isClass _x && getNumber _x >> 'rec' isEqualTo 1" configClasses (missionConfigFile >> "cfgfunctions" >> "vn_mf" >> "rehandler") apply {configName _x});
 

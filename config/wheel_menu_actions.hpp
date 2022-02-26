@@ -268,12 +268,12 @@ class wheel_menu_actions
 	class toggleSiren : base_action
 	{
 		visible = "nope";
-		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'SaigonWarriors')";
+		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'MilitaryPolice')";
 		text = "Siren";
 		icon = "custom\wheelmenu\mpsiren.paa";
 		icon_highlighted = "";
 		arguments = "player";
-		function = "vn_mf_fnc_saigonwarriors_toggleSiren";
+		function = "vn_mf_fnc_militarypolice_toggleSiren";
 		spawn = 0;
 		color_codes[] = {{0.2,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};

@@ -248,10 +248,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\saigonwarriors_gray.paa";
-			textUp = "custom\taskroster\saigonwarriors_HL.paa";
+			text = "custom\taskroster\militarypolice_gray.paa";
+			textUp = "custom\taskroster\militarypolice_HL.paa";
 			
-			onButtonClick = "['SaigonWarriors'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['MilitaryPolice'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		// bottom center left
 		class logoFM: vn_mf_RscButton_ImgSwitch
@@ -1259,7 +1259,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "custom\taskroster\saigonwarriors_HL.paa";
+			text = "custom\taskroster\militarypolice_HL.paa";
 			onButtonClick = "8 radioChannelAdd [player];13 enableChannel [true, true];";
 		};
 		class ccmpoff_btn: vn_mf_RscButton_ImgSwitch
@@ -1270,7 +1270,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "custom\taskroster\saigonwarriors_gray.paa";
+			text = "custom\taskroster\militarypolice_gray.paa";
 			onButtonClick = "8 radioChannelRemove [player];";
 		};
 	};

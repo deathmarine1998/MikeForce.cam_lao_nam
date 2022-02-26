@@ -3,9 +3,9 @@ class easycompany
 {
 	#include "private\easycompany.hpp"
 };
-class saigonwarriors
+class militarypolice
 {
-	#include "private\saigonwarriors.hpp"
+	#include "private\militarypolice.hpp"
 };
 class blackhawk
 {

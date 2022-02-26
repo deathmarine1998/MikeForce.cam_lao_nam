@@ -69,7 +69,7 @@ class CfgFunctions
 			class gather_intel {};
 			class deactivate_mine {};
 			class control_mine {};
-			class saigonwarriors_toggleSiren {};
+			class militarypolice_toggleSiren {};
 			class macv_grief_bentham {};
 			class muskets_bentham_creama {};
 			class vehicle_checkDriverAmmo{};

@@ -64,7 +64,7 @@ if(_playerGroup == "DacCong")then {
 		case "GreenHornets": {_unitGroupColor = "ColorGreen"; };
 		case "SatansAngels": {_unitGroupColor = "ColorGreen"; };
 		case "Muskets": {_unitGroupColor = "ColorGreen"; };
-		case "SaigonWarriors": {_unitGroupColor = "ColorBlue"; };
+		case "MilitaryPolice": {_unitGroupColor = "ColorBlue"; };
 		case "BlackHawk": {_unitGroupColor = "ColorOrange"; };
 		case "Frogmen": {_unitGroupColor = "ColorOrange"; };
 		case "MACV": {_unitGroupColor = "ColorYellow"; };
@@ -191,7 +191,7 @@ if(_debug isEqualTo 1) then { diag_log format["[+]fn_player_markers_job DBG-3 fi
 	
 	private _vehicleGroupColor = "ColorBLUFOR";
 	if(_vehicleGroup == "DacCong") then { _vehicleGroupColor = "ColorEAST"; vn_mf_vehicle_markers_daccong pushBack _vehicleMarker; };
-	if(_vehicleGroup == "SaigonWarriors") then { _vehicleGroupColor = "ColorBlue" };
+	if(_vehicleGroup == "MilitaryPolice") then { _vehicleGroupColor = "ColorBlue" };
 	if(_vehicleGroup in ["GreenHornets","SatansAngels","Muskets"]) then { _vehicleGroupColor = "ColorGreen" };
 	if(_vehicleGroup in ["ACAV","BlackHawk","Frogmen"])then { _vehicleGroupColor = "ColorOrange" };
 	if(_vehicleGroup == "MACV")then { _vehicleGroupColor = "ColorYellow" };

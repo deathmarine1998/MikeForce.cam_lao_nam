@@ -21,7 +21,7 @@ class EasyCompany
 	explosiveSpecialist = 10;
 	radioOperator = 1;
 };
-class SaigonWarriors
+class MilitaryPolice
 {
 	medic = 10;
 	engineer = 10;
@@ -133,19 +133,12 @@ class BNCadet
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class BNGunClub
-{
-	medic = 10;
-	engineer = 10;
-	explosiveSpecialist = 10;
-	radioOperator = 0;
-};
 
 class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, medic, uavhacker
 {
 	MikeForce[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
 	EasyCompany[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
-	SaigonWarriors[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
+	MilitaryPolice[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
 	ACAV[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
 	BlackHawk[] = { 0.7, 0.5, 0.9, "true", "false", "false", "false" };
 	Frogmen[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
@@ -161,5 +154,4 @@ class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, me
 	SASR[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
 	633rdCSG[] = { 0.7, 0.5, 0.9, "false", "true", "false", "true" };
 	BNCadet[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
-	BNGunClub[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
 };
