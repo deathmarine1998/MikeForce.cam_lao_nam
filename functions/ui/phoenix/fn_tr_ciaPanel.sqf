@@ -7,8 +7,8 @@ params["_team"];
 private _config = (missionConfigFile >> "gamemode" >> "vars" >> "players");
 private _uid = getPlayerUID player;
 
-private _command = getArray(_config >> "macvsog");
-if((_team == "MACVSOG") && !(_uid in _command))exitWith {
+private _command = getArray(_config >> "macv");
+if((_team == "MACV") && !(_uid in _command))exitWith {
 	[
 		[
 			"MACV-SOG Command",

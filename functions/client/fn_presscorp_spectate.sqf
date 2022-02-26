@@ -83,8 +83,8 @@ _enableAISpectating = true; // default true. allowed values, true or false.
 /*	------------------------------------------------------------------------------------------
 	DO NOT EDIT BELOW HERE!
 	------------------------------------------------------------------------------------------	*/
-private _macvsog = getArray(MissionConfigFile >> "gamemode" >> "whitelisting" >> "macvsog" >> "members");
-if!(_uid in _macvsog) exitWith {};
+private _macv = getArray(MissionConfigFile >> "gamemode" >> "whitelisting" >> "macv" >> "members");
+if!(_uid in _macv) exitWith {};
 
 addLocations = {
 	_townMarkerArray = [];

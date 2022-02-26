@@ -6,7 +6,7 @@ class secondary_mf1 : task
 	taskdesc = "Reinforce troops at their location";
 	tasktype = "defend";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf1.jpg";
-	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors"};
+	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","MilitaryPolice"};
 	rankprogress = 10;
 	taskprogress = 4;
 
@@ -39,7 +39,7 @@ class secondary_mf3 : task
 	tasktitle = "Destroy the Camp";
 	taskname = "Destroy the Camp";
 	taskdesc = "There's rumours of a VC camp in the area. Find it, eliminate it.";
-	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors"}; // all
+	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","MilitaryPolice"}; // all
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -70,7 +70,7 @@ class secondary_destroy_mortar : task
 	taskdesc = "Eliminate the mortar set up near this position.";
 	tasktype = "box";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_st2.jpg";
-	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors"};
+	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","MilitaryPolice"};
 	rankpoints = 10;
 	taskprogress = 10;
 
@@ -104,7 +104,7 @@ class secondary_destroy_supplies : task
 	tasktitle = "Destroy Weapon Caches";
 	taskname = "Destroy Weapon Caches";
 	taskdesc = "Destroy the enemy weapons caches found in this area. Explosives are advised.";
-	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors"}; // all
+	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","MilitaryPolice"}; // all
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -145,7 +145,7 @@ class secondary_patrol : task
 	tasktitle = "Patrol Area";
 	taskname = "Patrol Area";
 	taskdesc = "Patrol along the designated route and ensure the area is secure.";
-	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors"}; // all
+	taskgroups[] = {"MikeForce","EasyCompany","TigerForce","Frogmen","Montagnard","MilitaryPolice"}; // all
 	tasktype = "walk";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;

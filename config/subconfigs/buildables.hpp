@@ -4,7 +4,7 @@
 #define CONDITION_NOT_IN_RESTRICTED_ZONE { $STR_vn_mf_buildingMenu_condition_inRestrictedZone, "vn_mf_markers_blocked_areas findIf {_pos inArea _x} isEqualTo -1"}
 #define CONDITION_IS_ACAV { $STR_vn_mf_buildingMenu_condition_inACav, "!(groupId group player in ['MikeForce','GreenHornets','SpikeTeam'])"}
 #define CONDITION_IS_DACCONG { $STR_vn_mf_buildingMenu_condition_inDacCong, "groupId group player isEqualTo 'DacCong'"}
-#define CONDITION_IS_MACVSOG { $STR_vn_mf_buildingMenu_condition_inMACVSOG, "groupId group player isEqualTo 'MACVSOG'"}
+#define CONDITION_IS_MACV { $STR_vn_mf_buildingMenu_condition_inMACV, "groupId group player isEqualTo 'MACV'"}
 #define CONDITION_NOT_IN_CAPTURED_AO { $STR_vn_mf_buildingMenu_condition_inCapturedAO, "vn_mf_markers_captured_zones findIf {_pos inArea _x} isEqualTo -1"}
 #define CONDITION_IS_SASR { $STR_vn_mf_buildingMenu_condition_inSASR, "groupId group player isEqualTo 'SASR'"}
 
@@ -6146,7 +6146,7 @@ class vn_flagpole_f
 		CONDITION_IS_ENGINEER,
 		CONDITION_IS_ON_FOOT,
 		CONDITION_NOT_IN_RESTRICTED_ZONE,
-		CONDITION_IS_MACVSOG
+		CONDITION_IS_MACV
 	};
 	class build_states
 	{

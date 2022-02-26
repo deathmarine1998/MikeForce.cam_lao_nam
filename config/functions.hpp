@@ -37,9 +37,9 @@ class CfgFunctions
 			class player_award {};
 			class consume {};
 			class goto_prisoner_of_war {};
-			class macvsog_delete_vehicle {};
-			class macvsog_recover_wreck {};
-			class macvsog_delete_fob {};
+			class macv_delete_vehicle {};
+			class macv_recover_wreck {};
+			class macv_delete_fob {};
 			class presscorp_spectate {};
 			class presscorp_getDressed {};
 			class daccong_move_out_ai_crew {};
@@ -69,8 +69,8 @@ class CfgFunctions
 			class gather_intel {};
 			class deactivate_mine {};
 			class control_mine {};
-			class saigonwarriors_toggleSiren {};
-			class macvsog_grief_bentham {};
+			class militarypolice_toggleSiren {};
+			class macv_grief_bentham {};
 			class muskets_bentham_creama {};
 			class vehicle_checkDriverAmmo{};
 			class vehicle_checkTurretAmmo{};

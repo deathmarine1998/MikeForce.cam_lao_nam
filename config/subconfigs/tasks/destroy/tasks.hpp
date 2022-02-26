@@ -4,7 +4,7 @@ class destroy_aa_site : task
 	tasktitle = "Eliminate the AA Site";
 	taskname = "Eliminate the AA Site";
 	taskdesc = "Enemy AA has been seen firing near this position. Take it out.";
-	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","SaigonWarriors","BlackHorse","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
+	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","MilitaryPolice","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -33,7 +33,7 @@ class destroy_artillery_site : task
 	tasktitle = "Eliminate Hostile Artillery";
 	taskname = "Eliminate Hostile Artillery";
 	taskdesc = "Enemy artillery has been seen firing from this position. Take it out.";
-	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","SaigonWarriors","BlackHorse","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
+	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","MilitaryPolice","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;
@@ -118,7 +118,7 @@ class destroy_vehicle_depot : task
 	tasktitle = "Destroy Vehicle Depot";
 	taskname = "Destroy Vehicle Depot";
 	taskdesc = "An enemy vehicle maintenance point has been placed in this area. Destroy it, and any vehicles you find.";
-	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","SaigonWarriors","BlackHorse","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
+	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","MilitaryPolice","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","PressCorp"}; // all
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_mf3.jpg";
 	rankpoints = 10;

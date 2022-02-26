@@ -31,11 +31,11 @@ if !(_current_group_ID isEqualTo _group) then
 	if (!isNull _selected_group && {_selected_group isEqualType grpNull}) then
 	{
 		// bypass checks if this is a MACV command player
-		_macvsog = getArray(MissionConfigFile >> "gamemode" >> "whitelisting" >> "macvsog" >> "members");
-		if((getPlayerUID _player) in _macvsog)then { 
+		_macv = getArray(MissionConfigFile >> "gamemode" >> "whitelisting" >> "macv" >> "members");
+		if((getPlayerUID _player) in _macv)then { 
 			[_player, _selected_group] call vn_mf_fnc_force_team_change; 
 		};
-		if!((getPlayerUID _player) in _macvsog)then 
+		if!((getPlayerUID _player) in _macv)then 
 		{ 
 			// make sure player is witin 20m of a duty officer
 			if !(vn_mf_duty_officers inAreaArray [getPos _player, 20, 20, 0, false, 20] isEqualTo []) then

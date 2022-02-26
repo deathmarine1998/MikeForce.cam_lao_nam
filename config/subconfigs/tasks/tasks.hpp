@@ -7,7 +7,7 @@ class task
 	taskformatdata = "[(_this getVariable 'taskMarker') call vn_mf_fnc_zone_marker_to_name]";
 	taskdesc = "This should not be seen. If you are seeing this, something is mis-configured.";
 	taskimage = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa";
-	taskgroups[] = {"MACVSOG","MikeForce","ACAV","GreenHornets","SpikeTeam","EasyCompany","SaigonWarriors","BlackHorse","Frogmen","Muskets","SatansAngels","TigerForce","Gunslingers","SASR","Montagnard","PressCorp","BNCadet","BNGunClub"}; // all
+	taskgroups[] = {"MACV","MikeForce","ACAV","GreenHornets","SpikeTeam","EasyCompany","MilitaryPolice","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","633rdCSG","SASR","Montagnard","PressCorp","BNCadet"}; // all
 	requestgroups[] = {};
 	tasktype = "walk";
 	rankpoints = 0;

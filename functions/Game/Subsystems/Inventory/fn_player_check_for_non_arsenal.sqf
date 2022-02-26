@@ -12,7 +12,7 @@ private _arsenal = getText(_gmCfg >> "modded_ops" >> "arsenal_name");
 private _cfg = missionConfigFile >> "vn_whitelisted_arsenal_loadouts" >> _arsenal;
 private _itemsArray = getArray(_cfg >> "items");
 
-if(groupId group player in ["DacCong", "MACVSOG", "DOD"])exitWith {};
+if(groupId group player in ["DacCong", "MACV", "DOD"])exitWith {};
 
 //check weapons not team or rank - players use enemy weapons in times of need do not do team rank checks
 {
@@ -96,7 +96,7 @@ if(_binosArray#1 == -1)then { player unlinkItem _binos;player removeItem _binos 
 
 
 private _unitGroup = groupId group player;
-if!(_unitGroup in ["DacCong", "MACVSOG", "DOD", "Montagnard"])then {
+if!(_unitGroup in ["DacCong", "MACV", "DOD", "Montagnard"])then {
 	{
 		private _wCfg = (getNumber(_cfg >> "weapons" >> _x)) select 1;
 		if(_wCfg isEqualTo -1)then { player removeWeapon _x };
