@@ -76,7 +76,7 @@ class vn_mf_siren_toggle
 	shift = "false";
 	ctrl = "false";
 	alt = "false";
-	function = "vn_mf_fnc_saigonwarriors_toggleSiren";
+	function = "vn_mf_fnc_militarypolice_toggleSiren";
 	down = 1;
 	displayName = $STR_vn_mf_keybindings_siren_toggle;
 	access = 1;

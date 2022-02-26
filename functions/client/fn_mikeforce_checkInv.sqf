@@ -29,7 +29,7 @@ private _binos = binocular player;
 }forEach _headStuff;
 /*
 private _unitGroup = groupId group player;
-if!(_unitGroup in ["DacCong", "MACVSOG", "DOD", "Montagnard"])then {
+if!(_unitGroup in ["DacCong", "MACV", "DOD", "Montagnard"])then {
 	{
 		private _wCfg = (getNumber(_cfg >> "weapons" >> _x)) select 1;
 		if(_wCfg isEqualTo -1)then { player removeWeapon _x };

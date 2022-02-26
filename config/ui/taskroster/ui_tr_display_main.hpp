@@ -133,7 +133,7 @@ class vn_tr_disp_taskRoster_Main
 			
 			tooltip = "";
 			text = "";
-			onButtonClick = "systemchat str [groupID (group player)];if((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACVSOG')then { call vn_mf_fnc_tr_cleanRightSheet; createDialog 'vn_tr_disp_ciaPanel' };";
+			onButtonClick = "systemchat str [groupID (group player)];if((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACV')then { call vn_mf_fnc_tr_cleanRightSheet; createDialog 'vn_tr_disp_ciaPanel' };";
 		};
 		class username: vn_mf_RscButton
 		{

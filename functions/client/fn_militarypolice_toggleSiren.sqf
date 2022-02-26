@@ -3,7 +3,7 @@ private ["_unit"];
 
 private _group_ID = player getVariable "vn_mf_db_player_group";
 
-if(_group_ID == "SaigonWarriors") then {
+if(_group_ID == "MilitaryPolice") then {
 	[player] spawn { 
 
 		_loop = 0;

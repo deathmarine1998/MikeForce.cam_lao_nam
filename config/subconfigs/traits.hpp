@@ -21,7 +21,7 @@ class EasyCompany
 	explosiveSpecialist = 10;
 	radioOperator = 1;
 };
-class SaigonWarriors
+class MilitaryPolice
 {
 	medic = 10;
 	engineer = 10;
@@ -35,7 +35,7 @@ class ACAV
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class BlackHorse
+class BlackHawk
 {
 	medic = 10;
 	engineer = 10;
@@ -98,7 +98,7 @@ class DacCong
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class MACVSOG
+class MACV
 {
 	medic = 10;
 	engineer = 10;
@@ -119,7 +119,7 @@ class SASR
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class Gunslingers
+class 633rdCSG
 {
 	medic = 10;
 	engineer = 10;
@@ -133,21 +133,14 @@ class BNCadet
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class BNGunClub
-{
-	medic = 10;
-	engineer = 10;
-	explosiveSpecialist = 10;
-	radioOperator = 0;
-};
 
 class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, medic, uavhacker
 {
 	MikeForce[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
 	EasyCompany[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
-	SaigonWarriors[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
+	MilitaryPolice[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
 	ACAV[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
-	BlackHorse[] = { 0.7, 0.5, 0.9, "true", "false", "false", "false" };
+	BlackHawk[] = { 0.7, 0.5, 0.9, "true", "false", "false", "false" };
 	Frogmen[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	GreenHornets[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
 	Muskets[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
@@ -156,10 +149,9 @@ class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, me
 	TigerForce[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	Montagnard[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	DacCong[] = { 0.7, 0.5, 0.9, "true", "true", "true", "false" };
-	MACVSOG[] = { 0.5, 0.4, 0.75, "true", "true", "true", "true" };
+	MACV[] = { 0.5, 0.4, 0.75, "true", "true", "true", "true" };
 	PressCorp[] = { 0.7, 0.5, 0.9 "false", "false", "true", "false" };
 	SASR[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
-	Gunslingers[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
+	633rdCSG[] = { 0.7, 0.5, 0.9, "false", "true", "false", "true" };
 	BNCadet[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
-	BNGunClub[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
 };

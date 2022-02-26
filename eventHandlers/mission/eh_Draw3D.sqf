@@ -25,7 +25,7 @@ private _dist = 30;
 private _hlth = 0.8;
 private _nameColor = [1, _hlth, 0.1, (1 - ((_x distance player) / _dist))];
 private _iconColor = [1,1,1,0.7];
-if(_groupID in ["MACVSOG","Montagnard","DacCong"])then { 
+if(_groupID in ["MACV","Montagnard","DacCong"])then { 
 	_dist = 100;
 	_hlth = ((0.8 - damage _x) max 0); 
 };
