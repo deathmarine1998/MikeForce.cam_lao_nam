@@ -28,6 +28,8 @@ ranks[] = {
 	{"Jester 1", "76561198136639292", "Specialist"}, // SECONDARY UNIT
 	{"Valour 1","76561198162908634","Sergeant1stClass"}, // SA COC , MACV , MUSKET 
 	{"Peacekeeper 1", "76561198124377972", "FirstLieutenant"} // SECONDARY UNIT
+	
+};
 
 vehicles[] = 
 { 
