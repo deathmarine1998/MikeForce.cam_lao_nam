@@ -200,10 +200,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\blackhorse_gray.paa";
-			textUp = "custom\taskroster\blackhorse_HL.paa";
+			text = "custom\taskroster\blackhawk_gray.paa";
+			textUp = "custom\taskroster\blackhawk_HL.paa";
 			
-			onButtonClick = "['BlackHorse'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['BlackHawk'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		// middle center right
 		class logoMK: vn_mf_RscButton_ImgSwitch

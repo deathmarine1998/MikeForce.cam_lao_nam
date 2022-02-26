@@ -58,7 +58,7 @@ if(_group_ID == "Montagnard")then {
 	10 enableChannel [true,false];
 	14 enableChannel [true,true];
 };
-if(_group_ID == "BlackHorse")then {
+if(_group_ID == "BlackHawk")then {
 	8 enableChannel [true,false];
 	10 enableChannel [false,false];
 	11 enableChannel [true,true];
@@ -99,8 +99,8 @@ _customChannels = getArray(missionConfigFile >> "gamemode" >> "customchat" >> "c
 	private _playerGroup = (_group_ID in ["MikeForce","ACAV","GreenHornets"]);
 	private _channelGroup = (_chanName in ["MikeForce","ACAV","GreenHornets"]);
 
-	private _playerGroupAC = (_group_ID in ["ACAV","BlackHorse"]);
-	private _channelGroupAC = (_chanName in ["ACAV","BlackHorse"]);
+	private _playerGroupAC = (_group_ID in ["ACAV","BlackHawk"]);
+	private _channelGroupAC = (_chanName in ["ACAV","BlackHawk"]);
 	
 	private _playerGroupST = (_group_ID in ["SpikeTeam","TigerForce","Montagnard"]);
 	private _channelGroupST = (_chanName in ["SpikeTeam","TigerForce","Montagnard"]);

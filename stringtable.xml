@@ -225,7 +225,7 @@
         <Original>PRESS CORP</Original>
       </Key>
 	  <Key ID="STR_vn_mf_respawn_macvsog">
-        <Original>MACV-SOG</Original>
+        <Original>MACV</Original>
       </Key>
 	  <Key ID="STR_vn_mf_respawn_shooting_range">
         <Original>GUN RANGE</Original>
@@ -239,8 +239,8 @@
 	  <Key ID="STR_vn_mf_respawn_easycompany">
         <Original>EASY COMPANY</Original>
       </Key>
-	  <Key ID="STR_vn_mf_respawn_blackhorse">
-        <Original>BLACK HORSE</Original>
+	  <Key ID="STR_vn_mf_respawn_blackhawk">
+        <Original>BLACK HAWK</Original>
       </Key>
 	  <Key ID="STR_vn_mf_respawn_muskets">
         <Original>MUSKETS</Original>
@@ -526,8 +526,8 @@
 	  <Key ID="STR_vn_mf_taskRoster_Main_FrogmenDescription">
         <Original>&lt;t align='center' size='1.1'&gt;Frogmen (UDT 11-12)&lt;br/&gt;- Also known as: UDT 11-12, Seal Team Five&lt;br/&gt;&lt;br/&gt;BRO NATION and Associated Servers, Frogmen are tasked with:&lt;br/&gt;- Underwater Demolition&lt;br/&gt;- Direct Action&lt;br/&gt;- Special Assignment and Reconnaissance&lt;br/&gt;- Sea, Air, and Land Infiltration and exfiltration&lt;br/&gt;- Capture and relocation of HVT's&lt;br/&gt;&lt;br/&gt;When we aren't chilling on the beach, drinking beer and relaxing with the boys. &lt;br/&gt;We are in the water, deep inside the VC Territory and blowing shit up. &lt;br/&gt;&lt;br/&gt;"The only easy day was yesterday." &lt;br/&gt;&lt;br/&gt;The Frogmen, may have less men, but we strive for excellence and upmost dedication to our job.&lt;/t&gt;</Original>
       </Key>
-	  <Key ID="STR_vn_mf_taskRoster_Main_BlackHorseDescription">
-        <Original>BlackHorse, send us what you want to fill this in with please. The sooner the better</Original>
+	  <Key ID="STR_vn_mf_taskRoster_Main_BlackHawkDescription">
+        <Original>BlackHawk, send us what you want to fill this in with please. The sooner the better</Original>
       </Key>
 	  <Key ID="STR_vn_mf_taskRoster_Main_PressCorpDescription">
         <Original>PressCorp, send us what you want to fill this in with please. The sooner the better</Original>

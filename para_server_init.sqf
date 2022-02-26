@@ -113,7 +113,7 @@ vn_mf_secondaryTasksBySide setVariable ["GreenHornets", []];
 vn_mf_secondaryTasksBySide setVariable ["ACAV", []];
 vn_mf_secondaryTasksBySide setVariable ["EasyCompany", []];
 vn_mf_secondaryTasksBySide setVariable ["SaigonWarriors", []];
-vn_mf_secondaryTasksBySide setVariable ["BlackHorse", []];
+vn_mf_secondaryTasksBySide setVariable ["BlackHawk", []];
 vn_mf_secondaryTasksBySide setVariable ["Frogmen", []];
 vn_mf_secondaryTasksBySide setVariable ["Muskets", []];
 vn_mf_secondaryTasksBySide setVariable ["SatansAngels", []];

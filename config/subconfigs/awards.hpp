@@ -2,10 +2,10 @@ class deaths
 {
 	class purple_heart
 	{
-		// "MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"
+		// "MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"
 		// KIA while serving in ACAV / Green Hornets
 
-		required_teams[] = {"ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 		levels[] =
 		{
 			{1}
@@ -84,7 +84,7 @@ class kills
 	class bronze_star
 	{
 		// 1 kill
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -94,7 +94,7 @@ class kills
 	class silver_star
 	{
 		// 1 kill
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -104,7 +104,7 @@ class kills
 	class air_medal
 	{
 		// 300 kills GreenHornets
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -140,7 +140,7 @@ class atoakills
 	class air_cross_of_gallantry
 	{
 		// 10 air to air kills
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -187,7 +187,7 @@ class teamtaskscomplete
 	class distinguished_flying_cross
 	{
 		// Completion of 5 GH team tasks generates each level of award
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -201,7 +201,7 @@ class teamtaskscomplete
 	class army_commendation_medal
 	{
 		// Completion of 20 (secondary) Team tasks
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -211,7 +211,7 @@ class teamtaskscomplete
 	class air_force_good_conduct_medal
 	{
 		// Completion of 20 (secondary) Team tasks
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -221,7 +221,7 @@ class teamtaskscomplete
 	class air_force_cross
 	{
 		// Completion of 10 Team tasks at specified rank
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -233,7 +233,7 @@ class teamtaskscomplete
 	class special_operations_medal
 	{
 		// Completion of 1 Team Task
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -243,7 +243,7 @@ class teamtaskscomplete
 	class army_presidential_unit_citation
 	{
 		// Completion of 30 Spike Team tasks
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -254,7 +254,7 @@ class teamtaskscomplete
 	class usaf_outstanding_unit_award
 	{
 		// Completion of 30 GH Team tasks
-		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -264,7 +264,7 @@ class teamtaskscomplete
 	class meritorious_unit_citation
 	{
 		// Completion of 30 Team tasks
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -279,7 +279,7 @@ class supplytaskscomplete
 	class meritorious_service_medal
 	{
 		// 10 air to air kills
-		required_teams[] = {"EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		levels[] =
 		{
@@ -371,7 +371,7 @@ class rank
 	class rvn_training_service_medal
 	{
 		// Achieving LT rank in Mike Force/ Spike Team
-		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","BlackHorse","Frogmen","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"MikeForce","EasyCompany","SaigonWarriors","BlackHawk","Frogmen","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		required_code = "rank _player isEqualTo 'LIEUTENANT'";
 		levels[] =
@@ -382,7 +382,7 @@ class rank
 	class rvn_technical_service_medal
 	{
 		// Achieving LT rank in ACAV Team
-		required_teams[] = {"EasyCompany","SaigonWarriors","ACAV","BlackHorse","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
+		required_teams[] = {"EasyCompany","SaigonWarriors","ACAV","BlackHawk","Frogmen","GreenHornets","Muskets","SatansAngels","SpikeTeam","TigerForce","Montagnard","MACVSOG","PressCorp","DacCong"};
 
 		required_code = "rank _player isEqualTo 'LIEUTENANT'";
 		levels[] =

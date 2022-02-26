@@ -35,7 +35,7 @@ class ACAV
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class BlackHorse
+class BlackHawk
 {
 	medic = 10;
 	engineer = 10;
@@ -147,7 +147,7 @@ class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, me
 	EasyCompany[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
 	SaigonWarriors[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
 	ACAV[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
-	BlackHorse[] = { 0.7, 0.5, 0.9, "true", "false", "false", "false" };
+	BlackHawk[] = { 0.7, 0.5, 0.9, "true", "false", "false", "false" };
 	Frogmen[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	GreenHornets[] = { 0.8, 0.6, 1, "false", "false", "false", "false" };
 	Muskets[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };

@@ -6,8 +6,8 @@ class support_resupply : support_task
 	taskdesc = $STR_vn_mf_task_support_resupply_desc;
 	tasktype = "box";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_ac1.jpg";
-	taskgroups[] = {"ACAV","GreenHornets","BlackHorse","Muskets","SatansAngels"};
-	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHorse","MACVSOG"};
+	taskgroups[] = {"ACAV","GreenHornets","BlackHawk","Muskets","SatansAngels"};
+	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACVSOG"};
 	rankpoints = 10;
 	taskprogress = 0;
 
@@ -90,9 +90,9 @@ class support_transport : support_task
 	taskname = "Collect Squad";
 	taskdesc = "Collect %1 from the given position, and drop them at their desired location.";
 	tasktype = "land";
-	taskgroups[] = {"ACAV", "GreenHornets","BlackHorse","Muskets","SatansAngels"};
+	taskgroups[] = {"ACAV", "GreenHornets","BlackHawk","Muskets","SatansAngels"};
 	//TODO: Remove GreenHornets and ACAV
-	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHorse","MACVSOG"};
+	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACVSOG"};
 	rankpoints = 10;
 	taskprogress = 0;
 

@@ -7,9 +7,9 @@ class saigonwarriors
 {
 	#include "private\saigonwarriors.hpp"
 };
-class blackhorse
+class blackhawk
 {
-	#include "private\blackhorse.hpp"
+	#include "private\blackhawk.hpp"
 };
 class frogmen
 {
