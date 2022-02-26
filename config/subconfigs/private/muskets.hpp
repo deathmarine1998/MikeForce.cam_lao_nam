@@ -17,7 +17,7 @@ ranks[] = {
 	{"Joker 1-1", "76561197991170572", "Warrant Officer"}, // PRIMARY UNIT
 	{"Smokey 500", "76561198011924128", "Warrant Officer"}, // PRIMARY UNIT
 	{"Heretic 1", "76561198181258729", "Warrant Officer"}, // PRIMARY UNIT
-	{"Magic Carpet 1-1", "76561198855827151", "Warrant Officer" // PRIMARY UNIT
+	{"Magic Carpet 1-1", "76561198855827151", "Warrant Officer"}, // PRIMARY UNIT
 	{"Feklar 1-1", "76561198078657813", "Warrant Officer"}, // PRIMARY UNIT
 	{"Patriot 1-3", "76561198189047726", "Warrant Officer"},  // PRIMARY UNIT
 	{"King Fish", "76561198171046051", "Warrant Officer"}, // PRIMARY UNIT
