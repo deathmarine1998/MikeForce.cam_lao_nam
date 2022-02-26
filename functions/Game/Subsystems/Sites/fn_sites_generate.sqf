@@ -116,6 +116,7 @@ private _fnc_findPosRoad = {
 		};
 	};
 	
+	/* glitchy... will fix later
 	for "_i" from 1 to (1 + ceil random (mf_s_max_helicopters_per_zone - 1)) do
 	{
 		private _helicopterSite = [_center, _sizeX, _sizeX] call _fnc_findPosRoad;
@@ -123,7 +124,8 @@ private _fnc_findPosRoad = {
 			[_helicopterSite, _zone] call vn_mf_fnc_sites_create_helicopter_site;
 		};
 	};
-	
+	*/
+
 	//Create zone HQ
 	private _hqPosition = _center;
 	for "_i" from 0 to 40 do {
