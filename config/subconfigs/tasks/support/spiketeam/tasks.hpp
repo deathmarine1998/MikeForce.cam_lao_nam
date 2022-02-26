@@ -6,7 +6,7 @@ class support_st_brightlight : support_task
 	taskdesc = "Rescue the crew of the downed helicopter, %1.";
 	tasktype = "box";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\su\vn_ui_mf_task_sts1.jpg";
-	taskgroups[] = {"SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","BlackHawk","MACVSOG"};
+	taskgroups[] = {"SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","BlackHawk","MACV"};
 	requestgroups[] = {"GreenHornets","Muskets","SatansAngels"};
 	rankpoints = 10;
 	taskprogress = 0;

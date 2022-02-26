@@ -131,7 +131,7 @@ class wheel_menu_actions
 	class enableCopilot : base_action
 	{
 		visible = "ALWAYS";
-		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo ['MACVSOG','SatansAngels']) && (driver vehicle player != player)";
+		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo ['MACV','SatansAngels']) && (driver vehicle player != player)";
 		text = "Enable Copilot";
 		icon = "\a3\ui_f\data\IGUI\Cfg\Targeting\SeekerLocked_ca.paa";
 		icon_highlighted = "";
@@ -144,12 +144,12 @@ class wheel_menu_actions
 	class delVehicle : base_action
 	{
 		visible = "ALWAYS";
-		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACVSOG') && (cursorTarget isKindOf 'Land_vn_building_base')";
+		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACV') && (cursorTarget isKindOf 'Land_vn_building_base')";
 		text = "Delete Buildable";
 		icon = "\a3\ui_f\data\IGUI\Cfg\Targeting\SeekerLocked_ca.paa";
 		icon_highlighted = "";
 		arguments = "cursorTarget";
-		function = "vn_mf_fnc_macvsog_delete_vehicle";
+		function = "vn_mf_fnc_macv_delete_vehicle";
 		spawn = 0;
 		color_codes[] = {{0.9,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};
@@ -157,12 +157,12 @@ class wheel_menu_actions
 	class wreckVehicle : base_action
 	{
 		visible = "ALWAYS";
-		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACVSOG') && (typeOf cursorTarget == 'vn_us_komex_medium_01')";
+		condition = "((player getVariable 'vn_mf_db_player_group') isEqualTo 'MACV') && (typeOf cursorTarget == 'vn_us_komex_medium_01')";
 		text = "Recover Wreck";
 		icon = "\a3\ui_f\data\IGUI\Cfg\Targeting\KnownTarget_ca.paa";
 		icon_highlighted = "";
 		arguments = "cursorTarget";
-		function = "vn_mf_fnc_macvsog_recover_wreck";
+		function = "vn_mf_fnc_macv_recover_wreck";
 		spawn = 0;
 		color_codes[] = {{0.9,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};
@@ -175,7 +175,7 @@ class wheel_menu_actions
 		icon = "\a3\ui_f\data\IGUI\Cfg\Targeting\KnownTarget_ca.paa";
 		icon_highlighted = "";
 		arguments = "cursorTarget";
-		function = "vn_mf_fnc_macvsog_delete_fob";
+		function = "vn_mf_fnc_macv_delete_fob";
 		spawn = 0;
 		color_codes[] = {{0.9,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};
@@ -281,12 +281,12 @@ class wheel_menu_actions
 	class Bentham : base_action
 	{
 		visible = "ALWAYS";
-		condition = "(((player getVariable 'vn_mf_db_player_group') in ['MACVSOG','DOD']) && (name cursorObject isEqualTo 'Cpt.Bentham'))";
+		condition = "(((player getVariable 'vn_mf_db_player_group') in ['MACV','DOD']) && (name cursorObject isEqualTo 'Cpt.Bentham'))";
 		text = "CLICK IT!";
 		icon = "\a3\ui_f\data\GUI\Rsc\RscDisplayArsenal\cargoThrow_ca.paa";
 		icon_highlighted = "";
 		arguments = "player";
-		function = "vn_mf_fnc_macvsog_grief_bentham";
+		function = "vn_mf_fnc_macv_grief_bentham";
 		spawn = 0;
 		color_codes[] = {{0.2,0.9,0.2,0.8}, {0.8,0.8,0.8,1}};
 	};

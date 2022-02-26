@@ -224,7 +224,7 @@
 	  <Key ID="STR_vn_mf_respawn_presscorp">
         <Original>PRESS CORP</Original>
       </Key>
-	  <Key ID="STR_vn_mf_respawn_macvsog">
+	  <Key ID="STR_vn_mf_respawn_macv">
         <Original>MACV</Original>
       </Key>
 	  <Key ID="STR_vn_mf_respawn_shooting_range">
@@ -248,8 +248,8 @@
 	  <Key ID="STR_vn_mf_respawn_frogmen">
         <Original>FROGMEN</Original>
       </Key>
-	  <Key ID="STR_vn_mf_respawn_gunslingers">
-        <Original>GUNSLINGERS</Original>
+	  <Key ID="STR_vn_mf_respawn_633rdcsg">
+        <Original>633RD CSG</Original>
       </Key>
 	  <Key ID="STR_vn_mf_respawn_sasr">
         <Original>SASR</Original>
@@ -508,7 +508,7 @@
 	  <Key ID="STR_vn_mf_taskRoster_Main_SatansAngelsDescription">
         <Original>Satans Angels 433rd Tactical Fighter Squadron.&lt;br/&gt;-433rd Tactical Fighter Squadron was activated in 25 Jul 1964.&lt;br/&gt;-Assignments: 8th Tactical Fighter Wing, 25 Jul 1964 - 23 Jul 1974&lt;br/&gt;The unit was first activated in May 1943 and flew the P-38 Lightning in the Pacific Theater of Operations. The 433d distinguished themselves in air combat against Japan over New Guinea, Rabaul, and the Philippines, achieving over 200 aerial victories. Reactivated in 1964 for the war in Southeast Asia, the 433d was assigned to the 8th Fighter Wing at Ubon, Thailand, flying the F-4 Phantom II. The 433d was credited with 12 MiG kills over North Vietnam.;br/&gt;Was deployed to Ubon Royal Thai Air Force Base in December 1965, becoming part of Pacific Air Forces Thirteenth Air Force. Assigned to the 8th Tactical Fighter Wing, engaged in combat operations over Southeast Asia, the squadron's mission included bombardment, ground support, air defense, interdiction, and armed reconnaissance.;br/&gt;Beginning in May 1967, it was re-equipped with new F-4D aircraft. This gave the unit the distinction of being the first in Southeast Asia to be operationally equipped with improved Phantom II. In May 1968, employed laser-guided bombs (LGBs) in combat for the first time. During its final years of combat, used F-4Ds for fast-forward air control, interdiction, escort, armed reconnaissance, and other special missions. Continued combat in Vietnam until mid-January 1973, in Laos until 22 February 1973, and in Cambodia until 15 August 1973. Remained in Thailand until July 1974 when the squadron was inactivated.</Original>
       </Key>
-	  <Key ID="STR_vn_mf_taskRoster_Main_MACVSOGDescription">
+	  <Key ID="STR_vn_mf_taskRoster_Main_MACVDescription">
         <Original>MACV-SOG Command Group.&lt;br/&gt; This group should make team coordination better.&lt;br/&gt; Established on 24 January 1964, the unit conducted strategic reconnaissance missions in the Republic of Vietnam (South Vietnam), the Democratic Republic of Vietnam (North Vietnam), Laos, and Cambodia; carried out the capture of enemy prisoners, rescued downed pilots, conducted rescue operations to retrieve prisoners of war throughout Southeast Asia, and conducted clandestine agent team activities and psychological operations.&lt;br/&gt; The unit participated in most of the significant campaigns of the Vietnam War, including the Gulf of Tonkin incident which precipitated increased American involvement, Operation Steel Tiger, Operation Tiger Hound, the Tet Offensive, Operation Commando Hunt, the Cambodian Campaign, Operation Lam Son 719, and the Easter Offensive. The unit was downsized and renamed Strategic Technical Directorate Assistance Team 158 on 1 May 1972, to support the transfer of its work to the Strategic Technical Directorate of the Army of the Republic of Vietnam – part of the Vietnamization effort.</Original>
       </Key>
 	  <Key ID="STR_vn_mf_taskRoster_Main_TigerForceDescription">
@@ -859,7 +859,7 @@
 	  <Key ID="STR_vn_mf_buildingMenu_condition_inDacCong">
         <Original>In Dac Cong</Original>
       </Key>
-	  <Key ID="STR_vn_mf_buildingMenu_condition_inMACVSOG">
+	  <Key ID="STR_vn_mf_buildingMenu_condition_inMACV">
         <Original>In MACV-SOG</Original>
       </Key>
     </Container>

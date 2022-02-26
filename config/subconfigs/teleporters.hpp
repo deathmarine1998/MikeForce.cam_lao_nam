@@ -27,15 +27,15 @@ class objects
 	
 	class vn_mf_saigonwarriors_teleporter
 	{
-		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "tigerforce_base", "macvsog_base"};
+		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base", "tigerforce_base", "macv_base"};
 	};
 	
 	class vn_mf_gunrange_teleporter
 	{
-		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base", "macvsog_base"};
+		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base", "macv_base"};
 	};
 	
-	class vn_mf_macvsog_teleporter
+	class vn_mf_macv_teleporter
 	{
 		destinations[] = {"satansangels_base", "saigonwarriors_base", "tigerforce_base", "blackhawk_base", "easycompany_base", "sasr_base", "muskets_base"};
 	};
@@ -64,7 +64,7 @@ class objects
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
 	
-	class vn_mf_gunslingers_teleporter
+	class vn_mf_633rdcsg_teleporter
 	{
 		destinations[] = {"mikeforce_base", "spiketeam_base", "greenhornets_base", "acav_base", "gunrange_base"};
 	};
@@ -217,10 +217,10 @@ class destinations
 		position_marker = "mf_respawn_saigonwarriors";
 	};
 	
-	class macvsog_base
+	class macv_base
 	{
-		image = "custom\taskroster\macvsog_command_HL.paa"; 
-		position_marker = "mf_respawn_macvsog";
+		image = "custom\taskroster\macv_HL.paa"; 
+		position_marker = "mf_respawn_macv";
 	};
 	
 	class easycompany_base

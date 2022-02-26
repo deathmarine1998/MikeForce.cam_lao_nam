@@ -98,7 +98,7 @@ class DacCong
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class MACVSOG
+class MACV
 {
 	medic = 10;
 	engineer = 10;
@@ -119,7 +119,7 @@ class SASR
 	explosiveSpecialist = 10;
 	radioOperator = 0;
 };
-class Gunslingers
+class 633rdCSG
 {
 	medic = 10;
 	engineer = 10;
@@ -156,10 +156,10 @@ class UnitTraitsSettings // camo, audio, load, engineer, explosiveSpecialist, me
 	TigerForce[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	Montagnard[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
 	DacCong[] = { 0.7, 0.5, 0.9, "true", "true", "true", "false" };
-	MACVSOG[] = { 0.5, 0.4, 0.75, "true", "true", "true", "true" };
+	MACV[] = { 0.5, 0.4, 0.75, "true", "true", "true", "true" };
 	PressCorp[] = { 0.7, 0.5, 0.9 "false", "false", "true", "false" };
 	SASR[] = { 0.7, 0.5, 0.9, "false", "false", "true", "false" };
-	Gunslingers[] = { 0.7, 0.5, 0.9, "false", "true", "false", "false" };
+	633rdCSG[] = { 0.7, 0.5, 0.9, "false", "true", "false", "true" };
 	BNCadet[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
 	BNGunClub[] = { 0.7, 0.5, 0.9, "false", "false", "false", "false" };
 };

@@ -35,7 +35,7 @@ if(_team in ["MikeForce", "ACAV", "GreenHornets", "SpikeTeam"])then {
 	_teamArray = getArray(_config >> toLower(_team) >> "members");
 	if(_uid in _teamArray) then { _ctrlEnable = true };
 };
-if((_team != "MACVSOG") && !(_whitelisting))then { _ctrlEnable = true };
+if((_team != "MACV") && !(_whitelisting))then { _ctrlEnable = true };
 //if(_team in ["DOD","CIA"])then { _ctrlEnable = false };
 private _command = getArray(_config >> "dod" >> "members");
 if(_uid in _command) then { _ctrlEnable = true };

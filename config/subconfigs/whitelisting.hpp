@@ -39,17 +39,17 @@ class presscorp
 {
 	#include "private\presscorp.hpp"
 };
-class macvsog
+class macv
 {
-	#include "private\macvsog.hpp"
+	#include "private\macv.hpp"
 };
 class dod
 {
 	#include "private\dod.hpp"
 };
-class gunslingers
+class 633rdcsg
 {
-	#include "private\gunslingers.hpp"
+	#include "private\633rdCSG.hpp"
 };
 class sasr
 {

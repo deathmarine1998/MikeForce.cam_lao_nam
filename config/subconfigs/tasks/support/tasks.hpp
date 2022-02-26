@@ -7,7 +7,7 @@ class support_resupply : support_task
 	tasktype = "box";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_ac1.jpg";
 	taskgroups[] = {"ACAV","GreenHornets","BlackHawk","Muskets","SatansAngels"};
-	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACVSOG"};
+	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACV"};
 	rankpoints = 10;
 	taskprogress = 0;
 
@@ -92,7 +92,7 @@ class support_transport : support_task
 	tasktype = "land";
 	taskgroups[] = {"ACAV", "GreenHornets","BlackHawk","Muskets","SatansAngels"};
 	//TODO: Remove GreenHornets and ACAV
-	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACVSOG"};
+	requestgroups[] = {"MikeForce","SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","ACAV", "GreenHornets","BlackHawk","MACV"};
 	rankpoints = 10;
 	taskprogress = 0;
 

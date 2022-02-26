@@ -104,10 +104,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\macvsog_command_gray.paa";
-			textUp = "custom\taskroster\macvsog_command_HL.paa";
+			text = "custom\taskroster\macv_gray.paa";
+			textUp = "custom\taskroster\macv_HL.paa";
 			
-			onButtonClick = "['MACVSOG'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['MACV'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		// moved to Top left
 		class logoBL: vn_mf_RscButton_ImgSwitch
@@ -232,10 +232,10 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "custom\taskroster\tigerforce_gray.paa";
-			textUp = "custom\taskroster\tigerforce_HL.paa";
+			text = "custom\taskroster\633rdcombatsupportgroup_gray.paa";
+			textUp = "custom\taskroster\633rdcombatsupportgroup_HL.paa";
 			
-			onButtonClick = "['TigerForce'] call vn_mf_fnc_tr_selectTeam;";
+			onButtonClick = "['633rdCSG'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		// bottom left
 		class logoMP: vn_mf_RscButton_ImgSwitch
@@ -333,38 +333,6 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			textUp = "custom\taskroster\sasr_HL.paa";
 			
 			onButtonClick = "['SASR'] call vn_mf_fnc_tr_selectTeam;";
-		};
-		// bottom center right
-		class logoGS: vn_mf_RscButton_ImgSwitch
-		{
-			idc = VN_TR_SELECTTEAM_TEAM_LOGO_GS_IDC;
-			x = UIW(10);
-			y = UIH(15.75);
-			w = UIW(3);
-			h = UIH(3);
-			
-			tooltip = "";
-			
-			text = "custom\taskroster\gunslingers_gray.paa";
-			textUp = "custom\taskroster\gunslingers_HL.paa";
-			
-			onButtonClick = "['Gunslingers'] call vn_mf_fnc_tr_selectTeam;";
-		};
-		// bottom right
-		class logoBNO: vn_mf_RscButton_ImgSwitch
-		{
-			idc = VN_TR_SELECTTEAM_TEAM_LOGO_BNO_IDC;
-			x = UIW(14);
-			y = UIH(15.75);
-			w = UIW(3);
-			h = UIH(3);
-			
-			tooltip = "";
-			
-			text = "custom\taskroster\bronation_gray.paa";
-			textUp = "custom\taskroster\bronation_HL.paa";
-			
-			onButtonClick = "['BNGunClub'] call vn_mf_fnc_tr_selectTeam;";
 		};
 		
 		class txtTeam: vn_mf_RscStructuredText

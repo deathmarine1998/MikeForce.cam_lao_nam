@@ -122,7 +122,7 @@ vn_mf_secondaryTasksBySide setVariable ["Montagnard", []];
 vn_mf_secondaryTasksBySide setVariable ["DacCong", []];
 vn_mf_secondaryTasksBySide setVariable ["PressCorp", []];
 vn_mf_secondaryTasksBySide setVariable ["SASR", []];
-vn_mf_secondaryTasksBySide setVariable ["Gunslingers", []];
+vn_mf_secondaryTasksBySide setVariable ["633rdCSG", []];
 vn_mf_secondaryTasksBySide setVariable ["BNCadet", []];
 vn_mf_secondaryTasksBySide setVariable ["BNGunClub", []];
 

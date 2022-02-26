@@ -7,7 +7,7 @@ class support_gh_cas : support_task
 	tasktype = "attack";
 	taskimage = "vn\missions_f_vietnam\data\img\mikeforce\s\vn_ui_mf_task_gh3.jpg";
 	taskgroups[] = {"Muskets","SatansAngels"};
-	requestgroups[] = {"ACAV", "MikeForce", "SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","MACVSOG"};
+	requestgroups[] = {"ACAV", "MikeForce", "SpikeTeam","EasyCompany","TigerForce","Frogmen","Montagnard","SaigonWarriors","MACV"};
 	rankpoints = 10;
 	taskprogress = 0;
 

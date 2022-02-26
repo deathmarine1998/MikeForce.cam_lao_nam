@@ -15,7 +15,7 @@ if!(_group_ID == "DacCong")then {
 	10 radioChannelRemove [player];
 };
 
-if(_group_ID isEqualTo "MACVSOG")then {
+if(_group_ID isEqualTo "MACV")then {
 	for "_i" from 1 to 9 do {
 		(_i+5) enableChannel [true,true];
 	};
@@ -114,8 +114,8 @@ _customChannels = getArray(missionConfigFile >> "gamemode" >> "customchat" >> "c
 		_enabledChannel enableChannel [false, false];
 	};
 	
-	if(_group_ID isEqualTo "MACVSOG")then {
-		diag_log format["[+]fn_custom_chat_update DBG-2 MACVSOG _chanID:%1 _customChannels:%2", _chanID, _chanName];
+	if(_group_ID isEqualTo "MACV")then {
+		diag_log format["[+]fn_custom_chat_update DBG-2 MACV _chanID:%1 _customChannels:%2", _chanID, _chanName];
 		if!(_chanName isEqualTo "DacCong")then {
 			_enabledChannel enableChannel [true, true];
 		_handled = true;

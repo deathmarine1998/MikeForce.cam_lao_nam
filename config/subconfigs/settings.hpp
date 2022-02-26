@@ -11,10 +11,10 @@ groups[] =
 	{"Muskets","vn_b_men_army_08"},
 	{"SatansAngels","vn_b_men_army_08"},
 	{"TigerForce","vn_b_men_army_08"},
-	{"Gunslingers","vn_b_men_army_08"},
+	{"633rdCSG","vn_b_men_army_08"},
 	{"SASR","vn_b_men_army_08"},
 	{"Montagnard","vn_i_men_sf_12"},
-	{"MACVSOG","vn_b_men_army_08"},
+	{"MACV","vn_b_men_army_08"},
 	{"DacCong","vn_o_men_nva_dc_09"},
 	{"PressCorp","C_journalist_F"},
 	{"BNCadet","vn_b_men_army_08"},
@@ -34,10 +34,10 @@ class teams
 	Frogmen[] = {"Frogmen [UDT]", "custom\taskroster\frogmen_HL.paa", "Frogmen", "<a href='https://discord.gg/bVWBw243XS'>Frogmen UDT BN Units Discord</a>", {0.85,0.4,0,1}, "ColorKhaki" };
 	Muskets[] = {"Muskets [176th Gunships]", "custom\taskroster\muskets_HL.paa", "Muskets", "<a href='https://discord.gg/bVWBw243XS'>Muskets BN Units Discord</a>", {0,0.8,0,1}, "ColorGreen" };
 	SatansAngels[] = {"Satans Angels [433rd TFS]", "custom\taskroster\satansangels_HL.paa", "Satans Angels", "<a href='https://discord.gg/bVWBw243XS'>Satans Angels BN Units Discord</a>", {0,0.8,0,1}, "ColorGreen" };
-	Gunslingers[] = {"Gunslingers [71st MEU]", "custom\taskroster\gunslingers_HL.paa", "Gunslingers", "<a href='https://discord.gg/bVWBw243XS'>Gunslingers BN Units Discord</a>", {0,0,0,1}, "ColorBlack" };
+	633rdCSG[] = {"Crossbow [633rd CSG]", "custom\taskroster\633rdcombatsupportgroup_HL.paa", "Crossbow", "<a href='https://discord.gg/bVWBw243XS'>Crossbow BN Units Discord</a>", {0,0,0,1}, "ColorBlack" };
 	SASR[] = {"SASR", "custom\taskroster\sasr_HL.paa", "SASR", "<a href='https://discord.gg/bVWBw243XS'>SASR BN Units Discord</a>", {0.5,0.25,0,1}, "ColorBrown"};
 	Montagnard[] = {"Montagnard [5th SFG]", "custom\taskroster\montagnard_HL.paa", "Montagnard", "<a href='https://discord.gg/bVWBw243XS'>Montagnard BN Units Discord</a>", {0,0.5,0,1}, "ColorIndependent" };
-	MACVSOG[] = {"MACV-SOG [Command]", "custom\taskroster\macvsog_command_HL.paa", "MACVSOG", "<a href='https://discord.gg/W6geNfx'>BroNation Discord Invite</a>", {0.85,0.85,0,1}, "ColorYellow" };
+	MACV[] = {"MACV [Command]", "custom\taskroster\macv_HL.paa", "MACV", "<a href='https://discord.gg/W6geNfx'>BroNation Discord Invite</a>", {0.85,0.85,0,1}, "ColorYellow" };
 	DacCong[] = {"Dac Cong [Commandos]", "custom\taskroster\daccong_team.paa","Dac Cong", "<a href='https://discord.gg/bVWBw243XS'>DacCong BN Units Discord</a>", {0.5,0,0,1}, "ColorOPFOR" };
 	PressCorp[] = {"Press Corp [DASPO]", "custom\taskroster\presscorp_HL.paa", "Press Corp", "<a href='https://discord.gg/bVWBw243XS'>BroNation BN Units Discord</a>", {0.4,0,0.5,1}, "ColorCIV" };
 	BNCadet[] = {"BroNation Cadet","custom\taskroster\bncadet_HL.paa", "BN Cadet", "<a href='https://discord.gg/W6geNfx'>BroNation BN Units Discord</a>", {1,0.3,0.4,1}, "ColorPink" };
@@ -81,7 +81,7 @@ class powcages
 
 class playermarkers
 {
-	daccong[] = {"arsenal_mikeforce", "duty_officer_mikeforce", "arsenal_spiketeam", "duty_officer_spiketeam", "arsenal_acav", "duty_officer_acav", "marker_acav", "arsenal_greenhornets", "duty_officer_greenhornets", "arsenal_tigerforce", "duty_officer_tigerforce", "marker_tigerforce", "arsenal_satansangels", "duty_officer_satansangels", "marker_satansangels", "arsenal_macvsog", "duty_officer_macvsog", "marker_macvsog", "arsenal_gunrange", "marker_bron_shootingrange", "arsenal_muskets", "duty_officer_muskets", "marker_muskets", "arsenal_blackhawk", "duty_officer_blackhawk", "marker_blackhawk", "arsenal_montagnard", "duty_officer_montagnard", "marker_montagnard", "duty_officer_presscorp", "helicopter_spawn", "helicopter_spawn_1", "light_helicopter_spawn", "marker_ban_me_thuot", "marker_kontum", "marker_plei_mei", "marker_pleiku_base", "marker_mash", "marker_presscorp", "marker_cas_helicopters", "marker_light_helicopter_spawn", "marker_helicopter_spawn", "marker_special_iems", "rearm", "wreck_recovery", "supply_officer_initial_1_local", "supply_officer_initial_2_local", "supply_officer_initial_3_local", "supply_drop_initial_1", "supply_drop_initial_2", "supply_drop_initial_3", "arsenal_easycompany", "duty_officer_easycompany", "marker_easycompany", "arsenal_saigonwarriors", "duty_officer_saigonwarriors", "marker_saigonwarriors"};
+	daccong[] = {"arsenal_mikeforce", "duty_officer_mikeforce", "arsenal_spiketeam", "duty_officer_spiketeam", "arsenal_acav", "duty_officer_acav", "marker_acav", "arsenal_greenhornets", "duty_officer_greenhornets", "arsenal_tigerforce", "duty_officer_tigerforce", "marker_tigerforce", "arsenal_satansangels", "duty_officer_satansangels", "marker_satansangels", "arsenal_macv", "duty_officer_macv", "marker_macv", "arsenal_gunrange", "marker_bron_shootingrange", "arsenal_muskets", "duty_officer_muskets", "marker_muskets", "arsenal_blackhawk", "duty_officer_blackhawk", "marker_blackhawk", "arsenal_montagnard", "duty_officer_montagnard", "marker_montagnard", "duty_officer_presscorp", "helicopter_spawn", "helicopter_spawn_1", "light_helicopter_spawn", "marker_ban_me_thuot", "marker_kontum", "marker_plei_mei", "marker_pleiku_base", "marker_mash", "marker_presscorp", "marker_cas_helicopters", "marker_light_helicopter_spawn", "marker_helicopter_spawn", "marker_special_iems", "rearm", "wreck_recovery", "supply_officer_initial_1_local", "supply_officer_initial_2_local", "supply_officer_initial_3_local", "supply_drop_initial_1", "supply_drop_initial_2", "supply_drop_initial_3", "arsenal_easycompany", "duty_officer_easycompany", "marker_easycompany", "arsenal_saigonwarriors", "duty_officer_saigonwarriors", "marker_saigonwarriors"};
 	
 	notdaccong[] = {"arsenal_daccong", "duty_officer_daccong", "supply_officer_initial_4_local", "supply_drop_initial_4", "marker_nodallho"};
 };
@@ -104,7 +104,7 @@ class armarankfix
 	COLONEL = 6;
 	GENERAL = 7;
 	ranksArray[] = {"PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL", "GENERAL"};
-	teamsArray[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","SaigonWarriors","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","MACVSOG","DacCong","PressCorp"};
+	teamsArray[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets","EasyCompany","SaigonWarriors","BlackHawk","Frogmen","Muskets","SatansAngels","TigerForce","Montagnard","MACV","DacCong","PressCorp"};
 };
 
 class usarmyranks
