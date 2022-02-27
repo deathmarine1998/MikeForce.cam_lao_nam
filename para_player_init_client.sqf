@@ -315,4 +315,4 @@ IsDancing = false;
 call vn_mf_fnc_player_check_for_non_arsenal_init;
 
 [] spawn {call vn_mf_fnc_admin_arsenal};
-
+[true,30,false,true,30,3,true,[]] execVM "WerthlesHeadless.sqf";

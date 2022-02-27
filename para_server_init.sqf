@@ -358,24 +358,4 @@ private _customChannels = getArray(_gamemode_config >> "customchat" >> "channels
 	if !(_channelID == _chanID) exitWith { diag_log format ["Custom channel '%1' borked ChannelCreated:%2 ChannelExpected:%3", _chanName, _channelID, _chanID] };
 }forEach _customChannels;
 
-// AO Counter
-CapturedAOS = 0;
-//Init restart timer
-CAPTURERESTART60MIN = false;
-CAPTURERESTART59MIN = false;
-CAPTURERESTART55MIN = false;
-CAPTURERESTART50MIN = false;
-CAPTURERESTART40MIN = false;
-CAPTURERESTART30MIN = false;
-CAPTURERESTART29MIN = false;
-CAPTURERESTART20MIN = false;
-CAPTURERESTART19MIN = false;
-CAPTURERESTART15MIN = false;
-CAPTURERESTART10MIN = false;
-CAPTURERESTART5MIN = false;
-CAPTURERESTART2MIN = false;
-CAPTURERESTART1MIN = false;
-//init intel counter
-IntelCounter = 0;
-// Server is ready unlock it
-//[] call vn_mf_fnc_server_rcon_event_ready;
+[true,30,false,true,30,3,true,[]] execVM "WerthlesHeadless.sqf";
