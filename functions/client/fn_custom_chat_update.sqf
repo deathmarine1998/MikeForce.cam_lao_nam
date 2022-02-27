@@ -55,7 +55,7 @@ switch(_group_ID) do
 		8 enableChannel [true,true];
 		9 enableChannel [true,false];
 		10 enableChannel [false,false];
-		11 enableChannel [false,false];
+		11 enableChannel [true,false];
 	};
 
 	case "SpikeTeam" : {
@@ -71,9 +71,9 @@ switch(_group_ID) do
 	};
 
 	case "BlackHawk" : {
-		8 enableChannel [true,true];
+		8 enableChannel [true,false];
 		10 enableChannel [false,false];
-		11 enableChannel [false,false];
+		11 enableChannel [true,true];
 	};
 
 	case "Muskets" : {
