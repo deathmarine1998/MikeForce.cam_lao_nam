@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Sqf-Linter
-        run: python ./tools/sqf_lint.py
+        run: python3 ./tools/sqf_lint.py
       - name: Config-Linter
-        run: python ./tools/config_lint.py
+        run: python3 ./tools/config_lint.py
 
