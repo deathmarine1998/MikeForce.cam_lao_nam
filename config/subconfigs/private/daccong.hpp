@@ -21,6 +21,8 @@ ranks[] = {
 	{"mỹ phước ", "76561199211011880", "CWO4 Operations Officer"}, //CWO4 C. Willson MUSKETS
     {"Phu Duc Mai", "76561198173293466", "Pfc"} // Pfc. Tech DC
 
+	/* Fuck stalker is a cunt - what a cunt - fuck stalker - hes a cunt */
+
 /*	{"Derp", "76561198122629843", "SecondLieutentant"},
 	{"Tôi ăn gi", "76561198226125028", "Private"},
 	{"Thảo Duy Bảo", "76561198011584225", "Private"},
