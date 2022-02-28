@@ -18,6 +18,14 @@ def check_config_style(filepath):
     def popClosing():
         closing << closingStack.pop()
 
+    reIsClass = re.compile(r'^\s*class(.*)')
+    reIsClassInherit = re.compile(r'^\s*class(.*):')
+    reIsClassBody = re.compile(r'^\s*class(.*){')
+    reBadColon = re.compile(r'\s*class (.*) :')
+    reSpaceAfterColon = re.compile(r'\s*class (.*): ')
+    reSpaceBeforeCurly = re.compile(r'\s*class (.*) {')
+    reClassSingleLine = re.compile(r'\s*class (.*)[{;]')
+
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
         content = file.read()
 
@@ -32,11 +40,6 @@ def check_config_style(filepath):
         # Used in case we are in a comment block (/* */). This is true if we detect a * inside a comment block.
         # If the next character is a /, it means we end our comment block.
         checkIfNextIsClosingBlock = False
-
-        checkIfInScope = False
-        checkIfRecursion = False
-
-        checkIfEndOfArray = False
 
         # We ignore everything inside a string
         isInString = False
@@ -95,32 +98,20 @@ def check_config_style(filepath):
                                 bad_count_file += 1
                             brackets_list.append(']')
                         elif (c == '{'):
-                            if(checkIfInScope):
-                                checkIfRecursion = True
-                            checkIfInScope = True
                             brackets_list.append('{')
                         elif (c == '}'):
                             lastIsCurlyBrace = True
-
-                            if(checkIfRecursion == True and lastIsCurlyBrace):
-                                if(c == ','):
-                                    checkIfRecursion = False
-                                else:
-                                    print("ERROR: Possible missing comma ',' detected at {0} Line number: {1}".format(filepath,lineNumber))
-                                    bad_count_file += 1
-                                    checkIfRecursion = False
-                            else:
-                                checkIfInScope = False
-
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
-
                             brackets_list.append('}')
+                        elif (c== '\t'):
+                            print("ERROR: Tab detected at {0} Line number: {1}".format(filepath,lineNumber))
+                            bad_count_file += 1
 
             else: # Look for the end of our comment block
                 if (c == '*'):
-                    checkIfNextIsClosingBlock = True
+                    checkIfNextIsClosingBlock = True;
                 elif (checkIfNextIsClosingBlock):
                     if (c == '/'):
                         isInCommentBlock = False
@@ -137,6 +128,23 @@ def check_config_style(filepath):
         if brackets_list.count('{') != brackets_list.count('}'):
             print("ERROR: A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
             bad_count_file += 1
+
+        file.seek(0)
+        for lineNumber, line in enumerate(file.readlines()):
+            if reIsClass.match(line):
+                if reBadColon.match(line):
+                    print(f"WARNING: bad class colon {filepath} Line number: {lineNumber+1}")
+                    # bad_count_file += 1
+                if reIsClassInherit.match(line):
+                    if not reSpaceAfterColon.match(line):
+                        print(f"WARNING: bad class missing space after colon {filepath} Line number: {lineNumber+1}")
+                if reIsClassBody.match(line):
+                    if not reSpaceBeforeCurly.match(line):
+                        print(f"WARNING: bad class inherit missing space before curly braces {filepath} Line number: {lineNumber+1}")
+                if not reClassSingleLine.match(line):
+                    print(f"WARNING: bad class braces placement {filepath} Line number: {lineNumber+1}")
+                    # bad_count_file += 1
+
     return bad_count_file
 
 def main():
