@@ -156,7 +156,7 @@ def main():
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default="")
     args = parser.parse_args()
 
-    for folder in ['addons', 'optionals']:
+    for folder in ['config']:
         # Allow running from root directory as well as from inside the tools directory
         rootDir = "../" + folder
         if (os.path.exists(folder)):
