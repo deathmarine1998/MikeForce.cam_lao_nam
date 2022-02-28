@@ -32,15 +32,4 @@ if ((_role == "driver") && (isEngineOn _vehicle))exitWith{
 if !([_unit1, _role, _vehicle] call vn_mf_fnc_player_can_enter_vehicle) then {
 	//Try to move them to safety - we don't want people falling out of helicopters if we can avoid it!Agreed
 	moveOut _unit1;
-	if (_unit1 moveInCargo _vehicle) isEqualTo false then {
-		if (_unit1 moveInGunner _vehicle) isEqualTo false then {
-			if (_unit1 moveInCommander _vehicle) isEqualTo false then {
-				_unit1 allowDamage false;
-				moveOut _vehicle;
-				_unit1 setPOS (getMarkerPos "mf_respawn_greenhornets");
-				_unit1 allowDamage true;
-				//Maybe we should teleport them to the ground here?[DONE] Or give them a parachute?[FUTURE]
-			};
-		};
-	};
 };
