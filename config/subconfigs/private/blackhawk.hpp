@@ -108,7 +108,7 @@ ranks[] = {
 	{"Whitey", "76561198044478446", "SecondLieutentant"}
 
 	
-
+}
 
 vehicles[] = 
 { 
