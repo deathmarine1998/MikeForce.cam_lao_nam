@@ -40,11 +40,17 @@ def check_config_style(filepath):
         # Used in case we are in a comment block (/* */). This is true if we detect a * inside a comment block.
         # If the next character is a /, it means we end our comment block.
         checkIfNextIsClosingBlock = False
+        checkIfEndArray = False
 
         # We ignore everything inside a string
         isInString = False
+        isInScope = False
+        isInRecursion = False
+        isInArray = False
         # Used to store the starting type of a string, so we can match that to the end of a string
-        inStringType = '';
+        inStringType = ''
+
+        previousCharater = ''
 
         lastIsCurlyBrace = False
         checkForSemiColumn = False
@@ -57,6 +63,8 @@ def check_config_style(filepath):
         for c in content:
             if (lastIsCurlyBrace):
                 lastIsCurlyBrace = False
+
+                checkForSemicolon = not re.search('findIf', content, re.IGNORECASE)
             if c == '\n': # Keeping track of our line numbers
                 lineNumber += 1 # so we can print accurate line number information when we detect a possible error
             if (isInString): # while we are in a string, we can ignore everything else, except the end of the string
@@ -93,18 +101,41 @@ def check_config_style(filepath):
                         elif (c == '['):
                             brackets_list.append('[')
                         elif (c == ']'):
+                            if(previousCharater == '['):
+                                isInArray = False
+
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['{', '(']):
                                 print("ERROR: Possible missing square bracket ']' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
                             brackets_list.append(']')
                         elif (c == '{'):
+                            if(isInScope):
+                                isInRecursion = True
+                            else:
+                                isInScope = True
+
                             brackets_list.append('{')
                         elif (c == '}'):
+                            if(isInRecursion and isInScope):
+                                
+
+                                isInRecursion = False
+                            elif(isInScope and isInRecursion == False):
+                                isInScope = False
+
                             lastIsCurlyBrace = True
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
                             brackets_list.append('}')
+
+                        if (checkForSemicolon):
+                            if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments
+                                checkForSemicolon = False
+                                if (c not in [']', ')', '}', ';', ',', '&', '!', '|', '=']): # , 'f', 'd', 'c', 'e', 'a', 'n', 'i']):
+                                    print("ERROR: Possible missing semicolon ';' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                    bad_count_file += 1
+
 
             else: # Look for the end of our comment block
                 if (c == '*'):
@@ -115,6 +146,9 @@ def check_config_style(filepath):
                     elif (c != '*'):
                         checkIfNextIsClosingBlock = False
             indexOfCharacter += 1
+
+            if (c not in [' ', '\t', '\n']):
+                previousCharater = c
 
         if brackets_list.count('[') != brackets_list.count(']'):
             print("ERROR: A possible missing square bracket [ or ] in file {0} [ = {1} ] = {2}".format(filepath,brackets_list.count('['),brackets_list.count(']')))
