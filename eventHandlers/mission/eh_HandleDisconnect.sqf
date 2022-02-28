@@ -46,7 +46,7 @@ if !(isNull _unit) then
 		if(_varname == "vn_mf_db_awards")then {
 			private _awardArray = [];
 			for "_i" from 0 to (count(_resp)-1) do {
-				_awardArray pushBack ((_resp# _i)# 1);
+				_awardArray pushBack ((_resp select _i) select 1);
 			};
 			_resp = _awardArray;
 			if(_debug isEqualTo 1) then { diag_log format["[+]handleDisconnect awards Name:%1 Data:%2", _varname,_resp] };
