@@ -20,6 +20,6 @@ jobs:
           python-version: "3.9"
       - name: Sqf-Linter
         run: python ./tools/verify.py
-      - name: Cpp-Linter
-        uses: github/super-linter@v4.9.0
+      - name: Hpp Lint
+        uses: shenxianpeng/cpp-linter-action@v1.3.0
 
