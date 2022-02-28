@@ -20,5 +20,6 @@ jobs:
           python-version: "3.9"
       - name: sqflint
         uses: arma-actions/sqflint@v1.0
-        with: --exit e
+        with: 
+          args: --exit e
 
