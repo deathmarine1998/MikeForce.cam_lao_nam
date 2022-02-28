@@ -19,6 +19,7 @@ jobs:
       - name: Hpp Lint
         uses: shenxianpeng/cpp-linter-action@v1.3.0
         env:
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tidy-checks: '-*'
