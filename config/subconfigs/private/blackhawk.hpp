@@ -73,7 +73,7 @@ ranks[] = {
 	{"Binbers", "76561198080723248", "Private2ndClass"},
 	{"j34741", "76561198112065529", "Private2ndClass"},
 	{"xenotype", "76561197962643432", "Private2ndClass"},
-	{"tup28", "76561198095034040", "Private2ndClass"}
+	{"tup28", "76561198095034040", "Private2ndClass"},
 	{"straight-enough", "76561198151344720", "Private2ndClass"},
 	{"Pfc. SmokenYou", "76561198019114289", "Private1stClass"},
 	{"Captain Crunch", "76561198020007558", "Private1stClass"},
@@ -108,7 +108,7 @@ ranks[] = {
 	{"Whitey", "76561198044478446", "SecondLieutentant"}
 
 	
-};
+
 
 vehicles[] = 
 { 
