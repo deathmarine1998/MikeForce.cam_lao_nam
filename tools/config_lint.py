@@ -105,7 +105,8 @@ def check_config_style(filepath):
                                 bad_count_file += 1
                             elif (checkIfEndOfArray == False):
                                 print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
-                                
+                                checkIfEndOfArray = True
+
                             brackets_list.append('}')
 
             else: # Look for the end of our comment block
