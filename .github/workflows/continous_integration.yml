@@ -17,11 +17,7 @@ jobs:
       - name: Sqf-Linter
         run: python ./tools/verify.py
       - name: Hpp Lint
-        uses: shenxianpeng/cpp-linter-action@v1.3.0
+        uses: docker://github/super-linter:v3
         env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tidy-checks: '-*'
-          files-changed-only: true
+          VALIDATE_ALL_CODEBASE: false
 
