@@ -92,7 +92,7 @@ showHUD[] =
 };
 
 // Enable CBA settings loading
-cba_settings_hasSettingsFile = 1;
+cba_settings_hasSettingsFile = 0;
 
 class Params
 {
