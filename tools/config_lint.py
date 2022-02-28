@@ -33,6 +33,8 @@ def check_config_style(filepath):
         # If the next character is a /, it means we end our comment block.
         checkIfNextIsClosingBlock = False
 
+        checkIfEndOfArray = False
+
         # We ignore everything inside a string
         isInString = False
         # Used to store the starting type of a string, so we can match that to the end of a string
@@ -83,6 +85,8 @@ def check_config_style(filepath):
                                 bad_count_file += 1
                             brackets_list.append(')')
                         elif (c == '['):
+                            if(c == ']'):
+                                checkIfEndOfArray = False
                             brackets_list.append('[')
                         elif (c == ']'):
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['{', '(']):
@@ -92,15 +96,21 @@ def check_config_style(filepath):
                         elif (c == '{'):
                             brackets_list.append('{')
                         elif (c == '}'):
+                            if (c == ';'):
+                                checkIfEndOfArray = True
+
                             lastIsCurlyBrace = True
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
+                            elif (checkIfEndOfArray == False):
+                                print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
+                                
                             brackets_list.append('}')
 
             else: # Look for the end of our comment block
                 if (c == '*'):
-                    checkIfNextIsClosingBlock = True;
+                    checkIfNextIsClosingBlock = True
                 elif (checkIfNextIsClosingBlock):
                     if (c == '/'):
                         isInCommentBlock = False
