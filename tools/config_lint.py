@@ -102,7 +102,7 @@ def check_config_style(filepath):
                         elif (c == '}'):
                             lastIsCurlyBrace = True
 
-                            if(checkIfRecursion == True):
+                            if(checkIfRecursion == True and lastIsCurlyBrace):
                                 if(c == ','):
                                     checkIfRecursion = False
                                 else:
