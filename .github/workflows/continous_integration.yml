@@ -16,8 +16,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Sqf-Linter
         run: python ./tools/verify.py
-      - name: Hpp Lint
-        uses: docker://github/super-linter:v3
+      - name: Hpp-Linter
+        uses: github/super-linter@v4.9.0
         env:
           VALIDATE_ALL_CODEBASE: false
 
