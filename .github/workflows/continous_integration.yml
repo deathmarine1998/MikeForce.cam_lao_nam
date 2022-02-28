@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  sqf_linter:
+  run_linters:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +18,9 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: "3.9"
-      - run: python ./tools/verify.py
+      - name: Sqf-Linter
+        run: python ./tools/verify.py
+      - name: Cpp-Linter
+        uses: github/super-linter@v4.9.0
   cpp_linter:
-    - name: Super-Linter
-    uses: github/super-linter@v4.9.0
+
