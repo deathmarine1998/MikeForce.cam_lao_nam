@@ -76,7 +76,7 @@ if!(_checked_object_data isEqualTo []) then
 	_saved_vars = _checked_object_data;
 	{
 		_varname = format["vn_mf_db_%1",_x];
-		_vardata = _saved_vars# _saved_var_count;
+		_vardata = _saved_vars select _saved_var_count;
 		_saved_var_count = _saved_var_count + 1;
 		if (!isNil "_vardata" && !(_varname in _blacklisted_vars)) then
 		{
@@ -86,7 +86,7 @@ if!(_checked_object_data isEqualTo []) then
 				if(_varname == "vn_mf_db_awards")then { 
 					_awardArray = [];
 					for "_i" from 0 to (count(_vardata)-1) do {
-						_awardArray pushBack [_awards# _i,_vardata# _i];
+						_awardArray pushBack [_awards select _i,_vardata select _i];
 					};
 					if(_debug isEqualTo 1) then { diag_log format["[+]p_init_server Name:%1 Data:%2", _varname,_vardata] };
 					_vardata = _awardArray;
@@ -106,7 +106,7 @@ if(_checked_object_data isEqualTo []) then
 	["SET", (_uid + "_data"), _statsdefault] call para_s_fnc_profile_db;
 	{
 		_varname = format["vn_mf_db_%1",_x];
-		_vardata = _statsdefault # _forEachIndex;
+		_vardata = _statsdefault select _forEachIndex;
 		if (!isNil "_vardata" && !(_varname in _blacklisted_vars)) then
 		{
 			if (_varname in _public_vars) then {
@@ -115,7 +115,7 @@ if(_checked_object_data isEqualTo []) then
 				if(_varname == "vn_mf_db_awards")then { 
 					_awardArray = [];
 					for "_j" from 0 to (count(_vardata)-1) do {
-						_awardArray pushBack [_awards# _j,_vardata# _j];
+						_awardArray pushBack [_awards select _j,_vardata select _j];
 					};
 					if(_debug isEqualTo 1) then { diag_log format["[+]recv_db_stats Name:%1 Data:%2", _varname,_vardata] };
 					_vardata = _awardArray;
@@ -196,11 +196,11 @@ if (!isNull _selected_group && {_selected_group isEqualType grpNull}) then
 // add players stats to scoreboard
 //values: Array - killsInfantry , killsSoft(vehicles), killsArmor, killsAir, killed
 //reset if they are rejoining, if there is no score then its null :)
-private _curKills = (getPlayerScores _player) #0;
-private _curVehKills = (getPlayerScores _player) #1;
-private _curTankKills = (getPlayerScores _player) #2;
-private _curChopperKills = (getPlayerScores _player) #3;
-private _curDeaths = (getPlayerScores _player) #4;
+private _curKills = (getPlayerScores _player) select 0;
+private _curVehKills = (getPlayerScores _player) select 1;
+private _curTankKills = (getPlayerScores _player) select 2;
+private _curChopperKills = (getPlayerScores _player) select 3;
+private _curDeaths = (getPlayerScores _player) select 4;
 _player addPlayerScores [-_curKills, -_curVehKills, -_curTankKills, -_curChopperKills, -_curDeaths];
 //if!(_group_ID == "DacCong")then {
 	private _kills = _player getVariable ["vn_mf_db_kills",0];
