@@ -21,5 +21,5 @@ jobs:
       - name: sqflint
         uses: arma-actions/sqflint@v1.0
         with: 
-          args: --exit e
+          args: --exit e --directory ./
 
