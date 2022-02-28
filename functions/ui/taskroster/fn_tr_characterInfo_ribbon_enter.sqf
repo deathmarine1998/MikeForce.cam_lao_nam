@@ -20,6 +20,7 @@
 
 
 #include "..\..\..\config\ui\ui_def_base.inc"
+
 params["_ctrl_src","_isRibbon"];
 //set description text
 _text = _ctrl_src getVariable ["text",""];
