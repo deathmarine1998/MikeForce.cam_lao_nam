@@ -98,14 +98,14 @@ def check_config_style(filepath):
                         elif (c == '}'):
                             if (c == ';'):
                                 checkIfEndOfArray = True
+                            else:
+                                print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
+                                bad_count_file += 1
 
                             lastIsCurlyBrace = True
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
-                            elif (checkIfEndOfArray != False):
-                                print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
-                                checkIfEndOfArray = False
 
                             brackets_list.append('}')
 
