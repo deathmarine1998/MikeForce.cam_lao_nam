@@ -16,7 +16,7 @@
 */
 
 private _holder = uiNamespace getVariable ['#VN_MF_TimerOverlay_Holder', controlNull];
-private _positon = ctrlPosition _holder;
+private _position = ctrlPosition _holder;
 
 _holder ctrlSetPosition [safeZoneX + safezoneW, _position select 1];
 _holder ctrlCommit 0.3;
