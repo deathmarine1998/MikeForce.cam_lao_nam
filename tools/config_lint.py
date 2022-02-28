@@ -103,9 +103,9 @@ def check_config_style(filepath):
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
-                            elif (checkIfEndOfArray == False):
+                            elif (checkIfEndOfArray != False):
                                 print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
-                                checkIfEndOfArray = True
+                                checkIfEndOfArray = False
 
                             brackets_list.append('}')
 
