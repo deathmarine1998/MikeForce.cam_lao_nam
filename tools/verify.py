@@ -1,125 +1,194 @@
-import argparse
+#!/usr/bin/env python3
+
+#credits to ACE3: https://github.com/acemod/ACE3/blob/master/tools/sqf_validator.py
+
+import fnmatch
 import os
 import re
+import ntpath
 import sys
+import argparse
 
-from sqf.parser import parse
-import sqf.analyzer
-from sqf.exceptions import SQFParserError, SQFWarning
+def validKeyWordAfterCode(content, index):
+    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply", "findIf", "remoteExec"];
+    for word in keyWords:
+        try:
+            subWord = content.index(word, index, index+len(word))
+            return True;
+        except:
+            pass
+    return False
+
+def check_sqf_syntax(filepath):
+    bad_count_file = 0
+    def pushClosing(t):
+        closingStack.append(closing.expr)
+        closing << Literal( closingFor[t[0]] )
+
+    def popClosing():
+        closing << closingStack.pop()
+
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
+        content = file.read()
+
+        # Store all brackets we find in this file, so we can validate everything on the end
+        brackets_list = []
+
+        # To check if we are in a comment block
+        isInCommentBlock = False
+        checkIfInComment = False
+        # Used in case we are in a line comment (//)
+        ignoreTillEndOfLine = False
+        # Used in case we are in a comment block (/* */). This is true if we detect a * inside a comment block.
+        # If the next character is a /, it means we end our comment block.
+        checkIfNextIsClosingBlock = False
+
+        # We ignore everything inside a string
+        isInString = False
+        # Used to store the starting type of a string, so we can match that to the end of a string
+        inStringType = '';
+
+        lastIsCurlyBrace = False
+        checkForSemicolon = False
+        onlyWhitespace = True
+
+        # Extra information so we know what line we find errors at
+        lineNumber = 1
+
+        indexOfCharacter = 0
+        # Parse all characters in the content of this file to search for potential errors
+        for c in content:
+            if (lastIsCurlyBrace):
+                lastIsCurlyBrace = False
+                # Test generates false positives with binary commands that take CODE as 2nd arg (e.g. findIf)
+                checkForSemicolon = not re.search('findIf', content, re.IGNORECASE)
+
+            if c == '\n': # Keeping track of our line numbers
+                onlyWhitespace = True # reset so we can see if # is for a preprocessor command
+                lineNumber += 1 # so we can print accurate line number information when we detect a possible error
+            if (isInString): # while we are in a string, we can ignore everything else, except the end of the string
+                if (c == inStringType):
+                    isInString = False
+            # if we are not in a comment block, we will check if we are at the start of one or count the () {} and []
+            elif (isInCommentBlock == False):
+
+                # This means we have encountered a /, so we are now checking if this is an inline comment or a comment block
+                if (checkIfInComment):
+                    checkIfInComment = False
+                    if c == '*': # if the next character after / is a *, we are at the start of a comment block
+                        isInCommentBlock = True
+                    elif (c == '/'): # Otherwise, will check if we are in an line comment
+                        ignoreTillEndOfLine = True # and an line comment is a / followed by another / (//) We won't care about anything that comes after it
+
+                if (isInCommentBlock == False):
+                    if (ignoreTillEndOfLine): # we are in a line comment, just continue going through the characters until we find an end of line
+                        if (c == '\n'):
+                            ignoreTillEndOfLine = False
+                    else: # validate brackets
+                        if (c == '"' or c == "'"):
+                            isInString = True
+                            inStringType = c
+                        elif (c == '#' and onlyWhitespace):
+                            ignoreTillEndOfLine = True
+                        elif (c == '/'):
+                            checkIfInComment = True
+                        elif (c == '('):
+                            brackets_list.append('(')
+                        elif (c == ')'):
+                            if (brackets_list[-1] in ['{', '[']):
+                                print("ERROR: Possible missing round bracket ')' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                bad_count_file += 1
+                            brackets_list.append(')')
+                        elif (c == '['):
+                            brackets_list.append('[')
+                        elif (c == ']'):
+                            if (brackets_list[-1] in ['{', '(']):
+                                print("ERROR: Possible missing square bracket ']' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                bad_count_file += 1
+                            brackets_list.append(']')
+                        elif (c == '{'):
+                            brackets_list.append('{')
+                        elif (c == '}'):
+                            lastIsCurlyBrace = True
+                            if (brackets_list[-1] in ['(', '[']):
+                                print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                bad_count_file += 1
+                            brackets_list.append('}')
+                        elif (c== '\t'):
+                            print("ERROR: Tab detected at {0} Line number: {1}".format(filepath,lineNumber))
+                            bad_count_file += 1
+
+                        if (c not in [' ', '\t', '\n']):
+                            onlyWhitespace = False
+
+                        if (checkForSemicolon):
+                            if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments
+                                checkForSemicolon = False
+                                if (c not in [']', ')', '}', ';', ',', '&', '!', '|', '='] and not validKeyWordAfterCode(content, indexOfCharacter)): # , 'f', 'd', 'c', 'e', 'a', 'n', 'i']):
+                                    print("ERROR: Possible missing semicolon ';' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                    bad_count_file += 1
+
+            else: # Look for the end of our comment block
+                if (c == '*'):
+                    checkIfNextIsClosingBlock = True;
+                elif (checkIfNextIsClosingBlock):
+                    if (c == '/'):
+                        isInCommentBlock = False
+                    elif (c != '*'):
+                        checkIfNextIsClosingBlock = False
+            indexOfCharacter += 1
+
+        if brackets_list.count('[') != brackets_list.count(']'):
+            print("ERROR: A possible missing square bracket [ or ] in file {0} [ = {1} ] = {2}".format(filepath,brackets_list.count('['),brackets_list.count(']')))
+            bad_count_file += 1
+        if brackets_list.count('(') != brackets_list.count(')'):
+            print("ERROR: A possible missing round bracket ( or ) in file {0} ( = {1} ) = {2}".format(filepath,brackets_list.count('('),brackets_list.count(')')))
+            bad_count_file += 1
+        if brackets_list.count('{') != brackets_list.count('}'):
+            print("ERROR: A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
+            bad_count_file += 1
+        pattern = re.compile('\s*(/\*[\s\S]+?\*/)\s*#include')
+        if pattern.match(content):
+            print("ERROR: A found #include after block comment in file {0}".format(filepath))
+            bad_count_file += 1
 
 
-class Writer:
-    def __init__(self):
-        self.strings = []
 
-    def write(self, message):
-        self.strings.append(message)
-
-
-def analyze(code, writer, exceptions_list):
-    try:
-        result = parse(code)
-    except SQFParserError as e:
-        writer.write('[%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
-        exceptions_list += [e]
-        return
-
-    exceptions = sqf.analyzer.analyze(result).exceptions
-    for e in exceptions:
-        writer.write('[%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
-    exceptions_list += exceptions
-
-def analyze_dir(directory, writer, exceptions_list, exclude):
-    """
-    Analyzes a directory recursively
-    """
-    for root, dirs, files in os.walk(directory):
-        if any([re.match(s, root) for s in exclude.copy()]):
-            writer.write(root + ' EXCLUDED\n')
-            continue
-        files.sort()
-        for file in files:
-            if file.endswith(".sqf"):
-                file_path = os.path.join(root, file)
-                if any([re.match(s, file_path) for s in exclude.copy()]):
-                    writer.write(file_path + ' EXCLUDED\n')
-                    continue
-
-                writer_helper = Writer()
-
-                with open(file_path) as f:
-                    analyze(f.read(), writer_helper, exceptions_list)
-
-                if writer_helper.strings:
-                    writer.write(os.path.relpath(file_path, directory) + '\n')
-                    for string in writer_helper.strings:
-                        writer.write('\t%s' % string)
-    return writer
-
-
-def readable_dir(prospective_dir):
-    if not os.path.isdir(prospective_dir):
-        raise Exception("readable_dir:{0} is not a valid path".format(prospective_dir))
-    if os.access(prospective_dir, os.R_OK):
-        return prospective_dir
-    else:
-        raise Exception("readable_dir:{0} is not a readable dir".format(prospective_dir))
-
-def parse_args(args):
-    parser = argparse.ArgumentParser(description="Static Analyzer of SQF code")
-    parser.add_argument('file', nargs='?', type=argparse.FileType('r'), default=None,
-                        help='The full path of the file to be analyzed')
-    parser.add_argument('-d', '--directory', nargs='?', type=readable_dir, default=None,
-                        help='The full path of the directory to recursively analyse sqf files on')
-    parser.add_argument('-o', '--output', nargs='?', type=argparse.FileType('w'), default=None,
-                        help='File path to redirect the output to (default to stdout)')
-    parser.add_argument('-x', '--exclude', action='append', nargs='?', help='Path that should be ignored (regex)', default=[])
-    parser.add_argument('-e', '--exit', type=str, default='',
-                        help='How the parser should exit. \'\': exit code 0;\n'
-                             '\'e\': exit with code 1 when any error is found;\n'
-                             '\'w\': exit with code 1 when any error or warning is found.')
-
-    return parser.parse_args(args)
-
-
-def entry_point(args):
-    args = parse_args(args)
-
-    if args.output is None:
-        writer = sys.stdout
-    else:
-        writer = args.output
-
-    exceptions_list = []
-
-    if args.file is None and args.directory is None:
-        code = sys.stdin.read()
-        analyze(code, writer, exceptions_list)
-    elif args.file is not None:
-        code = args.file.read()
-        args.file.close()
-        analyze(code, writer, exceptions_list)
-    else:
-        directory = args.directory.rstrip('/')
-        exclude = list(map(lambda x: x if x.startswith('/') else os.path.join(directory, x), args.exclude))
-        analyze_dir(directory, writer, exceptions_list, exclude)
-
-    if args.output is not None:
-        writer.close()
-
-    exit_code = 0
-    if args.exit == 'e':
-        errors = [e for e in exceptions_list if isinstance(e, SQFParserError)]
-        exit_code = int(len(errors) != 0)
-    elif args.exit == 'w':
-        errors_and_warnings = [e for e in exceptions_list if isinstance(e, (SQFWarning, SQFParserError))]
-        exit_code = int(len(errors_and_warnings) != 0)
-    return int(exit_code)
-
+    return bad_count_file
 
 def main():
-    sys.exit(entry_point(sys.argv[1:]))
 
+    print("Validating SQF")
+
+    sqf_list = []
+    bad_count = 0
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default="")
+    args = parser.parse_args()
+
+    # Allow running from root directory as well as from inside the tools directory
+    rootDir = "../MikeForce.cam_lao_nam"
+    if (os.path.exists("MikeForce.cam_lao_nam")):
+        rootDir = "MikeForce.cam_lao_nam"
+
+    for root, dirnames, filenames in os.walk(rootDir + '/' + args.module):
+      if ".git" in root:
+        continue
+      for filename in fnmatch.filter(filenames, '*.sqf'):
+        sqf_list.append(os.path.join(root, filename))
+
+    for filename in sqf_list:
+        bad_count = bad_count + check_sqf_syntax(filename)
+
+
+    print("------\nChecked {0} files\nErrors detected: {1}".format(len(sqf_list), bad_count))
+    if (bad_count == 0):
+        print("SQF validation PASSED")
+    else:
+        print("SQF validation FAILED")
+
+    return bad_count
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
