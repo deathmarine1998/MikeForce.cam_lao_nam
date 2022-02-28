@@ -102,13 +102,13 @@ ranks[] = {
 	{"HighKingViking", "76561198027737478", "StaffSergeant"},
 	{"cpt. GI Sniper", "76561198855827151", "Captain"},
 	{"Lt.Michael", "76561198053142518", "SecondLieutentant"},
-	{"Reaper Two", "76561197996446476", "Captain"},
+	{"Reaper Two", "76561197996446476", "Captain"}
 	{"John_the.G.I", "76561198358470514", "SecondLieutentant"},
 	{"2LT. Johan Strauss", "76561198025677060", "SecondLieutentant"},
 	{"Whitey", "76561198044478446", "SecondLieutentant"}
 
 	
-}
+};
 
 vehicles[] = 
 { 

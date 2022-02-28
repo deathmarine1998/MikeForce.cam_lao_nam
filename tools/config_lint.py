@@ -33,6 +33,9 @@ def check_config_style(filepath):
         # If the next character is a /, it means we end our comment block.
         checkIfNextIsClosingBlock = False
 
+        checkIfInScope = False
+        checkIfRecursion = False
+
         checkIfEndOfArray = False
 
         # We ignore everything inside a string
@@ -92,17 +95,27 @@ def check_config_style(filepath):
                                 bad_count_file += 1
                             brackets_list.append(']')
                         elif (c == '{'):
+                            if(checkIfInScope):
+                                checkIfRecursion = True
+                            checkIfInScope = True
                             brackets_list.append('{')
                         elif (c == '}'):
                             lastIsCurlyBrace = True
+
+                            if(checkIfRecursion == True):
+                                if(c == ','):
+                                    checkIfRecursion = False
+                                else:
+                                    print("ERROR: Possible missing comma ',' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                    bad_count_file += 1
+                                    checkIfRecursion = False
+                            else:
+                                checkIfInScope = False
+
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['(', '[']):
                                 print("ERROR: Possible missing curly brace '}}' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                 bad_count_file += 1
 
-                            if(lastIsCurlyBrace and c != ';'):
-                                print("ERROR: Possible missing semi-colon ';' detected at {0} Line number: {1}".format(filepath, lineNumber))
-                                bad_count_file += 1
-                                
                             brackets_list.append('}')
 
             else: # Look for the end of our comment block
