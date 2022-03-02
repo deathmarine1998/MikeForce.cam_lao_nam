@@ -1,30 +1,38 @@
 
-members[] = { "76561198014743152", "76561198372933750", "76561198981154299", "76561199082806351", "76561198162908634", "76561198057888677", "76561198116319722", "76561198177835547", "76561198112824448", "76561198037408014", "76561198153055336", "76561198140282519", "76561198226125028", "76561197996474535", "76561198204222821", "76561198121607904", "76561198013707878", "76561198114818319", "76561198202992532", "76561198183901839", "76561198358470514", "76561198152085615"};
+
+members[] = { "76561198372933750", "76561198981154299", "76561199082806351", "76561198162908634", "76561198057888677", "76561198116319722", "76561198177835547", "76561198112824448", "76561198037408014", "76561198153055336", "76561198140282519", "76561198226125028", "76561197996474535", "76561198204222821", "76561198121607904", "76561198013707878", "76561198114818319", "76561198202992532", "76561198183901839", "76561198358470514", "76561198152085615",  "76561198258881569", "76561198136639292", "76561198135889035", "76561198151696624", "76561198086654634", "76561198247344558", "76561198147795399" };
 
 ranks[] = {
 	
-	{"Cpt. Holtz 'VALOUR 1'", "76561198162908634", "Captain"},
-	{"BABA", "76561197996474535", "FirstLieutenant"},
-	{"1LT Gallant", "76561198183901839", "FirstLieutenant"},
-	{"2Lt. Malcolm 'Viper'", "76561198114818319", "SecondLieutenant"},
-	{"Title", "76561198226125028", "SecondLieutenant"},
-	{"2Lt. Persona non Grata", "76561198372933750", "SecondLieutenant"},
-	{"CWO-3 Lilac", "76561198014743152", "ChiefWarrantOfficer3"},
-	{"xiiRevenge", "76561198153055336", "SergeantFirstClass"},
-	{"chair65", "76561198204222821", "Corporal"},
-	{"Cpl. Chinery", "76561198121607904", "Corporal"},
-	{"Joshbond", "76561198013707878", "Corporal"},
-	{"Cpl. Cold", "76561199082806351", "Corporal"},
-	{"Scien", "76561198202992532", "PrivateFirstClass"},
-	{"Spaz", "76561198037408014", "PrivateFirstClass"},
-	{"John_the.G.I", "76561198358470514", "Private"},
-	{"Harrington", "76561198152085615", "Private"},
-	{"Pvt. Jake", "76561198981154299", "Private"},
-	{"Rct. De Lang", "76561198112824448", "Recruit"},
-	{"LBR", "76561198116319722", "Recruit"},
-	{"SGT. Skipper", "76561198177835547", "Recruit"},
-	{"RCT. Grommit!", "76561198057888677", "Recruit"}
+	{"Cpt. Holtz 'VALOUR 1'", "76561198162908634", "Captain"},// SA COC, Mskt, Macv, Dac Cong
+	{"Capt. Orange 'Stingray 1'", "76561198135889035", "Captain"},// SA, CSG 
+	{"1Lt. BABA 'Dragon-1'", "76561197996474535", "FirstLieutenant"},// SA, Mskt, Dac Cong
+	{"1Lt. Nox 'MAKO-1'", "76561198151696624", "FirstLieutenant"},// SA, CSG, BH
+	{"1Lt. Gallant 'Conway 1'", "76561198183901839", "FirstLieutenant"},// SA, Mskt
+	{"2Lt. Malcolm 'Viper'", "76561198114818319", "SecondLieutenant"},// SA COC
+	{"Title", "76561198226125028", "SecondLieutenant"},// SA COC, Mskt, Dac Cong
+	{"2Lt. Persona non Grata", "76561198372933750", "SecondLieutenant"},// SA COC, Mskt
+	{"2Lt. Joshbond 'Valkyrie 1'", "76561198013707878", "Corporal"},// SA
+	{"xiiRevenge", "76561198153055336", "SergeantFirstClass"},// SA, BH, MP
+	{"Sgt. LBR 'Saturn 1'", "76561198116319722", "Sergeant"},// SA
+	{"chair65", "76561198204222821", "Corporal"},// SA
+	{"Cpl. Chinery", "76561198121607904", "Corporal"},// SA, Mskt, MP
+	{"Cpl. Cold", "76561199082806351", "Corporal"},// SA, MP
+	{"Cpl. Bear 'Thunderlord1'", "76561198247344558", "Corporal"},// SA
+	{"SrA. Denisco 'Jester 1'", "76561198136639292", "Specialist"},// SA, Mskt
+	{"Spc. Skuny 'Fireball 1'", "76561198086654634", "Specialist"},// SA
+	{"Scien", "76561198202992532", "PrivateFirstClass"},// SA
+	{"Spaz", "76561198037408014", "PrivateFirstClass"},// SA, Mskt
+	{"Amn. Stubbs 'GoldEagle1'", "76561198147795399", "Private"},// SA
+	{"John_the.G.I", "76561198358470514", "Private"},// SA, Mskt, MP
+	{"Harrington", "76561198152085615", "Private"},// SA
+	{"Pvt. Jake", "76561198981154299", "Private"},// SA
+	{"Amn. Sparky 'Cyclops 1'","76561198258881569","Private"},// SA
+	{"Pvt. De Lang", "76561198112824448", "Private"},// SA, Mskt, BH, Dac Cong
+	{"SGT. Skipper", "76561198177835547", "Recruit"},// SA, Mskt
+	{"RCT. Grommit!", "76561198057888677", "Recruit"}// SA, MP
 };
+
 
 vehicles[] = 
 { 
