@@ -53,7 +53,7 @@ def check_config_style(filepath):
         previousCharater = ''
 
         lastIsCurlyBrace = False
-        checkForSemiColumn = False
+        checkForSemicolon = False
 
         # Extra information so we know what line we find errors at
         lineNumber = 1
@@ -102,7 +102,7 @@ def check_config_style(filepath):
                             brackets_list.append('[')
                         elif (c == ']'):
                             if(previousCharater == '['):
-                                isInArray = False
+                                isInArray = True
 
                             if (len(brackets_list) > 0 and brackets_list[-1] in ['{', '(']):
                                 print("ERROR: Possible missing square bracket ']' detected at {0} Line number: {1}".format(filepath,lineNumber))
@@ -132,8 +132,8 @@ def check_config_style(filepath):
                         if (checkForSemicolon):
                             if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments
                                 checkForSemicolon = False
-                                if (c not in [']', ')', '}', ';', ',', '&', '!', '|', '=']): # , 'f', 'd', 'c', 'e', 'a', 'n', 'i']):
-                                    print("ERROR: Possible missing semicolon ';' detected at {0} Line number: {1}".format(filepath,lineNumber))
+                                if (c not in [']', ')', '}', ';', ',', '&', '!', '|', '=', '#' , 'f', 'd', 'c', 'e', 'a', 'n', 'i']):
+                                    print("ERROR: Possible missing semicolon ';' or comma ',' detected at {0} Line number: {1}".format(filepath,lineNumber))
                                     bad_count_file += 1
 
 
@@ -159,22 +159,6 @@ def check_config_style(filepath):
         if brackets_list.count('{') != brackets_list.count('}'):
             print("ERROR: A possible missing curly brace {{ or }} in file {0} {{ = {1} }} = {2}".format(filepath,brackets_list.count('{'),brackets_list.count('}')))
             bad_count_file += 1
-
-        file.seek(0)
-        for lineNumber, line in enumerate(file.readlines()):
-            if reIsClass.match(line):
-                if reBadColon.match(line):
-                    print(f"WARNING: bad class colon {filepath} Line number: {lineNumber+1}")
-                    # bad_count_file += 1
-                if reIsClassInherit.match(line):
-                    if not reSpaceAfterColon.match(line):
-                        print(f"WARNING: bad class missing space after colon {filepath} Line number: {lineNumber+1}")
-                if reIsClassBody.match(line):
-                    if not reSpaceBeforeCurly.match(line):
-                        print(f"WARNING: bad class inherit missing space before curly braces {filepath} Line number: {lineNumber+1}")
-                if not reClassSingleLine.match(line):
-                    print(f"WARNING: bad class braces placement {filepath} Line number: {lineNumber+1}")
-                    # bad_count_file += 1
 
     return bad_count_file
 

@@ -343,7 +343,7 @@ class CfgFunctions
 			file = "functions\Game\Subsystems\Vehicle_Creation_Detection";
 			class veh_create_detection_job {};
 			class veh_create_detection_subsystem_init {};
-		}
+		};
 
 		//////////////////////////////////////////
 		//UI/TASK ROSTER STUFF:
@@ -410,7 +410,7 @@ class CfgFunctions
 			file = "functions\ui\zone_marker";
 			class zone_marker_captured_zone_info {};
 			class zone_marker_hostile_zone_info {};
-		}
+		};
 
 		class DisplayExample
 		{
