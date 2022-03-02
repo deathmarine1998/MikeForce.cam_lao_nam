@@ -28,30 +28,30 @@ private _script = {
 	};
 	
 	if(_history select 0 < para_s_perf_fps_min)then {
-	private _total = _history select 0;
-	{ _total = _total + _x; } forEach (_history select [1,15]);
-	private _average = _total / count _history;
+		private _total = _history select 0;
+		{ _total = _total + _x; } forEach (_history select [1,15]);
+		private _average = _total / count _history;
 
 	
-	if (_average < para_s_perf_fps_min) then {
-		private _newOVD = (((getObjectViewDistance # 0) - para_s_perf_view_downscale_rate) max para_s_perf_min_object_view_distance);
-		setObjectViewDistance _newOVD;
-		profileNamespace setVariable ["para_maxObjectViewdist", _newOVD];
-		private _newVD = ((viewDistance - para_s_perf_view_downscale_rate) max para_s_perf_min_view_distance);
-		setViewDistance _newVD;
-		profileNamespace setVariable ["para_maxViewdist", _newVD];
+		if (_average < para_s_perf_fps_min) then {
+			private _newOVD = (((getObjectViewDistance # 0) - para_s_perf_view_downscale_rate) max para_s_perf_min_object_view_distance);
+			setObjectViewDistance _newOVD;
+			profileNamespace setVariable ["para_maxObjectViewdist", _newOVD];
+			private _newVD = ((viewDistance - para_s_perf_view_downscale_rate) max para_s_perf_min_view_distance);
+			setViewDistance _newVD;
+			profileNamespace setVariable ["para_maxViewdist", _newVD];
+		};
+		if (_average > para_s_perf_fps_min_to_scale_up_view) then {
+			private _maxViewdist = ["para_maxViewdist"] call para_c_fnc_optionsMenu_getValue;
+			private _maxObjectViewdist = ["para_maxObjectViewdist"] call para_c_fnc_optionsMenu_getValue;
+			private _newOVD = (((getObjectViewDistance # 0) + para_s_perf_view_upscale_rate) min _maxObjectViewdist);
+			setObjectViewDistance _newOVD;
+			profileNamespace setVariable ["para_maxObjectViewdist", _newOVD];
+			private _newVD = ((viewDistance + para_s_perf_view_upscale_rate) min _maxViewdist);
+			setViewDistance _newVD;
+			profileNamespace setVariable ["para_maxViewdist", _newVD];
+		};
 	};
-	if (_average > para_s_perf_fps_min_to_scale_up_view) then {
-		private _maxViewdist = ["para_maxViewdist"] call para_c_fnc_optionsMenu_getValue;
-		private _maxObjectViewdist = ["para_maxObjectViewdist"] call para_c_fnc_optionsMenu_getValue;
-		private _newOVD = (((getObjectViewDistance # 0) + para_s_perf_view_upscale_rate) min _maxObjectViewdist);
-		setObjectViewDistance _newOVD;
-		profileNamespace setVariable ["para_maxObjectViewdist", _newOVD];
-		private _newVD = ((viewDistance + para_s_perf_view_upscale_rate) min _maxViewdist);
-		setViewDistance _newVD;
-		profileNamespace setVariable ["para_maxViewdist", _newVD];
-	};
-	
 };
 
 ["perf_auto_view_distance2", _script, [], para_s_perf_fps_record_freq] call para_g_fnc_scheduler_add_job;
